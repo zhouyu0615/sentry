@@ -270,7 +270,12 @@ const GroupDetailsActions = createReactClass({
 
     return (
       <div className="group-actions">
-        <GuideAnchor target="resolve" position="bottom">
+        <GuideAnchor
+          hasSelector
+          target="resolve"
+          position="bottom"
+          selectorStyles={{height: 28 + 12, width: 114 + 12, marginTop: '-9px'}}
+        >
           <ResolveActions
             hasRelease={hasRelease}
             latestRelease={project.latestRelease}
@@ -282,7 +287,12 @@ const GroupDetailsActions = createReactClass({
           />
         </GuideAnchor>
 
-        <GuideAnchor target="ignore_delete_discard" position="bottom">
+        <GuideAnchor
+          hasSelector
+          target="ignore_delete_discard"
+          position="bottom"
+          selectorStyles={{height: 28 + 12, width: 208 + 12, marginTop: '-9px'}}
+        >
           <IgnoreActions isIgnored={isIgnored} onUpdate={this.onUpdate} />
 
           <div className="btn-group">

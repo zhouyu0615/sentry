@@ -169,7 +169,7 @@ class BreadcrumbsInterface extends React.Component {
 
     const title = (
       <h3>
-        <GuideAnchor target="breadcrumbs" position="bottom">
+        <GuideAnchor hasSelector target="breadcrumbs" position="bottom">
           {t('Breadcrumbs')}
         </GuideAnchor>
       </h3>

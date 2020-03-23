@@ -1,7 +1,9 @@
 import {ClassNames} from '@emotion/core';
+import {Manager, Reference, Popper} from 'react-popper';
 import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Reflux from 'reflux';
 import styled from '@emotion/styled';
 import * as Sentry from '@sentry/browser';
@@ -28,6 +30,8 @@ type Props = {
   target?: string;
   position?: string;
   disabled?: boolean;
+  hasSelector?: boolean;
+  selectorStyles?: object;
 };
 
 type State = {
@@ -48,6 +52,8 @@ const GuideAnchor = createReactClass<Props, State>({
     target: PropTypes.string,
     position: PropTypes.string,
     disabled: PropTypes.bool,
+    hasSelector: PropTypes.bool,
+    selectorStyles: PropTypes.object,
   },
 
   mixins: [Reflux.listenTo(GuideStore, 'onGuideStateChange') as any],
@@ -56,10 +62,20 @@ const GuideAnchor = createReactClass<Props, State>({
     return {
       active: false,
       orgId: null,
+      height: null,
+      width: null,
     };
   },
 
   componentDidMount() {
+    let portal = document.getElementById('guide-anchor-portal');
+    if (!portal) {
+      portal = document.createElement('div');
+      portal.setAttribute('id', 'guide-anchor-portal');
+      document.body.appendChild(portal);
+    }
+    this.portalEl = portal;
+
     const {target} = this.props;
     target && registerAnchor(target);
   },
@@ -67,11 +83,13 @@ const GuideAnchor = createReactClass<Props, State>({
   componentDidUpdate(_prevProps, prevState) {
     if (this.containerElement && !prevState.active && this.state.active) {
       try {
-        const {top} = this.containerElement.getBoundingClientRect();
+        const {top, height, width} = this.containerElement.getBoundingClientRect();
         const scrollTop = window.pageYOffset;
         const centerElement = top + scrollTop - window.innerHeight / 2;
         window.scrollTo({top: centerElement});
+        this.setState({height: height + 12, width: width + 12});
       } catch (err) {
+        // this.setState({height: null, width: null});
         Sentry.captureException(err);
       }
     }
@@ -204,17 +222,65 @@ const GuideAnchor = createReactClass<Props, State>({
   },
 
   renderHovercardExp() {
-    const {children, position} = this.props;
+    const {children, position, hasSelector, selectorStyles} = this.props;
+    const {height, width} = this.state;
+
+    if (!children) {
+      return null;
+    }
+
+    if (!this.portalEl || !hasSelector)
+      return (
+        <StyledHovercard
+          show
+          body={this.getHovercardExpBody()}
+          tipColor={theme.purple}
+          position={position}
+        >
+          <span ref={el => (this.containerElement = el)}>{children}</span>
+        </StyledHovercard>
+      );
+
+    const modifiers = {
+      inner: {enabled: true},
+      preventOverflow: {
+        enabled: false,
+        padding: 0,
+      },
+    };
+
+    const newStyles = {
+      height,
+      width,
+      ...selectorStyles,
+    };
 
     return (
-      <StyledHovercard
-        show
-        body={this.getHovercardExpBody()}
-        tipColor={theme.purple}
-        position={position}
-      >
-        <span ref={el => (this.containerElement = el)}>{children}</span>
-      </StyledHovercard>
+      <Manager>
+        <Reference>
+          {({ref}) => (
+            <StyledHovercard
+              show
+              body={this.getHovercardExpBody()}
+              tipColor={theme.purple}
+              position={position}
+              offset="24px"
+            >
+              <span ref={ref}>
+                <span ref={el => (this.containerElement = el)}>{children}</span>
+              </span>
+            </StyledHovercard>
+          )}
+        </Reference>
+        {ReactDOM.createPortal(
+          <Popper placement="top-start" modifiers={modifiers}>
+            {({ref, style}) => (
+              <AnchorSelector ref={ref} style={{...style, ...newStyles}} />
+            )}
+          </Popper>,
+          this.portalEl
+        )}
+      </Manager>
     );
   },
 
@@ -356,6 +422,14 @@ const StyledHovercard = styled(Hovercard)`
     margin: -1px;
     border-radius: ${theme.borderRadius};
   }
+`;
+
+const AnchorSelector = styled('div')`
+  z-index: 1;
+  margin-top: -${space(0.75)};
+  margin-left: -${space(0.75)};
+  border: 2px solid ${p => p.theme.purple};
+  border-radius: ${p => p.theme.borderRadius};
 `;
 
 export default GuideAnchor;

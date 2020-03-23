@@ -254,7 +254,7 @@ class GroupSidebar extends React.Component {
         {this.renderPluginIssue()}
 
         <h6>
-          <GuideAnchor target="tags" position="bottom">
+          <GuideAnchor hasSelector target="tags" position="bottom">
             <span>{t('Tags')}</span>
           </GuideAnchor>
         </h6>

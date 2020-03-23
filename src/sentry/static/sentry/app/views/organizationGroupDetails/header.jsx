@@ -137,7 +137,7 @@ class GroupHeader extends React.Component {
           <div className="col-sm-5 stats">
             <div className="flex flex-justify-right">
               {group.shortId && (
-                <GuideAnchor target="issue_number" position="bottom">
+                <GuideAnchor hasSelector target="issue_number" position="bottom">
                   <div className="short-id-box count align-right">
                     <h6 className="nav-header">
                       <Tooltip

@@ -100,7 +100,12 @@ class CrashHeader extends React.Component {
           whiteSpace: 'nowrap',
         }}
       >
-        <GuideAnchor target="exception" disabled={hideGuide} position="bottom">
+        <GuideAnchor
+          hasSelector
+          target="exception"
+          disabled={hideGuide}
+          position="bottom"
+        >
           {title}
           <small>
             (

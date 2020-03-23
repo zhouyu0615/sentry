@@ -223,7 +223,12 @@ class SuggestedOwners extends React.Component {
                 )}
               </ClassNames>
             </OwnerRuleHeading>
-            <GuideAnchor target="owners" position="bottom">
+            <GuideAnchor
+              hasSelector
+              target="owners"
+              position="bottom"
+              selectorStyles={{height: 28 + 12, marginTop: '-11px'}}
+            >
               <Button
                 onClick={() =>
                   openCreateOwnershipRule({
@@ -233,7 +238,6 @@ class SuggestedOwners extends React.Component {
                   })
                 }
                 size="small"
-                className="btn btn-default btn-sm btn-create-ownership-rule"
               >
                 {t('Create Ownership Rule')}
               </Button>

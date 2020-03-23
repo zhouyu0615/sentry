@@ -50,11 +50,16 @@ class Hovercard extends React.Component {
      * Color of the arrow tip
      */
     tipColor: PropTypes.string,
+    /**
+     * Offset for the arrow
+     */
+    offset: PropTypes.string,
   };
 
   static defaultProps = {
     displayTimeout: 100,
     position: 'top',
+    offset: space(2),
   };
 
   constructor(...args) {
@@ -101,6 +106,7 @@ class Hovercard extends React.Component {
       position,
       show,
       tipColor,
+      offset,
     } = this.props;
 
     // Maintain the hovercard class name for BC with less styles
@@ -148,6 +154,7 @@ class Hovercard extends React.Component {
                   placement={placement}
                   withHeader={!!header}
                   className={cx}
+                  offset={offset}
                   {...hoverProps}
                 >
                   {header && <Header>{header}</Header>}
@@ -214,10 +221,10 @@ const StyledHovercard = styled('div')`
   animation-play-state: ${p => (p.visible ? 'running' : 'paused')};
 
   /* Offset for the arrow */
-  ${p => (p.placement === 'top' ? 'margin-bottom: 15px' : '')};
-  ${p => (p.placement === 'bottom' ? 'margin-top: 15px' : '')};
-  ${p => (p.placement === 'left' ? 'margin-right: 15px' : '')};
-  ${p => (p.placement === 'right' ? 'margin-left: 15px' : '')};
+  ${p => (p.placement === 'top' ? `margin-bottom: ${p.offset}` : '')};
+  ${p => (p.placement === 'bottom' ? `margin-top: ${p.offset}` : '')};
+  ${p => (p.placement === 'left' ? `margin-right: ${p.offset}` : '')};
+  ${p => (p.placement === 'right' ? `margin-left: ${p.offset}` : '')};
 `;
 
 const Header = styled('div')`
