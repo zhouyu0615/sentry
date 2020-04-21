@@ -4,7 +4,6 @@ import {Location} from 'history';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import {EventQuery} from 'app/actionCreators/events';
 import space from 'app/styles/space';
 import overflowEllipsis from 'app/styles/overflowEllipsis';
 import {t} from 'app/locale';
@@ -20,9 +19,6 @@ import DateTime from 'app/components/dateTime';
 import Button from 'app/components/button';
 import ExternalLink from 'app/components/links/externalLink';
 import FileSize from 'app/components/fileSize';
-import LoadingError from 'app/components/loadingError';
-import NotFound from 'app/components/errors/notFound';
-import AsyncComponent from 'app/components/asyncComponent';
 import SentryDocumentTitle from 'app/components/sentryDocumentTitle';
 import EventEntries from 'app/components/events/eventEntries';
 import {DataSection} from 'app/components/events/styles';
@@ -59,14 +55,14 @@ type Props = {
   api: Client;
   eventSlug: string;
   eventView: EventView;
+  event: Event;
 };
 
 type State = {
-  event: Event | undefined;
   isSidebarVisible: boolean;
-} & AsyncComponent['state'];
+};
 
-class EventDetailsContent extends AsyncComponent<Props, State> {
+class EventDetailsContent extends React.Component<Props, State> {
   static propTypes: any = {
     organization: SentryTypes.Organization.isRequired,
     eventSlug: slugValidator,
@@ -74,14 +70,6 @@ class EventDetailsContent extends AsyncComponent<Props, State> {
   };
 
   state: State = {
-    // AsyncComponent state
-    loading: true,
-    reloading: false,
-    error: false,
-    errors: [],
-    event: undefined,
-
-    // local state
     isSidebarVisible: true,
   };
 
@@ -89,31 +77,8 @@ class EventDetailsContent extends AsyncComponent<Props, State> {
     this.setState({isSidebarVisible: !this.state.isSidebarVisible});
   };
 
-  getEndpoints(): Array<[string, string, {query: EventQuery}]> {
-    const {organization, params, location, eventView} = this.props;
-    const {eventSlug} = params;
-
-    const query = eventView.getEventsAPIPayload(location);
-
-    const url = `/organizations/${organization.slug}/events/${eventSlug}/`;
-
-    // Get a specific event. This could be coming from
-    // a paginated group or standalone event.
-    return [['event', url, {query}]];
-  }
-
   get projectId() {
     return this.props.eventSlug.split(':')[0];
-  }
-
-  renderBody() {
-    const {event} = this.state;
-
-    if (!event) {
-      return this.renderWrapper(<NotFound />);
-    }
-
-    return this.renderWrapper(this.renderContent(event));
   }
 
   renderContent(event: Event) {
@@ -199,33 +164,8 @@ class EventDetailsContent extends AsyncComponent<Props, State> {
     );
   }
 
-  renderError(error) {
-    const notFound = Object.values(this.state.errors).find(
-      resp => resp && resp.status === 404
-    );
-    const permissionDenied = Object.values(this.state.errors).find(
-      resp => resp && resp.status === 403
-    );
-
-    if (notFound) {
-      return this.renderWrapper(<NotFound />);
-    }
-    if (permissionDenied) {
-      return this.renderWrapper(
-        <LoadingError message={t('You do not have permission to view that event.')} />
-      );
-    }
-
-    return this.renderWrapper(super.renderError(error, true, true));
-  }
-
-  renderLoading() {
-    return this.renderWrapper(super.renderLoading());
-  }
-
   renderWrapper(children: React.ReactNode) {
-    const {organization, location, eventView} = this.props;
-    const {event} = this.state;
+    const {organization, location, eventView, event} = this.props;
 
     return (
       <EventDetailsWrapper
@@ -237,6 +177,12 @@ class EventDetailsContent extends AsyncComponent<Props, State> {
         {children}
       </EventDetailsWrapper>
     );
+  }
+
+  render() {
+    const {event} = this.props;
+
+    return this.renderWrapper(this.renderContent(event));
   }
 }
 
