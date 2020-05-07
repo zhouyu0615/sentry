@@ -7,7 +7,6 @@ import re
 
 from rest_framework import serializers
 from six.moves.urllib.parse import urlparse
-from ua_parser.user_agent_parser import Parse
 
 from sentry.api.fields.multiplechoice import MultipleChoiceField
 from sentry.models.projectoption import ProjectOption
@@ -340,6 +339,8 @@ def _legacy_browsers_filter(project_config, data):
     value = get_user_agent(data)
     if not value:
         return False
+
+    from ua_parser.user_agent_parser import Parse
 
     ua = Parse(value)
     if not ua:

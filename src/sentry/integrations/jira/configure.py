@@ -1,7 +1,5 @@
 from __future__ import absolute_import
 
-
-from ua_parser import user_agent_parser
 from jwt import ExpiredSignatureError
 
 from django import forms
@@ -55,6 +53,8 @@ class JiraConfigureView(View):
             return self.get_response({"refresh_required": True})
 
         if not request.user.is_authenticated():
+            from ua_parser import user_agent_parser
+
             parsed_user_agent = user_agent_parser.ParseUserAgent(
                 request.META.get("HTTP_USER_AGENT", "")
             )

@@ -1,7 +1,5 @@
 from __future__ import absolute_import
 
-from ua_parser.user_agent_parser import Parse
-
 import sentry
 from sentry.plugins.bases.tag import TagPlugin
 
@@ -33,6 +31,8 @@ class UserAgentPlugin(TagPlugin):
         for key, value in headers:
             if key != "User-Agent":
                 continue
+            from ua_parser.user_agent_parser import Parse
+
             ua = Parse(value)
             if not ua:
                 continue
