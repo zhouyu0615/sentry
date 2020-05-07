@@ -53,6 +53,8 @@ class JiraConfigureView(View):
             return self.get_response({"refresh_required": True})
 
         if not request.user.is_authenticated():
+            # ua_parser is imported here, and not module level, because it takes ~300ms to warmup,
+            # and that penalty is seen even in running sentry cli or pytest.
             from ua_parser import user_agent_parser
 
             parsed_user_agent = user_agent_parser.ParseUserAgent(

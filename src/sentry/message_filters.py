@@ -340,6 +340,8 @@ def _legacy_browsers_filter(project_config, data):
     if not value:
         return False
 
+    # ua_parser is imported here, and not module level, because it takes ~300ms to warmup,
+    # and that penalty is seen even in running sentry cli or pytest.
     from ua_parser.user_agent_parser import Parse
 
     ua = Parse(value)
