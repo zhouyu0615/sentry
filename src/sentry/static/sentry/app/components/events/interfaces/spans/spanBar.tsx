@@ -910,7 +910,7 @@ type TogglerTypes = OmitHtmlDivProps<{
   isLast?: boolean;
 }>;
 
-const SpanTreeTogglerContainer = styled('div')<TogglerTypes>`
+export const SpanTreeTogglerContainer = styled('div')<TogglerTypes>`
   position: relative;
   height: ${SPAN_ROW_HEIGHT}px;
   width: ${p => (p.hasToggler ? '40px' : '12px')};
@@ -922,7 +922,7 @@ const SpanTreeTogglerContainer = styled('div')<TogglerTypes>`
   align-items: center;
 `;
 
-const SpanTreeConnector = styled('div')<TogglerTypes & {orphanBranch: boolean}>`
+export const SpanTreeConnector = styled('div')<TogglerTypes & {orphanBranch: boolean}>`
   height: ${p => (p.isLast ? SPAN_ROW_HEIGHT / 2 : SPAN_ROW_HEIGHT)}px;
   width: 100%;
   border-left: 1px ${p => (p.orphanBranch ? 'dashed' : 'solid')} ${p => p.theme.gray400};
@@ -952,7 +952,7 @@ const SpanTreeConnector = styled('div')<TogglerTypes & {orphanBranch: boolean}>`
   }
 `;
 
-const ConnectorBar = styled('div')<{orphanBranch: boolean}>`
+export const ConnectorBar = styled('div')<{orphanBranch: boolean}>`
   height: 250%;
 
   border-left: 1px ${p => (p.orphanBranch ? 'dashed' : 'solid')} ${p => p.theme.gray400};
@@ -992,7 +992,7 @@ type SpanTreeTogglerAndDivProps = OmitHtmlDivProps<{
   disabled: boolean;
 }>;
 
-const SpanTreeToggler = styled('div')<SpanTreeTogglerAndDivProps>`
+export const SpanTreeToggler = styled('div')<SpanTreeTogglerAndDivProps>`
   height: 16px;
   white-space: nowrap;
   min-width: 30px;
@@ -1077,7 +1077,7 @@ const WarningIcon = styled(InlineSvg)`
   margin-bottom: ${space(0.25)};
 `;
 
-const Chevron = styled(InlineSvg)`
+export const Chevron = styled(InlineSvg)`
   width: 7px;
   margin-left: ${space(0.25)};
 `;
