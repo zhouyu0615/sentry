@@ -1,8 +1,13 @@
+# -*- coding: utf8 -*-
+
 from __future__ import absolute_import, print_function
 
 import click
 import six
+import re
+import types
 from six.moves.urllib.parse import urlparse
+
 
 from sentry.runner.decorators import configuration, log_options
 
@@ -232,9 +237,9 @@ def devserver(
     # A better log-format for local dev when running through honcho,
     # but if there aren't any other daemons, we don't want to override.
     if daemons:
-        uwsgi_overrides["log-format"] = '"%(method) %(status) %(uri) %(proto)" %(size)'
+        uwsgi_overrides["log-format"] = "%(method) %(status) %(uri) %(proto) %(size)"
     else:
-        uwsgi_overrides["log-format"] = '[%(ltime)] "%(method) %(status) %(uri) %(proto)" %(size)'
+        uwsgi_overrides["log-format"] = "[%(ltime)] %(method) %(status) %(uri) %(proto) %(size)"
 
     server = SentryHTTPServer(host=host, port=port, workers=1, extra_options=uwsgi_overrides)
 
@@ -260,7 +265,97 @@ def devserver(
 
     cwd = os.path.realpath(os.path.join(settings.PROJECT_ROOT, os.pardir, os.pardir))
 
-    manager = Manager(Printer(prefix=prefix))
+    def monkeypatch_honcho_write(self, message):
+        def colorize_code(pattern):
+            code = int(pattern.group("code"))
+            method = pattern.group("method")
+
+            style = ((250, 71, 71), (255, 255, 255))
+
+            if code >= 200 and code < 300:
+                style = ((77, 199, 13), (255, 255, 255))
+            if code >= 400 and code < 500:
+                style = ((255, 119, 56), (255, 255, 255))
+            if code >= 500:
+                style = ((250, 71, 71), (255, 255, 255))
+
+            return u"{bg}{fg} {code} {reset} {method:4}".format(
+                bg="\x1b[48;2;%s;%s;%sm" % (style[0]),
+                fg="\x1b[38;2;%s;%s;%sm" % (style[1]),
+                reset="\x1b[0m",
+                code=code,
+                method=method,
+            )
+
+        def colorize_reboot(pattern):
+            return u"{bg}{fg}[ RELOADING ]{reset} {info_fg}{info}".format(
+                bg="\x1b[48;2;%s;%s;%sm" % (250, 71, 71),
+                fg="\x1b[38;2;%s;%s;%sm" % (255, 255, 255),
+                info_fg="\x1b[38;2;%s;%s;%sm" % (255, 255, 255),
+                reset="\x1b[0m",
+                info=pattern.group(0),
+            )
+
+        def colorize_booted(pattern):
+            return u"{bg}{fg}[ UWSGI READY ]{reset} {info_fg}{info}".format(
+                bg="\x1b[48;2;%s;%s;%sm" % (77, 199, 13),
+                fg="\x1b[38;2;%s;%s;%sm" % (255, 255, 255),
+                info_fg="\x1b[38;2;%s;%s;%sm" % (255, 255, 255),
+                reset="\x1b[0m",
+                info=pattern.group(0),
+            )
+
+        def colorize_traceback(pattern):
+            return u"{bg}  {reset} {info_fg}{info}".format(
+                bg="\x1b[48;2;%s;%s;%sm" % (250, 71, 71),
+                info_fg="\x1b[38;2;%s;%s;%sm" % (250, 71, 71),
+                reset="\x1b[0m",
+                info=pattern.group(0),
+            )
+
+        name = message.name if message.name is not None else ""
+        name = name.rjust(self.width)
+
+        if isinstance(message.data, bytes):
+            string = message.data.decode("utf-8", "replace")
+        else:
+            string = message.data
+
+        # Colorize requests
+        string = re.sub(
+            r"(?P<method>GET|POST|PUT|HEAD|DELETE) (?P<code>[0-9]{3})", colorize_code, string
+        )
+        # Colorize reboots
+        string = re.sub(r"Gracefully killing worker [0-9]+ .*\.\.\.", colorize_reboot, string)
+        # Colorize reboot complete
+        string = re.sub(
+            r"WSGI app [0-9]+ \(.*\) ready in [0-9]+ seconds .*", colorize_booted, string
+        )
+        # Colorize python tracebacks
+        string = re.sub(r"Traceback \(most recent call last\).*", colorize_traceback, string)
+
+        blank_color = (74, 62, 86)
+        colors = {
+            "server": (108, 95, 199),
+            "worker": (255, 194, 39),
+            "webpack": (61, 116, 219),
+            "cron": (255, 86, 124),
+        }
+
+        prefix = u"{name_fg}{name}{reset} {indicator_bg} {reset} ".format(
+            name=name.ljust(self.width),
+            name_fg="\x1b[38;2;%s;%s;%sm" % colors.get(message.name, blank_color),
+            indicator_bg="\x1b[48;2;%s;%s;%sm" % colors.get(message.name, blank_color),
+            reset="\x1b[0m",
+        )
+
+        for line in string.splitlines():
+            self.output.write(u"{}{}\n".format(prefix, line))
+
+    honcho_printer = Printer(prefix=prefix)
+    honcho_printer.write = types.MethodType(monkeypatch_honcho_write, honcho_printer)
+
+    manager = Manager(honcho_printer)
     for name, cmd in daemons:
         if name not in skip_daemons:
             manager.add_process(name, list2cmdline(cmd), quiet=False, cwd=cwd)
