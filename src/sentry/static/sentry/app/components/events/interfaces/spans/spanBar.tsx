@@ -840,7 +840,7 @@ type SpanRowCellProps = OmitHtmlDivProps<{
   showDetail?: boolean;
 }>;
 
-const SpanRowCell = styled('div')<SpanRowCellProps>`
+export const SpanRowCell = styled('div')<SpanRowCellProps>`
   position: absolute;
   padding: ${space(0.5)} 1px;
   height: 100%;
@@ -849,7 +849,7 @@ const SpanRowCell = styled('div')<SpanRowCellProps>`
   color: ${p => (p.showDetail ? p.theme.white : 'inherit')};
 `;
 
-const SpanRowCellContainer = styled('div')`
+export const SpanRowCellContainer = styled('div')`
   position: relative;
   height: ${SPAN_ROW_HEIGHT}px;
 `;
