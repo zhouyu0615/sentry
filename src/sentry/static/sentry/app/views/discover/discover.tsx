@@ -14,7 +14,7 @@ import PageHeading from 'app/components/pageHeading';
 import {Organization} from 'app/types';
 import space from 'app/styles/space';
 import localStorage from 'app/utils/localStorage';
-import {getDiscoverLandingUrl} from 'app/views/eventsV2/utils';
+import {getDiscoverLandingUrl} from 'app/utils/discover/urls';
 
 import {
   DiscoverContainer,

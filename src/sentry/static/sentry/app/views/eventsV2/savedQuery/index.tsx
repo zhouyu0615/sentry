@@ -15,8 +15,8 @@ import space from 'app/styles/space';
 import theme from 'app/utils/theme';
 import {IconBookmark, IconDelete} from 'app/icons';
 import EventView from 'app/utils/discover/eventView';
+import {getDiscoverLandingUrl} from 'app/utils/discover/urls';
 
-import {getDiscoverLandingUrl} from '../utils';
 import {handleCreateQuery, handleUpdateQuery, handleDeleteQuery} from './utils';
 
 type DefaultProps = {

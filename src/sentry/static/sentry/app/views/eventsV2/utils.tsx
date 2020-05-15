@@ -4,7 +4,7 @@ import {browserHistory} from 'react-router';
 
 import {tokenizeSearch, stringifyQueryObject} from 'app/utils/tokenizeSearch';
 import {t} from 'app/locale';
-import {Event, Organization, OrganizationSummary} from 'app/types';
+import {Event, Organization} from 'app/types';
 import {getTitle} from 'app/utils/events';
 import {getUtcDateString} from 'app/utils/dates';
 import {URL_PARAM} from 'app/constants/globalSelectionHeader';
@@ -368,11 +368,4 @@ function generateExpandedConditions(
   }
 
   return stringifyQueryObject(parsedQuery);
-}
-
-export function getDiscoverLandingUrl(organization: OrganizationSummary): string {
-  if (organization.features.includes('discover-query')) {
-    return `/organizations/${organization.slug}/discover/queries/`;
-  }
-  return `/organizations/${organization.slug}/discover/results/`;
 }
