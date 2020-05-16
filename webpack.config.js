@@ -340,7 +340,7 @@ let appConfig = {
   ],
   resolve: {
     alias: {
-      app: path.join(staticPrefix, 'app'),
+      sentry: path.join(staticPrefix, 'app'),
       '@emotion/styled': path.join(staticPrefix, 'app', 'styled'),
       '@original-emotion/styled': path.join(
         __dirname,
