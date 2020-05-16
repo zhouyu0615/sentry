@@ -408,12 +408,12 @@ const StyledButton = styled(Button)`
   right: ${space(0.5)};
 `;
 
-const SpanDetailContainer = styled('div')`
+export const SpanDetailContainer = styled('div')`
   border-bottom: 1px solid ${p => p.theme.gray400};
   cursor: auto;
 `;
 
-const SpanDetails = styled('div')`
+export const SpanDetails = styled('div')`
   padding: ${space(2)};
 `;
 
@@ -428,7 +428,7 @@ const StyledLoadingIndicator = styled(LoadingIndicator)`
   margin: 0;
 `;
 
-const Row = ({
+export const Row = ({
   title,
   keep,
   children,
@@ -456,7 +456,7 @@ const Row = ({
   );
 };
 
-const Tags = ({span}: {span: RawSpanType}) => {
+export const Tags = ({span}: {span: RawSpanType}) => {
   const tags: {[tag_name: string]: string} | undefined = span?.tags;
 
   if (!tags) {
