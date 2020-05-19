@@ -22,7 +22,7 @@ export default class WorldMapChart extends React.Component {
 
   async componentDidMount() {
     const countryToCodeMap = await import(
-      /* webpackChunkName: "countryCodesMap" */ 'app/data/countryCodesMap'
+      /* webpackChunkName: "countryCodesMap" */ 'sentry/data/countryCodesMap'
     );
 
     // eslint-disable-next-line

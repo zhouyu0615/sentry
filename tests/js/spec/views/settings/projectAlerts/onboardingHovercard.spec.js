@@ -5,7 +5,7 @@ import {mountWithTheme} from 'sentry-test/enzyme';
 import OnboardingHovercard from 'sentry/views/settings/projectAlerts/onboardingHovercard';
 import {updateOnboardingTask} from 'sentry/actionCreators/onboardingTasks';
 
-jest.mock('app/actionCreators/onboardingTasks');
+jest.mock('sentry/actionCreators/onboardingTasks');
 
 describe('OnboardingHovercard', function() {
   const {organization, routerContext} = initializeOrg();

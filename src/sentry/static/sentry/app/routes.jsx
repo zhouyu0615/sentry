@@ -51,7 +51,7 @@ function routes() {
         name="Details"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AccountDetails" */ 'app/views/settings/account/accountDetails'
+            /* webpackChunkName: "AccountDetails" */ 'sentry/views/settings/account/accountDetails'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -61,7 +61,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "AccountNotifications" */ 'app/views/settings/account/accountNotifications'
+              /* webpackChunkName: "AccountNotifications" */ 'sentry/views/settings/account/accountNotifications'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -71,7 +71,7 @@ function routes() {
           name="Fine Tune Alerts"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "AccountNotificationsFineTuning" */ 'app/views/settings/account/accountNotificationFineTuning'
+              /* webpackChunkName: "AccountNotificationsFineTuning" */ 'sentry/views/settings/account/accountNotificationFineTuning'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -82,7 +82,7 @@ function routes() {
         name="Emails"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AccountEmails" */ 'app/views/settings/account/accountEmails'
+            /* webpackChunkName: "AccountEmails" */ 'sentry/views/settings/account/accountEmails'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -92,7 +92,7 @@ function routes() {
         path="authorizations/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AccountAuthorizations" */ 'app/views/settings/account/accountAuthorizations'
+            /* webpackChunkName: "AccountAuthorizations" */ 'sentry/views/settings/account/accountAuthorizations'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -102,7 +102,7 @@ function routes() {
         <Route
           componentPromise={() =>
             import(
-              /* webpackChunkName: "AccountSecurityWrapper" */ 'app/views/settings/account/accountSecurity/accountSecurityWrapper'
+              /* webpackChunkName: "AccountSecurityWrapper" */ 'sentry/views/settings/account/accountSecurity/accountSecurityWrapper'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -110,7 +110,7 @@ function routes() {
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AccountSecurity" */ 'app/views/settings/account/accountSecurity'
+                /* webpackChunkName: "AccountSecurity" */ 'sentry/views/settings/account/accountSecurity'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -120,7 +120,7 @@ function routes() {
             name="Session History"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AccountSecuritySessionHistory" */ 'app/views/settings/account/accountSecurity/accountSecuritySessionHistory'
+                /* webpackChunkName: "AccountSecuritySessionHistory" */ 'sentry/views/settings/account/accountSecurity/accountSecuritySessionHistory'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -130,7 +130,7 @@ function routes() {
             name="Details"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AccountSecurityDetails" */ 'app/views/settings/account/accountSecurity/accountSecurityDetails'
+                /* webpackChunkName: "AccountSecurityDetails" */ 'sentry/views/settings/account/accountSecurity/accountSecurityDetails'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -142,7 +142,7 @@ function routes() {
           name="Enroll"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "AccountSecurityEnroll" */ 'app/views/settings/account/accountSecurity/accountSecurityEnroll'
+              /* webpackChunkName: "AccountSecurityEnroll" */ 'sentry/views/settings/account/accountSecurity/accountSecurityEnroll'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -154,7 +154,7 @@ function routes() {
         name="Subscriptions"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AccountSubscriptions" */ 'app/views/settings/account/accountSubscriptions'
+            /* webpackChunkName: "AccountSubscriptions" */ 'sentry/views/settings/account/accountSubscriptions'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -165,7 +165,7 @@ function routes() {
         name="Identities"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AccountSocialIdentities" */ 'app/views/settings/account/accountIdentities'
+            /* webpackChunkName: "AccountSocialIdentities" */ 'sentry/views/settings/account/accountIdentities'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -178,7 +178,7 @@ function routes() {
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ApiTokensIndex" */ 'app/views/settings/account/apiTokens'
+                /* webpackChunkName: "ApiTokensIndex" */ 'sentry/views/settings/account/apiTokens'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -188,7 +188,7 @@ function routes() {
             name="Create New Token"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ApiTokenCreate" */ 'app/views/settings/account/apiNewToken'
+                /* webpackChunkName: "ApiTokenCreate" */ 'sentry/views/settings/account/apiNewToken'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -199,7 +199,7 @@ function routes() {
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ApiApplications" */ 'app/views/settings/account/apiApplications'
+                /* webpackChunkName: "ApiApplications" */ 'sentry/views/settings/account/apiApplications'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -209,7 +209,7 @@ function routes() {
             name="Details"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ApiApplicationDetails" */ 'app/views/settings/account/apiApplications/details'
+                /* webpackChunkName: "ApiApplicationDetails" */ 'sentry/views/settings/account/apiApplications/details'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -222,7 +222,7 @@ function routes() {
         name="Close Account"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AccountClose" */ 'app/views/settings/account/accountClose'
+            /* webpackChunkName: "AccountClose" */ 'sentry/views/settings/account/accountClose'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -236,7 +236,7 @@ function routes() {
         name="General"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectGeneralSettings" */ 'app/views/settings/projectGeneralSettings'
+            /* webpackChunkName: "ProjectGeneralSettings" */ 'sentry/views/settings/projectGeneralSettings'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -246,7 +246,7 @@ function routes() {
         name="Teams"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectTeams" */ 'app/views/settings/project/projectTeams'
+            /* webpackChunkName: "ProjectTeams" */ 'sentry/views/settings/project/projectTeams'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -258,7 +258,7 @@ function routes() {
         component={errorHandler(LazyLoad)}
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectAlerts" */ 'app/views/settings/projectAlerts'
+            /* webpackChunkName: "ProjectAlerts" */ 'sentry/views/settings/projectAlerts'
           )
         }
       >
@@ -266,7 +266,7 @@ function routes() {
           component={errorHandler(LazyLoad)}
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectAlertsList" */ 'app/views/settings/projectAlerts/list'
+              /* webpackChunkName: "ProjectAlertsList" */ 'sentry/views/settings/projectAlerts/list'
             )
           }
         />
@@ -277,7 +277,7 @@ function routes() {
           component={errorHandler(LazyLoad)}
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectAlertsSettings" */ 'app/views/settings/projectAlerts/settings'
+              /* webpackChunkName: "ProjectAlertsSettings" */ 'sentry/views/settings/projectAlerts/settings'
             )
           }
         />
@@ -288,7 +288,7 @@ function routes() {
           component={errorHandler(LazyLoad)}
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectAlertsCreate" */ 'app/views/settings/projectAlerts/create'
+              /* webpackChunkName: "ProjectAlertsCreate" */ 'sentry/views/settings/projectAlerts/create'
             )
           }
         />
@@ -301,7 +301,7 @@ function routes() {
             component={errorHandler(LazyLoad)}
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ProjectAlertsCreate" */ 'app/views/settings/projectAlerts/create'
+                /* webpackChunkName: "ProjectAlertsCreate" */ 'sentry/views/settings/projectAlerts/create'
               )
             }
           />
@@ -310,7 +310,7 @@ function routes() {
             name="Edit Alert Rule"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ProjectAlertsEdit" */ 'app/views/settings/projectAlerts/edit'
+                /* webpackChunkName: "ProjectAlertsEdit" */ 'sentry/views/settings/projectAlerts/edit'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -324,7 +324,7 @@ function routes() {
             path="new/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ProjectAlertsCreate" */ 'app/views/settings/projectAlerts/create'
+                /* webpackChunkName: "ProjectAlertsCreate" */ 'sentry/views/settings/projectAlerts/create'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -334,7 +334,7 @@ function routes() {
             path=":ruleId/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ProjectAlertsEdit" */ 'app/views/settings/projectAlerts/edit'
+                /* webpackChunkName: "ProjectAlertsEdit" */ 'sentry/views/settings/projectAlerts/edit'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -347,7 +347,7 @@ function routes() {
         path="environments/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectEnvironments" */ 'app/views/settings/project/projectEnvironments'
+            /* webpackChunkName: "ProjectEnvironments" */ 'sentry/views/settings/project/projectEnvironments'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -359,7 +359,9 @@ function routes() {
         name="Tags"
         path="tags/"
         componentPromise={() =>
-          import(/* webpackChunkName: "ProjectTags" */ 'app/views/settings/projectTags')
+          import(
+            /* webpackChunkName: "ProjectTags" */ 'sentry/views/settings/projectTags'
+          )
         }
         component={errorHandler(LazyLoad)}
       />
@@ -369,7 +371,7 @@ function routes() {
         name="Release Tracking"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectReleaseTracking" */ 'app/views/settings/project/projectReleaseTracking'
+            /* webpackChunkName: "ProjectReleaseTracking" */ 'sentry/views/settings/project/projectReleaseTracking'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -379,7 +381,7 @@ function routes() {
         name="Issue Owners"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectOwnership" */ 'app/views/settings/project/projectOwnership'
+            /* webpackChunkName: "ProjectOwnership" */ 'sentry/views/settings/project/projectOwnership'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -389,7 +391,7 @@ function routes() {
         name="Data Forwarding"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectDataForwarding" */ 'app/views/settings/projectDataForwarding'
+            /* webpackChunkName: "ProjectDataForwarding" */ 'sentry/views/settings/projectDataForwarding'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -401,7 +403,7 @@ function routes() {
         component={errorHandler(LazyLoad)}
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectDataPrivacy" */ 'app/views/settings/projectDataPrivacy/projectDataPrivacy'
+            /* webpackChunkName: "ProjectDataPrivacy" */ 'sentry/views/settings/projectDataPrivacy/projectDataPrivacy'
           )
         }
       />
@@ -411,7 +413,7 @@ function routes() {
         name="Debug Information Files"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectDebugFiles" */ 'app/views/settings/projectDebugFiles'
+            /* webpackChunkName: "ProjectDebugFiles" */ 'sentry/views/settings/projectDebugFiles'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -421,7 +423,7 @@ function routes() {
         name="Processing Issues"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectProcessingIssues" */ 'app/views/settings/project/projectProcessingIssues'
+            /* webpackChunkName: "ProjectProcessingIssues" */ 'sentry/views/settings/project/projectProcessingIssues'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -431,7 +433,7 @@ function routes() {
         name="Inbound Filters"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectFilters" */ 'app/views/settings/project/projectFilters'
+            /* webpackChunkName: "ProjectFilters" */ 'sentry/views/settings/project/projectFilters'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -444,7 +446,7 @@ function routes() {
         name="Service Hooks"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectServiceHooks" */ 'app/views/settings/project/projectServiceHooks'
+            /* webpackChunkName: "ProjectServiceHooks" */ 'sentry/views/settings/project/projectServiceHooks'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -454,7 +456,7 @@ function routes() {
         name="Create Service Hook"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectCreateServiceHook" */ 'app/views/settings/project/projectCreateServiceHook'
+            /* webpackChunkName: "ProjectCreateServiceHook" */ 'sentry/views/settings/project/projectCreateServiceHook'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -464,7 +466,7 @@ function routes() {
         name="Service Hook Details"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectServiceHookDetails" */ 'app/views/settings/project/projectServiceHookDetails'
+            /* webpackChunkName: "ProjectServiceHookDetails" */ 'sentry/views/settings/project/projectServiceHookDetails'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -473,7 +475,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectKeys" */ 'app/views/settings/project/projectKeys/list'
+              /* webpackChunkName: "ProjectKeys" */ 'sentry/views/settings/project/projectKeys/list'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -484,7 +486,7 @@ function routes() {
           name="Details"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectKeyDetails" */ 'app/views/settings/project/projectKeys/details'
+              /* webpackChunkName: "ProjectKeyDetails" */ 'sentry/views/settings/project/projectKeys/details'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -495,7 +497,7 @@ function routes() {
         name="User Feedback"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "ProjectUserFeedbackSettings" */ 'app/views/settings/project/projectUserFeedback'
+            /* webpackChunkName: "ProjectUserFeedbackSettings" */ 'sentry/views/settings/project/projectUserFeedback'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -505,7 +507,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectSecurityHeaders" */ 'app/views/settings/projectSecurityHeaders'
+              /* webpackChunkName: "ProjectSecurityHeaders" */ 'sentry/views/settings/projectSecurityHeaders'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -515,7 +517,7 @@ function routes() {
           name="Content Security Policy"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectCspReports" */ 'app/views/settings/projectSecurityHeaders/csp'
+              /* webpackChunkName: "ProjectCspReports" */ 'sentry/views/settings/projectSecurityHeaders/csp'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -525,7 +527,7 @@ function routes() {
           name="Certificate Transparency"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectExpectCtReports" */ 'app/views/settings/projectSecurityHeaders/expectCt'
+              /* webpackChunkName: "ProjectExpectCtReports" */ 'sentry/views/settings/projectSecurityHeaders/expectCt'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -535,7 +537,7 @@ function routes() {
           name="HPKP"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectHpkpReports" */ 'app/views/settings/projectSecurityHeaders/hpkp'
+              /* webpackChunkName: "ProjectHpkpReports" */ 'sentry/views/settings/projectSecurityHeaders/hpkp'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -545,7 +547,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectPlugins" */ 'app/views/settings/projectPlugins'
+              /* webpackChunkName: "ProjectPlugins" */ 'sentry/views/settings/projectPlugins'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -555,7 +557,7 @@ function routes() {
           name="Integration Details"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectPluginDetails" */ 'app/views/settings/projectPlugins/details'
+              /* webpackChunkName: "ProjectPluginDetails" */ 'sentry/views/settings/projectPlugins/details'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -565,7 +567,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectInstallOverview" */ 'app/views/projectInstall/overview'
+              /* webpackChunkName: "ProjectInstallOverview" */ 'sentry/views/projectInstall/overview'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -575,7 +577,7 @@ function routes() {
           name="Docs"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectInstallPlatform" */ 'app/views/projectInstall/platform'
+              /* webpackChunkName: "ProjectInstallPlatform" */ 'sentry/views/projectInstall/platform'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -592,7 +594,7 @@ function routes() {
         name="General"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationGeneralSettings" */ 'app/views/settings/organizationGeneralSettings'
+            /* webpackChunkName: "OrganizationGeneralSettings" */ 'sentry/views/settings/organizationGeneralSettings'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -603,7 +605,7 @@ function routes() {
         name="Projects"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationProjects" */ 'app/views/settings/organizationProjects'
+            /* webpackChunkName: "OrganizationProjects" */ 'sentry/views/settings/organizationProjects'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -613,7 +615,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationApiKeys" */ 'app/views/settings/organizationApiKeys'
+              /* webpackChunkName: "OrganizationApiKeys" */ 'sentry/views/settings/organizationApiKeys'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -624,7 +626,7 @@ function routes() {
           name="Details"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationApiKeyDetails" */ 'app/views/settings/organizationApiKeys/organizationApiKeyDetails'
+              /* webpackChunkName: "OrganizationApiKeyDetails" */ 'sentry/views/settings/organizationApiKeys/organizationApiKeyDetails'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -636,7 +638,7 @@ function routes() {
         name="Audit Log"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationAuditLog" */ 'app/views/settings/organizationAuditLog'
+            /* webpackChunkName: "OrganizationAuditLog" */ 'sentry/views/settings/organizationAuditLog'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -647,7 +649,7 @@ function routes() {
         name="Auth Providers"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationAuth" */ 'app/views/settings/organizationAuth'
+            /* webpackChunkName: "OrganizationAuth" */ 'sentry/views/settings/organizationAuth'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -657,7 +659,7 @@ function routes() {
         <Route
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationMembersWrapper" */ 'app/views/settings/organizationMembers/organizationMembersWrapper'
+              /* webpackChunkName: "OrganizationMembersWrapper" */ 'sentry/views/settings/organizationMembers/organizationMembersWrapper'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -665,7 +667,7 @@ function routes() {
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationMembersList" */ 'app/views/settings/organizationMembers/organizationMembersList'
+                /* webpackChunkName: "OrganizationMembersList" */ 'sentry/views/settings/organizationMembers/organizationMembersList'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -676,7 +678,7 @@ function routes() {
             name="Requests"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationRequestsView" */ 'app/views/settings/organizationMembers/organizationRequestsView'
+                /* webpackChunkName: "OrganizationRequestsView" */ 'sentry/views/settings/organizationMembers/organizationRequestsView'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -688,7 +690,7 @@ function routes() {
           name="Invite"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "InviteMember" */ 'app/views/settings/organizationMembers/inviteMember'
+              /* webpackChunkName: "InviteMember" */ 'sentry/views/settings/organizationMembers/inviteMember'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -699,7 +701,7 @@ function routes() {
           name="Details"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationMemberDetail" */ 'app/views/settings/organizationMembers/organizationMemberDetail'
+              /* webpackChunkName: "OrganizationMemberDetail" */ 'sentry/views/settings/organizationMembers/organizationMemberDetail'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -711,7 +713,7 @@ function routes() {
         name="Rate Limits"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationRateLimits" */ 'app/views/settings/organizationRateLimits'
+            /* webpackChunkName: "OrganizationRateLimits" */ 'sentry/views/settings/organizationRateLimits'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -722,7 +724,7 @@ function routes() {
         name="Repositories"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationRepositories" */ 'app/views/settings/organizationRepositories'
+            /* webpackChunkName: "OrganizationRepositories" */ 'sentry/views/settings/organizationRepositories'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -732,7 +734,7 @@ function routes() {
         path="settings/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationGeneralSettings" */ 'app/views/settings/organizationGeneralSettings'
+            /* webpackChunkName: "OrganizationGeneralSettings" */ 'sentry/views/settings/organizationGeneralSettings'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -743,7 +745,7 @@ function routes() {
         path="security-and-privacy/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationSecurityAndPrivacy" */ 'app/views/settings/organizationSecurityAndPrivacy/organizationSecurityAndPrivacy'
+            /* webpackChunkName: "OrganizationSecurityAndPrivacy" */ 'sentry/views/settings/organizationSecurityAndPrivacy/organizationSecurityAndPrivacy'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -753,7 +755,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationTeams" */ 'app/views/settings/organizationTeams'
+              /* webpackChunkName: "OrganizationTeams" */ 'sentry/views/settings/organizationTeams'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -764,7 +766,7 @@ function routes() {
           path=":teamId/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "TeamDetails" */ 'app/views/settings/organizationTeams/teamDetails'
+              /* webpackChunkName: "TeamDetails" */ 'sentry/views/settings/organizationTeams/teamDetails'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -775,7 +777,7 @@ function routes() {
             name="Members"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "TeamMembers" */ 'app/views/settings/organizationTeams/teamMembers'
+                /* webpackChunkName: "TeamMembers" */ 'sentry/views/settings/organizationTeams/teamMembers'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -785,7 +787,7 @@ function routes() {
             name="Projects"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "TeamProjects" */ 'app/views/settings/organizationTeams/teamProjects'
+                /* webpackChunkName: "TeamProjects" */ 'sentry/views/settings/organizationTeams/teamProjects'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -795,7 +797,7 @@ function routes() {
             name="settings"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "TeamSettings" */ 'app/views/settings/organizationTeams/teamSettings'
+                /* webpackChunkName: "TeamSettings" */ 'sentry/views/settings/organizationTeams/teamSettings'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -810,7 +812,7 @@ function routes() {
           path=":integrationSlug/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "PluginDetailedView" */ 'app/views/organizationIntegrations/pluginDetailedView'
+              /* webpackChunkName: "PluginDetailedView" */ 'sentry/views/organizationIntegrations/pluginDetailedView'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -824,7 +826,7 @@ function routes() {
           path=":integrationSlug"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "SentryAppDetailedView" */ 'app/views/organizationIntegrations/sentryAppDetailedView'
+              /* webpackChunkName: "SentryAppDetailedView" */ 'sentry/views/organizationIntegrations/sentryAppDetailedView'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -838,7 +840,7 @@ function routes() {
           path=":integrationSlug"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ConfigureIntegration" */ 'app/views/organizationIntegrations/docIntegrationDetailedView'
+              /* webpackChunkName: "ConfigureIntegration" */ 'sentry/views/organizationIntegrations/docIntegrationDetailedView'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -848,7 +850,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "IntegrationListDirectory" */ 'app/views/organizationIntegrations/integrationListDirectory'
+              /* webpackChunkName: "IntegrationListDirectory" */ 'sentry/views/organizationIntegrations/integrationListDirectory'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -858,7 +860,7 @@ function routes() {
           path=":integrationSlug"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "IntegrationDetailedView" */ 'app/views/organizationIntegrations/integrationDetailedView'
+              /* webpackChunkName: "IntegrationDetailedView" */ 'sentry/views/organizationIntegrations/integrationDetailedView'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -868,7 +870,7 @@ function routes() {
           path=":providerKey/:integrationId/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ConfigureIntegration" */ 'app/views/settings/organizationIntegrations/configureIntegration'
+              /* webpackChunkName: "ConfigureIntegration" */ 'sentry/views/settings/organizationIntegrations/configureIntegration'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -879,7 +881,7 @@ function routes() {
         <IndexRoute
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationDeveloperSettings" */ 'app/views/settings/organizationDeveloperSettings'
+              /* webpackChunkName: "OrganizationDeveloperSettings" */ 'sentry/views/settings/organizationDeveloperSettings'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -889,7 +891,7 @@ function routes() {
           path="new-public/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "sentryApplicationDetails" */ 'app/views/settings/organizationDeveloperSettings/sentryApplicationDetails'
+              /* webpackChunkName: "sentryApplicationDetails" */ 'sentry/views/settings/organizationDeveloperSettings/sentryApplicationDetails'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -899,7 +901,7 @@ function routes() {
           path="new-internal/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "sentryApplicationDetails" */ 'app/views/settings/organizationDeveloperSettings/sentryApplicationDetails'
+              /* webpackChunkName: "sentryApplicationDetails" */ 'sentry/views/settings/organizationDeveloperSettings/sentryApplicationDetails'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -909,7 +911,7 @@ function routes() {
           path=":appSlug/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "sentryApplicationDetails" */ 'app/views/settings/organizationDeveloperSettings/sentryApplicationDetails'
+              /* webpackChunkName: "sentryApplicationDetails" */ 'sentry/views/settings/organizationDeveloperSettings/sentryApplicationDetails'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -919,7 +921,7 @@ function routes() {
           path=":appSlug/dashboard/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "SentryApplicationDashboard" */ 'app/views/settings/organizationDeveloperSettings/sentryApplicationDashboard'
+              /* webpackChunkName: "SentryApplicationDashboard" */ 'sentry/views/settings/organizationDeveloperSettings/sentryApplicationDashboard'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -934,7 +936,7 @@ function routes() {
         path="/accept/:memberId/:token/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AcceptOrganizationInvite" */ 'app/views/acceptOrganizationInvite'
+            /* webpackChunkName: "AcceptOrganizationInvite" */ 'sentry/views/acceptOrganizationInvite'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -943,7 +945,7 @@ function routes() {
         path="/accept-transfer/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AcceptProjectTransfer" */ 'app/views/acceptProjectTransfer'
+            /* webpackChunkName: "AcceptProjectTransfer" */ 'sentry/views/acceptProjectTransfer'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -952,7 +954,7 @@ function routes() {
         path="/extensions/external-install/:providerId/:installationId"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AcceptProjectTransfer" */ 'app/views/integrationInstallation'
+            /* webpackChunkName: "AcceptProjectTransfer" */ 'sentry/views/integrationInstallation'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -962,7 +964,7 @@ function routes() {
         path="/extensions/vsts/link/"
         getComponent={(_loc, cb) =>
           import(
-            /* webpackChunkName: "VSTSOrganizationLink" */ 'app/views/vstsOrganizationLink'
+            /* webpackChunkName: "VSTSOrganizationLink" */ 'sentry/views/vstsOrganizationLink'
           ).then(lazyLoad(cb))
         }
       />
@@ -971,7 +973,7 @@ function routes() {
         path="/sentry-apps/:sentryAppSlug/external-install/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "AcceptProjectTransfer" */ 'app/views/sentryAppExternalInstallation'
+            /* webpackChunkName: "AcceptProjectTransfer" */ 'sentry/views/sentryAppExternalInstallation'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -981,7 +983,7 @@ function routes() {
         <Route path="/auth/login/" component={errorHandler(AuthLayout)}>
           <IndexRoute
             componentPromise={() =>
-              import(/* webpackChunkName: "AuthLogin" */ 'app/views/auth/login')
+              import(/* webpackChunkName: "AuthLogin" */ 'sentry/views/auth/login')
             }
             component={errorHandler(LazyLoad)}
           />
@@ -995,7 +997,7 @@ function routes() {
         path="/share/issue/:shareId/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "SharedGroupDetails" */ 'app/views/sharedGroupDetails/sharedGroupDetails'
+            /* webpackChunkName: "SharedGroupDetails" */ 'sentry/views/sharedGroupDetails/sharedGroupDetails'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -1005,7 +1007,7 @@ function routes() {
         path="/organizations/new/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationCreate" */ 'app/views/organizationCreate'
+            /* webpackChunkName: "OrganizationCreate" */ 'sentry/views/organizationCreate'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -1015,7 +1017,7 @@ function routes() {
         path="/organizations/:orgId/data-export/:dataExportId"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "DataDownloadView" */ 'app/views/dataExport/dataDownload'
+            /* webpackChunkName: "DataDownloadView" */ 'sentry/views/dataExport/dataDownload'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -1025,7 +1027,7 @@ function routes() {
         path="/join-request/:orgId/"
         componentPromise={() =>
           import(
-            /* webpackChunkName: "OrganizationJoinRequest" */ 'app/views/organizationJoinRequest'
+            /* webpackChunkName: "OrganizationJoinRequest" */ 'sentry/views/organizationJoinRequest'
           )
         }
         component={errorHandler(LazyLoad)}
@@ -1036,7 +1038,9 @@ function routes() {
         <Route
           path=":step/"
           componentPromise={() =>
-            import(/* webpackChunkName: "Onboarding" */ 'app/views/onboarding/onboarding')
+            import(
+              /* webpackChunkName: "Onboarding" */ 'sentry/views/onboarding/onboarding'
+            )
           }
           component={errorHandler(LazyLoad)}
         />
@@ -1048,7 +1052,7 @@ function routes() {
           <IndexRoute
             getComponent={(_loc, cb) =>
               import(
-                /* webpackChunkName: "SettingsIndex" */ 'app/views/settings/settingsIndex'
+                /* webpackChunkName: "SettingsIndex" */ 'sentry/views/settings/settingsIndex'
               ).then(lazyLoad(cb))
             }
           />
@@ -1058,7 +1062,7 @@ function routes() {
             name="Account"
             getComponent={(_loc, cb) =>
               import(
-                /* webpackChunkName: "AccountSettingsLayout" */ 'app/views/settings/account/accountSettingsLayout'
+                /* webpackChunkName: "AccountSettingsLayout" */ 'sentry/views/settings/account/accountSettingsLayout'
               ).then(lazyLoad(cb))
             }
           >
@@ -1069,7 +1073,7 @@ function routes() {
             <Route
               getComponent={(_loc, cb) =>
                 import(
-                  /* webpackChunkName: "OrganizationSettingsLayout" */ 'app/views/settings/organization/organizationSettingsLayout'
+                  /* webpackChunkName: "OrganizationSettingsLayout" */ 'sentry/views/settings/organization/organizationSettingsLayout'
                 ).then(lazyLoad(cb))
               }
             >
@@ -1082,7 +1086,7 @@ function routes() {
               path="projects/:projectId/"
               getComponent={(_loc, cb) =>
                 import(
-                  /* webpackChunkName: "ProjectSettingsLayout" */ 'app/views/settings/project/projectSettingsLayout'
+                  /* webpackChunkName: "ProjectSettingsLayout" */ 'sentry/views/settings/project/projectSettingsLayout'
                 ).then(lazyLoad(cb))
               }
             >
@@ -1114,7 +1118,7 @@ function routes() {
           path="/organizations/:orgId/projects/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectsDashboard" */ 'app/views/projectsDashboard'
+              /* webpackChunkName: "ProjectsDashboard" */ 'sentry/views/projectsDashboard'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -1123,14 +1127,16 @@ function routes() {
         <Route
           path="/organizations/:orgId/dashboards/"
           componentPromise={() =>
-            import(/* webpackChunkName: "DashboardsContainer" */ 'app/views/dashboards')
+            import(
+              /* webpackChunkName: "DashboardsContainer" */ 'sentry/views/dashboards'
+            )
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OverviewDashboard" */ 'app/views/dashboards/overviewDashboard'
+                /* webpackChunkName: "OverviewDashboard" */ 'sentry/views/dashboards/overviewDashboard'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1140,7 +1146,7 @@ function routes() {
         <Route
           path="/organizations/:orgId/user-feedback/"
           componentPromise={() =>
-            import(/* webpackChunkName: "UserFeedback" */ 'app/views/userFeedback')
+            import(/* webpackChunkName: "UserFeedback" */ 'sentry/views/userFeedback')
           }
           component={errorHandler(LazyLoad)}
         />
@@ -1160,7 +1166,7 @@ function routes() {
           path="/organizations/:orgId/issues/:groupId/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationGroupDetails" */ 'app/views/organizationGroupDetails'
+              /* webpackChunkName: "OrganizationGroupDetails" */ 'sentry/views/organizationGroupDetails'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -1168,7 +1174,7 @@ function routes() {
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationGroupEventDetails" */ 'app/views/organizationGroupDetails/groupEventDetails'
+                /* webpackChunkName: "OrganizationGroupEventDetails" */ 'sentry/views/organizationGroupDetails/groupEventDetails'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1177,7 +1183,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/activity/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "GroupActivity" */ 'app/views/organizationGroupDetails/groupActivity'
+                /* webpackChunkName: "GroupActivity" */ 'sentry/views/organizationGroupDetails/groupActivity'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1186,7 +1192,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/events/:eventId/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationGroupEventDetails" */ 'app/views/organizationGroupDetails/groupEventDetails'
+                /* webpackChunkName: "OrganizationGroupEventDetails" */ 'sentry/views/organizationGroupDetails/groupEventDetails'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1195,7 +1201,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/events/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationGroupEvents" */ 'app/views/organizationGroupDetails/groupEvents'
+                /* webpackChunkName: "OrganizationGroupEvents" */ 'sentry/views/organizationGroupDetails/groupEvents'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1204,7 +1210,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/tags/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationGroupTags" */ 'app/views/organizationGroupDetails/groupTags'
+                /* webpackChunkName: "OrganizationGroupTags" */ 'sentry/views/organizationGroupDetails/groupTags'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1213,7 +1219,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/tags/:tagKey/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationGroupTagsValues" */ 'app/views/organizationGroupDetails/groupTagValues'
+                /* webpackChunkName: "OrganizationGroupTagsValues" */ 'sentry/views/organizationGroupDetails/groupTagValues'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1222,7 +1228,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/feedback/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationGroupUserFeedback" */ 'app/views/organizationGroupDetails/groupUserFeedback'
+                /* webpackChunkName: "OrganizationGroupUserFeedback" */ 'sentry/views/organizationGroupDetails/groupUserFeedback'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1231,7 +1237,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/attachments/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "GroupEventAttachments" */ 'app/views/organizationGroupDetails/groupEventAttachments'
+                /* webpackChunkName: "GroupEventAttachments" */ 'sentry/views/organizationGroupDetails/groupEventAttachments'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1240,7 +1246,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/similar/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "GroupSimilarView" */ 'app/views/organizationGroupDetails/groupSimilar'
+                /* webpackChunkName: "GroupSimilarView" */ 'sentry/views/organizationGroupDetails/groupSimilar'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1249,7 +1255,7 @@ function routes() {
             path="/organizations/:orgId/issues/:groupId/merged/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "GroupSimilarView" */ 'app/views/organizationGroupDetails/groupMerged'
+                /* webpackChunkName: "GroupSimilarView" */ 'sentry/views/organizationGroupDetails/groupMerged'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1259,13 +1265,13 @@ function routes() {
         <Route
           path="/organizations/:orgId/alerts/"
           componentPromise={() =>
-            import(/* webpackChunkName: "AlertsContainer" */ 'app/views/alerts')
+            import(/* webpackChunkName: "AlertsContainer" */ 'sentry/views/alerts')
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
-              import(/* webpackChunkName: "AlertsList" */ 'app/views/alerts/list')
+              import(/* webpackChunkName: "AlertsList" */ 'sentry/views/alerts/list')
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1273,7 +1279,9 @@ function routes() {
           <Route
             path=":alertId/"
             componentPromise={() =>
-              import(/* webpackChunkName: "AlertsDetails" */ 'app/views/alerts/details')
+              import(
+                /* webpackChunkName: "AlertsDetails" */ 'sentry/views/alerts/details'
+              )
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1282,13 +1290,13 @@ function routes() {
         <Route
           path="/organizations/:orgId/events/"
           componentPromise={() =>
-            import(/* webpackChunkName: "EventsContainer" */ 'app/views/events')
+            import(/* webpackChunkName: "EventsContainer" */ 'sentry/views/events')
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
-              import(/* webpackChunkName: "Events" */ 'app/views/events/events')
+              import(/* webpackChunkName: "Events" */ 'sentry/views/events/events')
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1297,20 +1305,22 @@ function routes() {
         <Route
           path="/organizations/:orgId/monitors/"
           componentPromise={() =>
-            import(/* webpackChunkName: "MonitorsContainer" */ 'app/views/monitors')
+            import(/* webpackChunkName: "MonitorsContainer" */ 'sentry/views/monitors')
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
-              import(/* webpackChunkName: "Monitors" */ 'app/views/monitors/monitors')
+              import(/* webpackChunkName: "Monitors" */ 'sentry/views/monitors/monitors')
             }
             component={errorHandler(LazyLoad)}
           />
           <Route
             path="/organizations/:orgId/monitors/create/"
             componentPromise={() =>
-              import(/* webpackChunkName: "MonitorCreate" */ 'app/views/monitors/create')
+              import(
+                /* webpackChunkName: "MonitorCreate" */ 'sentry/views/monitors/create'
+              )
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1318,7 +1328,7 @@ function routes() {
             path="/organizations/:orgId/monitors/:monitorId/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "MonitorDetails" */ 'app/views/monitors/details'
+                /* webpackChunkName: "MonitorDetails" */ 'sentry/views/monitors/details'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1326,7 +1336,7 @@ function routes() {
           <Route
             path="/organizations/:orgId/monitors/:monitorId/edit/"
             componentPromise={() =>
-              import(/* webpackChunkName: "MonitorEdit" */ 'app/views/monitors/edit')
+              import(/* webpackChunkName: "MonitorEdit" */ 'sentry/views/monitors/edit')
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1338,9 +1348,11 @@ function routes() {
             decideReleasesVersion(v2 =>
               v2
                 ? import(
-                    /* webpackChunkName: "ReleasesV2Container" */ 'app/views/releasesV2'
+                    /* webpackChunkName: "ReleasesV2Container" */ 'sentry/views/releasesV2'
                   )
-                : import(/* webpackChunkName: "ReleasesContainer" */ 'app/views/releases')
+                : import(
+                    /* webpackChunkName: "ReleasesContainer" */ 'sentry/views/releases'
+                  )
             )
           }
           component={errorHandler(LazyLoad)}
@@ -1350,9 +1362,11 @@ function routes() {
               decideReleasesVersion(v2 =>
                 v2
                   ? import(
-                      /* webpackChunkName: "ReleasesV2List" */ 'app/views/releasesV2/list'
+                      /* webpackChunkName: "ReleasesV2List" */ 'sentry/views/releasesV2/list'
                     )
-                  : import(/* webpackChunkName: "Releases" */ 'app/views/releases/list')
+                  : import(
+                      /* webpackChunkName: "Releases" */ 'sentry/views/releases/list'
+                    )
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1363,10 +1377,10 @@ function routes() {
               decideReleasesVersion(v2 =>
                 v2
                   ? import(
-                      /* webpackChunkName: "ReleasesV2Detail" */ 'app/views/releasesV2/detail'
+                      /* webpackChunkName: "ReleasesV2Detail" */ 'sentry/views/releasesV2/detail'
                     )
                   : import(
-                      /* webpackChunkName: "ReleaseDetail" */ 'app/views/releases/detail'
+                      /* webpackChunkName: "ReleaseDetail" */ 'sentry/views/releases/detail'
                     )
               )
             }
@@ -1377,10 +1391,10 @@ function routes() {
                 decideReleasesVersion(v2 =>
                   v2
                     ? import(
-                        /* webpackChunkName: "ReleasesV2DetailOverview" */ 'app/views/releasesV2/detail/overview'
+                        /* webpackChunkName: "ReleasesV2DetailOverview" */ 'sentry/views/releasesV2/detail/overview'
                       )
                     : import(
-                        /* webpackChunkName: "ReleaseOverview" */ 'app/views/releases/detail/releaseOverview'
+                        /* webpackChunkName: "ReleaseOverview" */ 'sentry/views/releases/detail/releaseOverview'
                       )
                 )
               }
@@ -1392,10 +1406,10 @@ function routes() {
                 decideReleasesVersion(v2 =>
                   v2
                     ? import(
-                        /* webpackChunkName: "ReleasesV2DetailCommits" */ 'app/views/releasesV2/detail/commits'
+                        /* webpackChunkName: "ReleasesV2DetailCommits" */ 'sentry/views/releasesV2/detail/commits'
                       )
                     : import(
-                        /* webpackChunkName: "ReleaseCommits" */ 'app/views/releases/detail/releaseCommits'
+                        /* webpackChunkName: "ReleaseCommits" */ 'sentry/views/releases/detail/releaseCommits'
                       )
                 )
               }
@@ -1407,10 +1421,10 @@ function routes() {
                 decideReleasesVersion(v2 =>
                   v2
                     ? import(
-                        /* webpackChunkName: "ReleasesV2DetailArtifacts" */ 'app/views/releasesV2/detail/artifacts'
+                        /* webpackChunkName: "ReleasesV2DetailArtifacts" */ 'sentry/views/releasesV2/detail/artifacts'
                       )
                     : import(
-                        /* webpackChunkName: "ReleaseArtifacts" */ 'app/views/releases/detail/releaseArtifacts'
+                        /* webpackChunkName: "ReleaseArtifacts" */ 'sentry/views/releases/detail/releaseArtifacts'
                       )
                 )
               }
@@ -1422,7 +1436,7 @@ function routes() {
                 decideReleasesVersion(v2 =>
                   v2
                     ? import(
-                        /* webpackChunkName: "ReleasesV2DetailFilesChanged" */ 'app/views/releasesV2/detail/filesChanged'
+                        /* webpackChunkName: "ReleasesV2DetailFilesChanged" */ 'sentry/views/releasesV2/detail/filesChanged'
                       )
                     : Promise.resolve(({router, params}) => (
                         <RedirectTo
@@ -1450,7 +1464,7 @@ function routes() {
                         />
                       ))
                     : import(
-                        /* webpackChunkName: "ReleaseNewEvents" */ 'app/views/releases/detail/releaseNewEvents'
+                        /* webpackChunkName: "ReleaseNewEvents" */ 'sentry/views/releases/detail/releaseNewEvents'
                       )
                 )
               }
@@ -1470,7 +1484,7 @@ function routes() {
                         />
                       ))
                     : import(
-                        /* webpackChunkName: "ReleaseAllEvents" */ 'app/views/releases/detail/releaseAllEvents'
+                        /* webpackChunkName: "ReleaseAllEvents" */ 'sentry/views/releases/detail/releaseAllEvents'
                       )
                 )
               }
@@ -1483,7 +1497,7 @@ function routes() {
           path="/organizations/:orgId/activity/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "OrganizationActivity" */ 'app/views/organizationActivity'
+              /* webpackChunkName: "OrganizationActivity" */ 'sentry/views/organizationActivity'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -1502,14 +1516,14 @@ function routes() {
         <Route
           path="/organizations/:orgId/discover/queries/"
           componentPromise={() =>
-            import(/* webpackChunkName: "DiscoverV2Container" */ 'app/views/eventsV2')
+            import(/* webpackChunkName: "DiscoverV2Container" */ 'sentry/views/eventsV2')
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "DiscoverV2Landing" */ 'app/views/eventsV2/landing'
+                /* webpackChunkName: "DiscoverV2Landing" */ 'sentry/views/eventsV2/landing'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1518,14 +1532,14 @@ function routes() {
         <Route
           path="/organizations/:orgId/discover/results/"
           componentPromise={() =>
-            import(/* webpackChunkName: "DiscoverV2Container" */ 'app/views/eventsV2')
+            import(/* webpackChunkName: "DiscoverV2Container" */ 'sentry/views/eventsV2')
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "DiscoverV2Results" */ 'app/views/eventsV2/results'
+                /* webpackChunkName: "DiscoverV2Results" */ 'sentry/views/eventsV2/results'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1534,14 +1548,14 @@ function routes() {
         <Route
           path="/organizations/:orgId/discover/:eventSlug/"
           componentPromise={() =>
-            import(/* webpackChunkName: "DiscoverV2Container" */ 'app/views/eventsV2')
+            import(/* webpackChunkName: "DiscoverV2Container" */ 'sentry/views/eventsV2')
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "DiscoverV2Details" */ 'app/views/eventsV2/eventDetails'
+                /* webpackChunkName: "DiscoverV2Details" */ 'sentry/views/eventsV2/eventDetails'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1550,14 +1564,16 @@ function routes() {
         <Route
           path="/organizations/:orgId/performance/"
           componentPromise={() =>
-            import(/* webpackChunkName: "PerformanceContainer" */ 'app/views/performance')
+            import(
+              /* webpackChunkName: "PerformanceContainer" */ 'sentry/views/performance'
+            )
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "PerformanceLanding" */ 'app/views/performance/landing'
+                /* webpackChunkName: "PerformanceLanding" */ 'sentry/views/performance/landing'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1566,14 +1582,16 @@ function routes() {
         <Route
           path="/organizations/:orgId/performance/summary/"
           componentPromise={() =>
-            import(/* webpackChunkName: "PerformanceContainer" */ 'app/views/performance')
+            import(
+              /* webpackChunkName: "PerformanceContainer" */ 'sentry/views/performance'
+            )
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "PerformanceTransactionSummary" */ 'app/views/performance/transactionSummary'
+                /* webpackChunkName: "PerformanceTransactionSummary" */ 'sentry/views/performance/transactionSummary'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1584,14 +1602,14 @@ function routes() {
         <Route
           path="/manage/"
           componentPromise={() =>
-            import(/* webpackChunkName: "AdminLayout" */ 'app/views/admin/adminLayout')
+            import(/* webpackChunkName: "AdminLayout" */ 'sentry/views/admin/adminLayout')
           }
           component={errorHandler(LazyLoad)}
         >
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AdminOverview" */ 'app/views/admin/adminOverview'
+                /* webpackChunkName: "AdminOverview" */ 'sentry/views/admin/adminOverview'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1599,14 +1617,18 @@ function routes() {
           <Route
             path="buffer/"
             componentPromise={() =>
-              import(/* webpackChunkName: "AdminBuffer" */ 'app/views/admin/adminBuffer')
+              import(
+                /* webpackChunkName: "AdminBuffer" */ 'sentry/views/admin/adminBuffer'
+              )
             }
             component={errorHandler(LazyLoad)}
           />
           <Route
             path="relays/"
             componentPromise={() =>
-              import(/* webpackChunkName: "AdminRelays" */ 'app/views/admin/adminRelays')
+              import(
+                /* webpackChunkName: "AdminRelays" */ 'sentry/views/admin/adminRelays'
+              )
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1614,7 +1636,7 @@ function routes() {
             path="organizations/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AdminOrganizations" */ 'app/views/admin/adminOrganizations'
+                /* webpackChunkName: "AdminOrganizations" */ 'sentry/views/admin/adminOrganizations'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1623,7 +1645,7 @@ function routes() {
             path="projects/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AdminProjects" */ 'app/views/admin/adminProjects'
+                /* webpackChunkName: "AdminProjects" */ 'sentry/views/admin/adminProjects'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1631,14 +1653,16 @@ function routes() {
           <Route
             path="queue/"
             componentPromise={() =>
-              import(/* webpackChunkName: "AdminQueue" */ 'app/views/admin/adminQueue')
+              import(/* webpackChunkName: "AdminQueue" */ 'sentry/views/admin/adminQueue')
             }
             component={errorHandler(LazyLoad)}
           />
           <Route
             path="quotas/"
             componentPromise={() =>
-              import(/* webpackChunkName: "AdminQuotas" */ 'app/views/admin/adminQuotas')
+              import(
+                /* webpackChunkName: "AdminQuotas" */ 'sentry/views/admin/adminQuotas'
+              )
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1646,7 +1670,7 @@ function routes() {
             path="settings/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AdminSettings" */ 'app/views/admin/adminSettings'
+                /* webpackChunkName: "AdminSettings" */ 'sentry/views/admin/adminSettings'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1654,7 +1678,9 @@ function routes() {
           <Route path="users/">
             <IndexRoute
               componentPromise={() =>
-                import(/* webpackChunkName: "AdminUsers" */ 'app/views/admin/adminUsers')
+                import(
+                  /* webpackChunkName: "AdminUsers" */ 'sentry/views/admin/adminUsers'
+                )
               }
               component={errorHandler(LazyLoad)}
             />
@@ -1662,7 +1688,7 @@ function routes() {
               path=":id"
               componentPromise={() =>
                 import(
-                  /* webpackChunkName: "AdminUserEdit" */ 'app/views/admin/adminUserEdit'
+                  /* webpackChunkName: "AdminUserEdit" */ 'sentry/views/admin/adminUserEdit'
                 )
               }
               component={errorHandler(LazyLoad)}
@@ -1671,7 +1697,7 @@ function routes() {
           <Route
             path="status/mail/"
             componentPromise={() =>
-              import(/* webpackChunkName: "AdminMail" */ 'app/views/admin/adminMail')
+              import(/* webpackChunkName: "AdminMail" */ 'sentry/views/admin/adminMail')
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1679,7 +1705,7 @@ function routes() {
             path="status/environment/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AdminEnvironment" */ 'app/views/admin/adminEnvironment'
+                /* webpackChunkName: "AdminEnvironment" */ 'sentry/views/admin/adminEnvironment'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1688,7 +1714,7 @@ function routes() {
             path="status/packages/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AdminPackages" */ 'app/views/admin/adminPackages'
+                /* webpackChunkName: "AdminPackages" */ 'sentry/views/admin/adminPackages'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1697,7 +1723,7 @@ function routes() {
             path="status/warnings/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "AdminWarnings" */ 'app/views/admin/adminWarnings'
+                /* webpackChunkName: "AdminWarnings" */ 'sentry/views/admin/adminWarnings'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1714,7 +1740,7 @@ function routes() {
             path="/organizations/:orgId/stats/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "OrganizationStats" */ 'app/views/organizationStats'
+                /* webpackChunkName: "OrganizationStats" */ 'sentry/views/organizationStats'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1723,7 +1749,7 @@ function routes() {
           <Route
             path="/organizations/:orgId/discover/"
             componentPromise={() =>
-              import(/* webpackChunkName: "DiscoverContainer" */ 'app/views/discover')
+              import(/* webpackChunkName: "DiscoverContainer" */ 'sentry/views/discover')
             }
             component={errorHandler(LazyLoad)}
           >
@@ -1735,7 +1761,7 @@ function routes() {
             path="/organizations/:orgId/projects/:projectId/getting-started/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ProjectGettingStarted" */ 'app/views/projectInstall/gettingStarted'
+                /* webpackChunkName: "ProjectGettingStarted" */ 'sentry/views/projectInstall/gettingStarted'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1743,7 +1769,7 @@ function routes() {
             <IndexRoute
               componentPromise={() =>
                 import(
-                  /* webpackChunkName: "ProjectInstallOverview" */ 'app/views/projectInstall/overview'
+                  /* webpackChunkName: "ProjectInstallOverview" */ 'sentry/views/projectInstall/overview'
                 )
               }
               component={errorHandler(LazyLoad)}
@@ -1752,7 +1778,7 @@ function routes() {
               path=":platform/"
               componentPromise={() =>
                 import(
-                  /* webpackChunkName: "ProjectInstallPlatform" */ 'app/views/projectInstall/platform'
+                  /* webpackChunkName: "ProjectInstallPlatform" */ 'sentry/views/projectInstall/platform'
                 )
               }
               component={errorHandler(LazyLoad)}
@@ -1762,7 +1788,7 @@ function routes() {
           <Route
             path="/organizations/:orgId/teams/new/"
             componentPromise={() =>
-              import(/* webpackChunkName: "TeamCreate" */ 'app/views/teamCreate')
+              import(/* webpackChunkName: "TeamCreate" */ 'sentry/views/teamCreate')
             }
             component={errorHandler(LazyLoad)}
           />
@@ -1825,7 +1851,7 @@ function routes() {
             path="/organizations/:orgId/projects/new/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "NewProject" */ 'app/views/projectInstall/newProject'
+                /* webpackChunkName: "NewProject" */ 'sentry/views/projectInstall/newProject'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1835,7 +1861,7 @@ function routes() {
           path=":projectId/getting-started/"
           componentPromise={() =>
             import(
-              /* webpackChunkName: "ProjectGettingStarted" */ 'app/views/projectInstall/gettingStarted'
+              /* webpackChunkName: "ProjectGettingStarted" */ 'sentry/views/projectInstall/gettingStarted'
             )
           }
           component={errorHandler(LazyLoad)}
@@ -1843,7 +1869,7 @@ function routes() {
           <IndexRoute
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ProjectInstallOverview" */ 'app/views/projectInstall/overview'
+                /* webpackChunkName: "ProjectInstallOverview" */ 'sentry/views/projectInstall/overview'
               )
             }
             component={errorHandler(LazyLoad)}
@@ -1852,7 +1878,7 @@ function routes() {
             path=":platform/"
             componentPromise={() =>
               import(
-                /* webpackChunkName: "ProjectInstallPlatform" */ 'app/views/projectInstall/platform'
+                /* webpackChunkName: "ProjectInstallPlatform" */ 'sentry/views/projectInstall/platform'
               )
             }
             component={errorHandler(LazyLoad)}

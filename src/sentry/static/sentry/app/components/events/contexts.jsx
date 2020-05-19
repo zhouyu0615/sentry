@@ -6,13 +6,14 @@ import EventDataSection from 'sentry/components/events/eventDataSection';
 import plugins from 'sentry/plugins';
 
 const CONTEXT_TYPES = {
-  default: require('app/components/events/contexts/default').default,
-  app: require('app/components/events/contexts/app/app').default,
-  device: require('app/components/events/contexts/device/device').default,
-  os: require('app/components/events/contexts/operatingSystem/operatingSystem').default,
-  runtime: require('app/components/events/contexts/runtime/runtime').default,
-  user: require('app/components/events/contexts/user/user').default,
-  gpu: require('app/components/events/contexts/gpu/gpu').default,
+  default: require('sentry/components/events/contexts/default').default,
+  app: require('sentry/components/events/contexts/app/app').default,
+  device: require('sentry/components/events/contexts/device/device').default,
+  os: require('sentry/components/events/contexts/operatingSystem/operatingSystem')
+    .default,
+  runtime: require('sentry/components/events/contexts/runtime/runtime').default,
+  user: require('sentry/components/events/contexts/user/user').default,
+  gpu: require('sentry/components/events/contexts/gpu/gpu').default,
 };
 
 function getContextComponent(type) {

@@ -4,8 +4,8 @@ import 'bootstrap/js/tab';
 import 'bootstrap/js/dropdown';
 import 'focus-visible';
 
-import 'app/utils/statics-setup';
-import 'app/utils/emotion-setup';
+import 'sentry/utils/statics-setup';
+import 'sentry/utils/emotion-setup';
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -120,7 +120,7 @@ const render = (Component: React.ComponentType) => {
 async function loadPasswordStrength(callback: Function) {
   try {
     const module = await import(
-      /* webpackChunkName: "passwordStrength" */ 'app/components/passwordStrength'
+      /* webpackChunkName: "passwordStrength" */ 'sentry/components/passwordStrength'
     );
     callback(module);
   } catch (err) {
@@ -159,9 +159,9 @@ const globals = {
 // modules that are not compiled with the sentry bundle.
 globals.SentryApp = {
   // The following components are used in sentry-plugins.
-  Form: require('app/components/forms/form').default,
-  FormState: require('app/components/forms/index').FormState,
-  LoadingIndicator: require('app/components/loadingIndicator').default,
+  Form: require('sentry/components/forms/form').default,
+  FormState: require('sentry/components/forms/index').FormState,
+  LoadingIndicator: require('sentry/components/loadingIndicator').default,
   plugins: {
     add: plugins.add,
     addContext: plugins.addContext,
@@ -171,11 +171,11 @@ globals.SentryApp = {
 
   // The following components are used in legacy django HTML views
   passwordStrength: {load: loadPasswordStrength},
-  U2fSign: require('app/components/u2f/u2fsign').default,
-  ConfigStore: require('app/stores/configStore').default,
-  SystemAlerts: require('app/views/app/systemAlerts').default,
-  Indicators: require('app/components/indicators').default,
-  SetupWizard: require('app/components/setupWizard').default,
+  U2fSign: require('sentry/components/u2f/u2fsign').default,
+  ConfigStore: require('sentry/stores/configStore').default,
+  SystemAlerts: require('sentry/views/app/systemAlerts').default,
+  Indicators: require('sentry/components/indicators').default,
+  SetupWizard: require('sentry/components/setupWizard').default,
 };
 
 // Make globals available on the window object
