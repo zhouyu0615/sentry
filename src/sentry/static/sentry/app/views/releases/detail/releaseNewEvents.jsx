@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 import SentryTypes from 'sentry/sentryTypes';
 import Alert from 'sentry/components/alert';
-import GroupList from 'sentry/components/issues//groupList';
+import GroupList from 'sentry/components/issues/groupList';
 import {t} from 'sentry/locale';
 
 const ReleaseNewEvents = props => {
