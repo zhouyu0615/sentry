@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import space from 'app/styles/space';
-import {t, tct} from 'app/locale';
-import {Panel, PanelAlert, PanelBody, PanelHeader} from 'app/components/panels';
-import {Client} from 'app/api';
-import {addErrorMessage, addSuccessMessage} from 'app/actionCreators/indicator';
-import ExternalLink from 'app/components/links/externalLink';
-import SentryTypes from 'app/sentryTypes';
-import Button from 'app/components/button';
+import space from 'sentry/styles/space';
+import {t, tct} from 'sentry/locale';
+import {Panel, PanelAlert, PanelBody, PanelHeader} from 'sentry/components/panels';
+import {Client} from 'sentry/api';
+import {addErrorMessage, addSuccessMessage} from 'sentry/actionCreators/indicator';
+import ExternalLink from 'sentry/components/links/externalLink';
+import SentryTypes from 'sentry/sentryTypes';
+import Button from 'sentry/components/button';
 
 import {defaultSuggestions as sourceDefaultSuggestions} from './dataPrivacyRulesForm/dataPrivacyRulesFormSourceSuggestions';
 import DataPrivacyRulesModal from './dataPrivacyRulesModal';

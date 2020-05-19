@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import BarChart from 'app/components/barChart';
+import BarChart from 'sentry/components/barChart';
 
 export default class Chart extends React.Component {
   static propTypes = {

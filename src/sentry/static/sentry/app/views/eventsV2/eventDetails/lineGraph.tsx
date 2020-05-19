@@ -23,7 +23,10 @@ import {tokenizeSearch, stringifyQueryObject} from 'sentry/utils/tokenizeSearch'
 import theme from 'sentry/utils/theme';
 import {Event, Organization, GlobalSelection} from 'sentry/types';
 import EventView from 'sentry/utils/discover/eventView';
-import {eventDetailsRouteWithEventView, generateEventSlug} from 'sentry/utils/discover/urls';
+import {
+  eventDetailsRouteWithEventView,
+  generateEventSlug,
+} from 'sentry/utils/discover/urls';
 
 import {PIN_ICON} from '../data';
 

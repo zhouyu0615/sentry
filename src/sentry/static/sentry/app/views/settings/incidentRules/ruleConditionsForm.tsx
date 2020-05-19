@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {Client} from 'app/api';
-import {Environment, Organization} from 'app/types';
-import {Panel, PanelBody, PanelHeader} from 'app/components/panels';
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {defined} from 'app/utils';
-import {getDisplayName} from 'app/utils/environment';
-import {t, tct} from 'app/locale';
-import FormField from 'app/views/settings/components/forms/formField';
-import SearchBar from 'app/views/events/searchBar';
-import SelectField from 'app/views/settings/components/forms/selectField';
-import space from 'app/styles/space';
-import theme from 'app/utils/theme';
-import Tooltip from 'app/components/tooltip';
+import {Client} from 'sentry/api';
+import {Environment, Organization} from 'sentry/types';
+import {Panel, PanelBody, PanelHeader} from 'sentry/components/panels';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {defined} from 'sentry/utils';
+import {getDisplayName} from 'sentry/utils/environment';
+import {t, tct} from 'sentry/locale';
+import FormField from 'sentry/views/settings/components/forms/formField';
+import SearchBar from 'sentry/views/events/searchBar';
+import SelectField from 'sentry/views/settings/components/forms/selectField';
+import space from 'sentry/styles/space';
+import theme from 'sentry/utils/theme';
+import Tooltip from 'sentry/components/tooltip';
 
 import {AlertRuleAggregations, TimeWindow, IncidentRule} from './types';
 import getMetricDisplayName from './utils/getMetricDisplayName';

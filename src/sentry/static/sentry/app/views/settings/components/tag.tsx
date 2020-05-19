@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import InlineSvg from 'app/components/inlineSvg';
-import {Theme} from 'app/utils/theme';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {Theme} from 'sentry/utils/theme';
 
 type Props = React.HTMLAttributes<HTMLDivElement> & {
   priority?: keyof Theme['badge'] | keyof Theme['alert'];

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import space from 'app/styles/space';
-import {Release} from 'app/types';
-import Version from 'app/components/version';
-import TimeSince from 'app/components/timeSince';
-import DateTime from 'app/components/dateTime';
+import {t} from 'sentry/locale';
+import space from 'sentry/styles/space';
+import {Release} from 'sentry/types';
+import Version from 'sentry/components/version';
+import TimeSince from 'sentry/components/timeSince';
+import DateTime from 'sentry/components/dateTime';
 
 import {SectionHeading, Wrapper} from './styles';
 

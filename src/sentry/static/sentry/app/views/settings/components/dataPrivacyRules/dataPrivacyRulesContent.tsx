@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import space from 'app/styles/space';
-import {defined} from 'app/utils';
-import EmptyMessage from 'app/views/settings/components/emptyMessage';
-import {IconDelete, IconWarning, IconEdit} from 'app/icons';
-import TextOverflow from 'app/components/textOverflow';
-import Button from 'app/components/button';
+import {t} from 'sentry/locale';
+import space from 'sentry/styles/space';
+import {defined} from 'sentry/utils';
+import EmptyMessage from 'sentry/views/settings/components/emptyMessage';
+import {IconDelete, IconWarning, IconEdit} from 'sentry/icons';
+import TextOverflow from 'sentry/components/textOverflow';
+import Button from 'sentry/components/button';
 
 import DataPrivacyRulesModal from './dataPrivacyRulesModal';
 import {getRuleTypeLabel, getMethodTypeLabel} from './dataPrivacyRulesForm/utils';

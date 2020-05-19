@@ -4,7 +4,10 @@ import styled from '@emotion/styled';
 import {Client} from 'sentry/api';
 import {PanelItem} from 'sentry/components/panels';
 import {Repository, RepositoryStatus} from 'sentry/types';
-import {deleteRepository, cancelDeleteRepository} from 'sentry/actionCreators/integrations';
+import {
+  deleteRepository,
+  cancelDeleteRepository,
+} from 'sentry/actionCreators/integrations';
 import {t} from 'sentry/locale';
 import Access from 'sentry/components/acl/access';
 import Button from 'sentry/components/button';

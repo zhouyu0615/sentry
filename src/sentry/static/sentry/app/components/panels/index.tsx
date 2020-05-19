@@ -5,6 +5,9 @@ import PanelFooter from 'sentry/components/panels/panelFooter';
 import PanelItem from 'sentry/components/panels/panelItem';
 import PanelAlert from 'sentry/components/panels/panelAlert';
 
-export {default as PanelTable, PanelTableHeader} from 'sentry/components/panels/panelTable';
+export {
+  default as PanelTable,
+  PanelTableHeader,
+} from 'sentry/components/panels/panelTable';
 
 export {Panel, PanelHeader, PanelBody, PanelFooter, PanelItem, PanelAlert};

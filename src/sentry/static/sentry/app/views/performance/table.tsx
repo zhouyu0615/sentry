@@ -11,7 +11,10 @@ import Pagination from 'sentry/components/pagination';
 import Link from 'sentry/components/links/link';
 import EventView, {EventData, isFieldSortable} from 'sentry/utils/discover/eventView';
 import {TableData, TableDataRow, TableColumn} from 'sentry/views/eventsV2/table/types';
-import GridEditable, {COL_WIDTH_UNDEFINED, GridColumn} from 'sentry/components/gridEditable';
+import GridEditable, {
+  COL_WIDTH_UNDEFINED,
+  GridColumn,
+} from 'sentry/components/gridEditable';
 import SortLink from 'sentry/components/gridEditable/sortLink';
 import HeaderCell from 'sentry/views/eventsV2/table/headerCell';
 import {decodeScalar} from 'sentry/utils/queryString';

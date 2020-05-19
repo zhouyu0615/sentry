@@ -4,7 +4,7 @@ import TextareaAutosize from 'react-autosize-textarea';
 import styled from '@emotion/styled';
 import isPropValid from '@emotion/is-prop-valid';
 
-import {inputStyles} from 'app/styles/input';
+import {inputStyles} from 'sentry/styles/input';
 
 const TextAreaControl = React.forwardRef(({autosize, rows, ...p}, ref) =>
   autosize ? (

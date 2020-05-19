@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {Organization, Project} from 'app/types';
-import {Panel, PanelBody, PanelHeader} from 'app/components/panels';
-import {removeAtArrayIndex} from 'app/utils/removeAtArrayIndex';
-import {replaceAtArrayIndex} from 'app/utils/replaceAtArrayIndex';
-import {t} from 'app/locale';
-import Button from 'app/components/button';
-import {IconDelete} from 'app/icons';
-import CircleIndicator from 'app/components/circleIndicator';
-import TriggerForm from 'app/views/settings/incidentRules/triggers/form';
-import space from 'app/styles/space';
-import withProjects from 'app/utils/withProjects';
+import {Organization, Project} from 'sentry/types';
+import {Panel, PanelBody, PanelHeader} from 'sentry/components/panels';
+import {removeAtArrayIndex} from 'sentry/utils/removeAtArrayIndex';
+import {replaceAtArrayIndex} from 'sentry/utils/replaceAtArrayIndex';
+import {t} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import {IconDelete} from 'sentry/icons';
+import CircleIndicator from 'sentry/components/circleIndicator';
+import TriggerForm from 'sentry/views/settings/incidentRules/triggers/form';
+import space from 'sentry/styles/space';
+import withProjects from 'sentry/utils/withProjects';
 
 import {MetricActionTemplate, Trigger} from '../types';
 

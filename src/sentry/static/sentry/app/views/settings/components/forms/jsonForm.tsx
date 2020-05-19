@@ -5,7 +5,7 @@ import * as Sentry from '@sentry/browser';
 import scrollToElement from 'scroll-to-element';
 import {Location} from 'history';
 
-import {sanitizeQuerySelector} from 'app/utils/sanitizeQuerySelector';
+import {sanitizeQuerySelector} from 'sentry/utils/sanitizeQuerySelector';
 
 import {FieldObject, JsonFormObject} from './type';
 import FieldFromConfig from './fieldFromConfig';

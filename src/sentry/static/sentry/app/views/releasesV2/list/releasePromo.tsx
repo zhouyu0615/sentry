@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {t} from 'app/locale';
-import AsyncView from 'app/views/asyncView';
-import EmptyStateWarning from 'app/components/emptyStateWarning';
-import {Panel} from 'app/components/panels';
-import ReleaseLanding from 'app/views/releases/list/releaseLanding';
+import {t} from 'sentry/locale';
+import AsyncView from 'sentry/views/asyncView';
+import EmptyStateWarning from 'sentry/components/emptyStateWarning';
+import {Panel} from 'sentry/components/panels';
+import ReleaseLanding from 'sentry/views/releases/list/releaseLanding';
 
 type Props = {
   orgSlug: string;

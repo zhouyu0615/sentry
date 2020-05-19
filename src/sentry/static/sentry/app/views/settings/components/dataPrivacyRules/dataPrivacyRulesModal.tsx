@@ -3,10 +3,10 @@ import Modal from 'react-bootstrap/lib/Modal';
 import styled from '@emotion/styled';
 import omit from 'lodash/omit';
 
-import Button from 'app/components/button';
-import ButtonBar from 'app/components/buttonBar';
-import {t} from 'app/locale';
-import {defined} from 'app/utils';
+import Button from 'sentry/components/button';
+import ButtonBar from 'sentry/components/buttonBar';
+import {t} from 'sentry/locale';
+import {defined} from 'sentry/utils';
 
 import DataPrivacyRulesPanelForm from './dataPrivacyRulesForm/dataPrivacyRulesForm';
 import {RuleType, MethodType} from './dataPrivacyRulesForm/types';

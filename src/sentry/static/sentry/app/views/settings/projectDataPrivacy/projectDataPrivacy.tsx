@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Feature from 'app/components/acl/feature';
-import FeatureDisabled from 'app/components/acl/featureDisabled';
-import {PanelAlert} from 'app/components/panels';
-import {t} from 'app/locale';
+import Feature from 'sentry/components/acl/feature';
+import FeatureDisabled from 'sentry/components/acl/featureDisabled';
+import {PanelAlert} from 'sentry/components/panels';
+import {t} from 'sentry/locale';
 
 import ProjectDataPrivacyContent from './projectDataPrivacyContent';
 

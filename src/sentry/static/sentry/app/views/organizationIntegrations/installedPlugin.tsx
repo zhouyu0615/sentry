@@ -15,7 +15,12 @@ import {
   addSuccessMessage,
   addLoadingMessage,
 } from 'sentry/actionCreators/indicator';
-import {PluginNoProject, PluginProjectItem, Organization, AvatarProject} from 'sentry/types';
+import {
+  PluginNoProject,
+  PluginProjectItem,
+  Organization,
+  AvatarProject,
+} from 'sentry/types';
 import {SingleIntegrationEvent} from 'sentry/utils/integrationUtil';
 import space from 'sentry/styles/space';
 import Switch from 'sentry/components/switch';

@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import InlineSvg from 'app/components/inlineSvg';
-import Link from 'app/components/links/link';
-import RepoLabel from 'app/components/repoLabel';
-import TimeSince from 'app/components/timeSince';
+import {t} from 'sentry/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import Link from 'sentry/components/links/link';
+import RepoLabel from 'sentry/components/repoLabel';
+import TimeSince from 'sentry/components/timeSince';
 
 export default class ReleaseDeploys extends React.Component {
   static propTypes = {

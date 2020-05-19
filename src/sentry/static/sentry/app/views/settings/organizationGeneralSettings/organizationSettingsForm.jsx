@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {updateOrganization} from 'app/actionCreators/organizations';
-import AsyncComponent from 'app/components/asyncComponent';
-import AvatarChooser from 'app/components/avatarChooser';
-import Form from 'app/views/settings/components/forms/form';
-import JsonForm from 'app/views/settings/components/forms/jsonForm';
-import SentryTypes from 'app/sentryTypes';
-import organizationSettingsFields from 'app/data/forms/organizationGeneralSettings';
-import withOrganization from 'app/utils/withOrganization';
-import Link from 'app/components/links/link';
-import EmptyMessage from 'app/views/settings/components/emptyMessage';
-import organizationSecurityAndPrivacy from 'app/data/forms/organizationSecurityAndPrivacy';
-import Feature from 'app/components/acl/feature';
-import {t} from 'app/locale';
-import {Panel, PanelHeader} from 'app/components/panels';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {updateOrganization} from 'sentry/actionCreators/organizations';
+import AsyncComponent from 'sentry/components/asyncComponent';
+import AvatarChooser from 'sentry/components/avatarChooser';
+import Form from 'sentry/views/settings/components/forms/form';
+import JsonForm from 'sentry/views/settings/components/forms/jsonForm';
+import SentryTypes from 'sentry/sentryTypes';
+import organizationSettingsFields from 'sentry/data/forms/organizationGeneralSettings';
+import withOrganization from 'sentry/utils/withOrganization';
+import Link from 'sentry/components/links/link';
+import EmptyMessage from 'sentry/views/settings/components/emptyMessage';
+import organizationSecurityAndPrivacy from 'sentry/data/forms/organizationSecurityAndPrivacy';
+import Feature from 'sentry/components/acl/feature';
+import {t} from 'sentry/locale';
+import {Panel, PanelHeader} from 'sentry/components/panels';
 
 class OrganizationSettingsForm extends AsyncComponent {
   static propTypes = {

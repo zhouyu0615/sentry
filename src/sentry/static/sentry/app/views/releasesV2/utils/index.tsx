@@ -1,12 +1,12 @@
 import round from 'lodash/round';
 
-import localStorage from 'app/utils/localStorage';
-import ConfigStore from 'app/stores/configStore';
-import OrganizationStore from 'app/stores/organizationStore';
-import {trackAnalyticsEvent} from 'app/utils/analytics';
-import {Client} from 'app/api';
-import ProgressRing from 'app/components/progressRing';
-import {stringifyQueryObject} from 'app/utils/tokenizeSearch';
+import localStorage from 'sentry/utils/localStorage';
+import ConfigStore from 'sentry/stores/configStore';
+import OrganizationStore from 'sentry/stores/organizationStore';
+import {trackAnalyticsEvent} from 'sentry/utils/analytics';
+import {Client} from 'sentry/api';
+import ProgressRing from 'sentry/components/progressRing';
+import {stringifyQueryObject} from 'sentry/utils/tokenizeSearch';
 
 const CRASH_FREE_DANGER_THRESHOLD = 98;
 const CRASH_FREE_WARNING_THRESHOLD = 99.5;

@@ -11,7 +11,11 @@ import {SelectValue} from 'sentry/types';
 import {t} from 'sentry/locale';
 import Badge from 'sentry/components/badge';
 import space from 'sentry/styles/space';
-import {ColumnType, AggregateParameter, QueryFieldValue} from 'sentry/utils/discover/fields';
+import {
+  ColumnType,
+  AggregateParameter,
+  QueryFieldValue,
+} from 'sentry/utils/discover/fields';
 
 import {FieldValueKind, FieldValue} from './types';
 

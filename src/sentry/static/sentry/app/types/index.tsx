@@ -1,4 +1,7 @@
-import {SpanEntry, TraceContextType} from 'sentry/components/events/interfaces/spans/types';
+import {
+  SpanEntry,
+  TraceContextType,
+} from 'sentry/components/events/interfaces/spans/types';
 import {API_ACCESS_SCOPES} from 'sentry/constants';
 import {Field} from 'sentry/views/settings/components/forms/type';
 import {PlatformKey} from 'sentry/data/platformCategories';

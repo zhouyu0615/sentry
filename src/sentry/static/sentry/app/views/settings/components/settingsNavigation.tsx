@@ -1,8 +1,8 @@
 import * as Sentry from '@sentry/browser';
 import React from 'react';
 
-import SettingsNavigationGroup from 'app/views/settings/components/settingsNavigationGroup';
-import {NavigationSection, NavigationProps} from 'app/views/settings/types';
+import SettingsNavigationGroup from 'sentry/views/settings/components/settingsNavigationGroup';
+import {NavigationSection, NavigationProps} from 'sentry/views/settings/types';
 
 type DefaultProps = {
   /**

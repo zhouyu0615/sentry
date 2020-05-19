@@ -5,11 +5,11 @@ import {
   ThresholdControlValue,
   AlertRuleThreshold,
   AlertRuleThresholdType,
-} from 'app/views/settings/incidentRules/types';
-import {t} from 'app/locale';
-import Input from 'app/views/settings/components/forms/controls/input';
-import SelectControl from 'app/components/forms/selectControl';
-import space from 'app/styles/space';
+} from 'sentry/views/settings/incidentRules/types';
+import {t} from 'sentry/locale';
+import Input from 'sentry/views/settings/components/forms/controls/input';
+import SelectControl from 'sentry/components/forms/selectControl';
+import space from 'sentry/styles/space';
 
 type Props = ThresholdControlValue & {
   type: AlertRuleThreshold;

@@ -1,13 +1,13 @@
 import React from 'react';
 import * as ReactRouter from 'react-router';
 
-import ChartZoom from 'app/components/charts/chartZoom';
-import {IconWarning} from 'app/icons';
-import theme from 'app/utils/theme';
-import {GlobalSelection} from 'app/types';
-import TransitionChart from 'app/components/charts/transitionChart';
-import TransparentLoadingMask from 'app/components/charts/transparentLoadingMask';
-import ErrorPanel from 'app/components/charts/errorPanel';
+import ChartZoom from 'sentry/components/charts/chartZoom';
+import {IconWarning} from 'sentry/icons';
+import theme from 'sentry/utils/theme';
+import {GlobalSelection} from 'sentry/types';
+import TransitionChart from 'sentry/components/charts/transitionChart';
+import TransparentLoadingMask from 'sentry/components/charts/transparentLoadingMask';
+import ErrorPanel from 'sentry/components/charts/errorPanel';
 
 import HealthChart from './healthChart';
 import {YAxis} from './releaseChartControls';

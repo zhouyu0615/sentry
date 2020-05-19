@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import React from 'react';
 
-import {t} from 'app/locale';
-import {CSRF_COOKIE_NAME} from 'app/constants';
-import AsyncView from 'app/views/asyncView';
-import NarrowLayout from 'app/components/narrowLayout';
-import {Form, SelectField} from 'app/components/forms';
-import getCookie from 'app/utils/getCookie';
+import {t} from 'sentry/locale';
+import {CSRF_COOKIE_NAME} from 'sentry/constants';
+import AsyncView from 'sentry/views/asyncView';
+import NarrowLayout from 'sentry/components/narrowLayout';
+import {Form, SelectField} from 'sentry/components/forms';
+import getCookie from 'sentry/utils/getCookie';
 
 export default class VSTSOrganizationLink extends AsyncView {
   getEndpoints() {

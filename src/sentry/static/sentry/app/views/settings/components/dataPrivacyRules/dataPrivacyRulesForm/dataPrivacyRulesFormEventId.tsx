@@ -2,9 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import isEqual from 'lodash/isEqual';
 
-import TextField from 'app/components/forms/textField';
-import {t} from 'app/locale';
-import space from 'app/styles/space';
+import TextField from 'sentry/components/forms/textField';
+import {t} from 'sentry/locale';
+import space from 'sentry/styles/space';
 
 import DataPrivacyRulesPanelFormField from './dataPrivacyRulesFormField';
 import DataPrivacyRulesFormEventIdStatusIcon from './dataPrivacyRulesFormEventIdStatusIcon';

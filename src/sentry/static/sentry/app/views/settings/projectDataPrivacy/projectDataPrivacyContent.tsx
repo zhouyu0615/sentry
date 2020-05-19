@@ -1,15 +1,15 @@
 import React from 'react';
 import {RouteComponentProps} from 'react-router/lib/Router';
 
-import Link from 'app/components/links/link';
-import {t, tct} from 'app/locale';
-import SettingsPageHeader from 'app/views/settings/components/settingsPageHeader';
-import JsonForm from 'app/views/settings/components/forms/jsonForm';
-import Form from 'app/views/settings/components/forms/form';
-import {fields} from 'app/data/forms/projectGeneralSettings';
-import AsyncView from 'app/views/asyncView';
-import ProjectActions from 'app/actions/projectActions';
-import {Organization, Project} from 'app/types';
+import Link from 'sentry/components/links/link';
+import {t, tct} from 'sentry/locale';
+import SettingsPageHeader from 'sentry/views/settings/components/settingsPageHeader';
+import JsonForm from 'sentry/views/settings/components/forms/jsonForm';
+import Form from 'sentry/views/settings/components/forms/form';
+import {fields} from 'sentry/data/forms/projectGeneralSettings';
+import AsyncView from 'sentry/views/asyncView';
+import ProjectActions from 'sentry/actions/projectActions';
+import {Organization, Project} from 'sentry/types';
 
 import DataPrivacyRules from '../components/dataPrivacyRules/dataPrivacyRules';
 

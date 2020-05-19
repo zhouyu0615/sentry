@@ -8,7 +8,10 @@ import {t} from 'sentry/locale';
 import theme from 'sentry/utils/theme';
 import EventView from 'sentry/utils/discover/eventView';
 import {Organization} from 'sentry/types';
-import {saveKeyTransaction, deleteKeyTransaction} from 'sentry/actionCreators/performance';
+import {
+  saveKeyTransaction,
+  deleteKeyTransaction,
+} from 'sentry/actionCreators/performance';
 
 type Props = {
   api: Client;

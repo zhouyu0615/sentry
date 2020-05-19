@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {t} from 'app/locale';
-import Access from 'app/components/acl/access';
-import Alert from 'app/components/alert';
+import {t} from 'sentry/locale';
+import Access from 'sentry/components/acl/access';
+import Alert from 'sentry/components/alert';
 
 type Props = React.ComponentPropsWithoutRef<typeof Alert> &
   Pick<React.ComponentProps<typeof Access>, 'access'>;

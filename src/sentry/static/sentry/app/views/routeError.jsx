@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import * as Sentry from '@sentry/browser';
 
-import getRouteStringFromRoutes from 'app/utils/getRouteStringFromRoutes';
+import getRouteStringFromRoutes from 'sentry/utils/getRouteStringFromRoutes';
 
 class RouteError extends React.Component {
   static propTypes = {

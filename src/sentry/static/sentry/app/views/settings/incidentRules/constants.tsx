@@ -3,7 +3,7 @@ import {
   AlertRuleThresholdType,
   UnsavedIncidentRule,
   Trigger,
-} from 'app/views/settings/incidentRules/types';
+} from 'sentry/views/settings/incidentRules/types';
 
 export function createDefaultTrigger(): Trigger {
   return {

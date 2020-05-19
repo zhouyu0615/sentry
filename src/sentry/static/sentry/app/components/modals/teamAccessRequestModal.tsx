@@ -3,7 +3,10 @@ import styled from '@emotion/styled';
 
 import {addErrorMessage, addSuccessMessage} from 'sentry/actionCreators/indicator';
 import {Client} from 'sentry/api';
-import {ModalRenderProps, TeamAccessRequestModalOptions} from 'sentry/actionCreators/modal';
+import {
+  ModalRenderProps,
+  TeamAccessRequestModalOptions,
+} from 'sentry/actionCreators/modal';
 import {t, tct} from 'sentry/locale';
 import Button from 'sentry/components/button';
 import space from 'sentry/styles/space';

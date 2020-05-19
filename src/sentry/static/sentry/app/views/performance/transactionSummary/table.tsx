@@ -15,7 +15,10 @@ import EventView, {isFieldSortable, MetaType} from 'sentry/utils/discover/eventV
 import SortLink from 'sentry/components/gridEditable/sortLink';
 import {getFieldRenderer} from 'sentry/utils/discover/fieldRenderers';
 import {getAggregateAlias} from 'sentry/utils/discover/fields';
-import {generateEventSlug, eventDetailsRouteWithEventView} from 'sentry/utils/discover/urls';
+import {
+  generateEventSlug,
+  eventDetailsRouteWithEventView,
+} from 'sentry/utils/discover/urls';
 import {tokenizeSearch} from 'sentry/utils/tokenizeSearch';
 import {trackAnalyticsEvent} from 'sentry/utils/analytics';
 

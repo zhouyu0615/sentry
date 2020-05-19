@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {browserHistory} from 'react-router';
 
-import {t} from 'app/locale';
-import {addErrorMessage, addLoadingMessage} from 'app/actionCreators/indicator';
-import SentryTypes from 'app/sentryTypes';
-import Button from 'app/components/button';
-import Confirm from 'app/components/confirm';
-import {IconDelete} from 'app/icons';
+import {t} from 'sentry/locale';
+import {addErrorMessage, addLoadingMessage} from 'sentry/actionCreators/indicator';
+import SentryTypes from 'sentry/sentryTypes';
+import Button from 'sentry/components/button';
+import Confirm from 'sentry/components/confirm';
+import {IconDelete} from 'sentry/icons';
 
 import {deleteRelease} from './utils';
 

@@ -1,9 +1,9 @@
 import {RouteComponentProps} from 'react-router/lib/Router';
 import React from 'react';
 
-import {Organization, Project} from 'app/types';
-import {createDefaultRule} from 'app/views/settings/incidentRules/constants';
-import recreateRoute from 'app/utils/recreateRoute';
+import {Organization, Project} from 'sentry/types';
+import {createDefaultRule} from 'sentry/views/settings/incidentRules/constants';
+import recreateRoute from 'sentry/utils/recreateRoute';
 
 import RuleForm from './ruleForm';
 

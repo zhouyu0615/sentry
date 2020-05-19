@@ -1,13 +1,13 @@
 import React from 'react';
 import {RouteComponentProps} from 'react-router/lib/Router';
 
-import {t} from 'app/locale';
-import ReleaseArtifactsV1 from 'app/views/releases/detail/releaseArtifacts';
-import AsyncView from 'app/views/asyncView';
-import routeTitleGen from 'app/utils/routeTitle';
-import {formatVersion} from 'app/utils/formatters';
-import withOrganization from 'app/utils/withOrganization';
-import {Organization} from 'app/types';
+import {t} from 'sentry/locale';
+import ReleaseArtifactsV1 from 'sentry/views/releases/detail/releaseArtifacts';
+import AsyncView from 'sentry/views/asyncView';
+import routeTitleGen from 'sentry/utils/routeTitle';
+import {formatVersion} from 'sentry/utils/formatters';
+import withOrganization from 'sentry/utils/withOrganization';
+import {Organization} from 'sentry/types';
 
 import {ReleaseContext} from '..';
 

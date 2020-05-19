@@ -2,9 +2,9 @@ import React from 'react';
 import keydown from 'react-keydown';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import InlineSvg from 'app/components/inlineSvg';
-import Search from 'app/components/search';
+import {t} from 'sentry/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import Search from 'sentry/components/search';
 
 const MIN_SEARCH_LENGTH = 1;
 const MAX_RESULTS = 10;

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import InlineSvg from 'app/components/inlineSvg';
-import Tooltip from 'app/components/tooltip';
+import {t} from 'sentry/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import Tooltip from 'sentry/components/tooltip';
 
 const SubmitButton = styled('div')`
   background: transparent;

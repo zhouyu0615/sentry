@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import DropdownControl, {DropdownItem} from 'app/components/dropdownControl';
+import DropdownControl, {DropdownItem} from 'sentry/components/dropdownControl';
 
 type Option = {
   key: string;

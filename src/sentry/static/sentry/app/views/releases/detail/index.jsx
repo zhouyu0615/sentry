@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import pick from 'lodash/pick';
 
-import {PageContent} from 'app/styles/organization';
-import {URL_PARAM} from 'app/constants/globalSelectionHeader';
-import {tn} from 'app/locale';
-import Alert from 'app/components/alert';
-import AsyncView from 'app/views/asyncView';
-import GlobalSelectionHeader from 'app/components/organizations/globalSelectionHeader';
-import LoadingError from 'app/components/loadingError';
-import LoadingIndicator from 'app/components/loadingIndicator';
-import SentryTypes from 'app/sentryTypes';
-import withGlobalSelection from 'app/utils/withGlobalSelection';
-import withOrganization from 'app/utils/withOrganization';
-import withProfiler from 'app/utils/withProfiler';
-import withProjects from 'app/utils/withProjects';
-import Feature from 'app/components/acl/feature';
-import SwitchReleasesButton from 'app/views/releasesV2/utils/switchReleasesButton';
+import {PageContent} from 'sentry/styles/organization';
+import {URL_PARAM} from 'sentry/constants/globalSelectionHeader';
+import {tn} from 'sentry/locale';
+import Alert from 'sentry/components/alert';
+import AsyncView from 'sentry/views/asyncView';
+import GlobalSelectionHeader from 'sentry/components/organizations/globalSelectionHeader';
+import LoadingError from 'sentry/components/loadingError';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
+import SentryTypes from 'sentry/sentryTypes';
+import withGlobalSelection from 'sentry/utils/withGlobalSelection';
+import withOrganization from 'sentry/utils/withOrganization';
+import withProfiler from 'sentry/utils/withProfiler';
+import withProjects from 'sentry/utils/withProjects';
+import Feature from 'sentry/components/acl/feature';
+import SwitchReleasesButton from 'sentry/views/releasesV2/utils/switchReleasesButton';
 
 import ReleaseHeader from './releaseHeader';
 

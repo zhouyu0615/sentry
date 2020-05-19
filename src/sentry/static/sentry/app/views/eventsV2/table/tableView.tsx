@@ -23,7 +23,10 @@ import EventView, {
 } from 'sentry/utils/discover/eventView';
 import {Column} from 'sentry/utils/discover/fields';
 import {getFieldRenderer} from 'sentry/utils/discover/fieldRenderers';
-import {generateEventSlug, eventDetailsRouteWithEventView} from 'sentry/utils/discover/urls';
+import {
+  generateEventSlug,
+  eventDetailsRouteWithEventView,
+} from 'sentry/utils/discover/urls';
 import space from 'sentry/styles/space';
 
 import {downloadAsCsv, getExpandedResults, pushEventViewToLocation} from '../utils';

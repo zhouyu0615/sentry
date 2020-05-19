@@ -1,4 +1,7 @@
-import {getChartDataForWidget, getChartDataByDay} from 'sentry/views/discover/result/utils';
+import {
+  getChartDataForWidget,
+  getChartDataByDay,
+} from 'sentry/views/discover/result/utils';
 
 import {isTimeSeries} from './isTimeSeries';
 import {WIDGET_DISPLAY} from '../constants';

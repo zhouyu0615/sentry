@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
 
-import InlineSvg from 'app/components/inlineSvg';
-import TextBlock from 'app/views/settings/components/text/textBlock';
-import space from 'app/styles/space';
+import InlineSvg from 'sentry/components/inlineSvg';
+import TextBlock from 'sentry/views/settings/components/text/textBlock';
+import space from 'sentry/styles/space';
 
 type Props = {
   title?: React.ReactNode;

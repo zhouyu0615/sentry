@@ -2,14 +2,14 @@ import React from 'react';
 import maxBy from 'lodash/maxBy';
 import styled from '@emotion/styled';
 
-import {Client} from 'app/api';
-import {Organization, Project} from 'app/types';
-import {SeriesDataUnit} from 'app/types/echarts';
-import EventsRequest from 'app/views/events/utils/eventsRequest';
-import {getDisplayForAlertRuleAggregation} from 'app/views/alerts/utils';
-import LoadingMask from 'app/components/loadingMask';
-import Placeholder from 'app/components/placeholder';
-import space from 'app/styles/space';
+import {Client} from 'sentry/api';
+import {Organization, Project} from 'sentry/types';
+import {SeriesDataUnit} from 'sentry/types/echarts';
+import EventsRequest from 'sentry/views/events/utils/eventsRequest';
+import {getDisplayForAlertRuleAggregation} from 'sentry/views/alerts/utils';
+import LoadingMask from 'sentry/components/loadingMask';
+import Placeholder from 'sentry/components/placeholder';
+import space from 'sentry/styles/space';
 
 import {AlertRuleAggregations, IncidentRule, TimeWindow, Trigger} from '../../types';
 import ThresholdsChart from './thresholdsChart';

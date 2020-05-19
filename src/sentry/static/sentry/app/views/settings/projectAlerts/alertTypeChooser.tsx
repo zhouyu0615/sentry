@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Card from 'app/components/card';
-import {t, tct} from 'app/locale';
-import space from 'app/styles/space';
-import Radio from 'app/components/radio';
-import textStyles from 'app/styles/text';
-import BulletList from 'app/styles/bulletList';
-import FeatureBadge from 'app/components/featureBadge';
-import Tooltip from 'app/components/tooltip';
+import Card from 'sentry/components/card';
+import {t, tct} from 'sentry/locale';
+import space from 'sentry/styles/space';
+import Radio from 'sentry/components/radio';
+import textStyles from 'sentry/styles/text';
+import BulletList from 'sentry/styles/bulletList';
+import FeatureBadge from 'sentry/components/featureBadge';
+import Tooltip from 'sentry/components/tooltip';
 
 type Props = {
   selected?: string | null;

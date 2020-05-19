@@ -4,21 +4,21 @@ import {Location} from 'history';
 import partition from 'lodash/partition';
 import flatten from 'lodash/flatten';
 
-import {Release, GlobalSelection} from 'app/types';
-import GlobalSelectionLink from 'app/components/globalSelectionLink';
-import {PanelHeader, PanelBody, PanelItem} from 'app/components/panels';
-import {t, tn} from 'app/locale';
-import space from 'app/styles/space';
-import ProgressRing from 'app/components/progressRing';
-import Count from 'app/components/count';
-import {defined} from 'app/utils';
-import theme from 'app/utils/theme';
-import ScoreBar from 'app/components/scoreBar';
-import Tooltip from 'app/components/tooltip';
-import ProjectBadge from 'app/components/idBadge/projectBadge';
-import TextOverflow from 'app/components/textOverflow';
-import ClippedBox from 'app/components/clippedBox';
-import Link from 'app/components/links/link';
+import {Release, GlobalSelection} from 'sentry/types';
+import GlobalSelectionLink from 'sentry/components/globalSelectionLink';
+import {PanelHeader, PanelBody, PanelItem} from 'sentry/components/panels';
+import {t, tn} from 'sentry/locale';
+import space from 'sentry/styles/space';
+import ProgressRing from 'sentry/components/progressRing';
+import Count from 'sentry/components/count';
+import {defined} from 'sentry/utils';
+import theme from 'sentry/utils/theme';
+import ScoreBar from 'sentry/components/scoreBar';
+import Tooltip from 'sentry/components/tooltip';
+import ProjectBadge from 'sentry/components/idBadge/projectBadge';
+import TextOverflow from 'sentry/components/textOverflow';
+import ClippedBox from 'sentry/components/clippedBox';
+import Link from 'sentry/components/links/link';
 
 import HealthStatsChart from './healthStatsChart';
 import {

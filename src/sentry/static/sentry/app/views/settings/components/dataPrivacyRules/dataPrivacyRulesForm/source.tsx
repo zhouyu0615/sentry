@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import space from 'app/styles/space';
-import {t} from 'app/locale';
-import TextField from 'app/components/forms/textField';
-import TextOverflow from 'app/components/textOverflow';
-import {defined} from 'app/utils';
+import space from 'sentry/styles/space';
+import {t} from 'sentry/locale';
+import TextField from 'sentry/components/forms/textField';
+import TextOverflow from 'sentry/components/textOverflow';
+import {defined} from 'sentry/utils';
 
 import {
   unaryOperatorSuggestions,

@@ -1,14 +1,14 @@
 import React from 'react';
 
-import {Client} from 'app/api';
-import {Config, Organization, Project} from 'app/types';
-import {fetchOrgMembers} from 'app/actionCreators/members';
-import {t, tct} from 'app/locale';
-import ActionsPanel from 'app/views/settings/incidentRules/triggers/actionsPanel';
-import Field from 'app/views/settings/components/forms/field';
-import ThresholdControl from 'app/views/settings/incidentRules/triggers/thresholdControl';
-import withApi from 'app/utils/withApi';
-import withConfig from 'app/utils/withConfig';
+import {Client} from 'sentry/api';
+import {Config, Organization, Project} from 'sentry/types';
+import {fetchOrgMembers} from 'sentry/actionCreators/members';
+import {t, tct} from 'sentry/locale';
+import ActionsPanel from 'sentry/views/settings/incidentRules/triggers/actionsPanel';
+import Field from 'sentry/views/settings/components/forms/field';
+import ThresholdControl from 'sentry/views/settings/incidentRules/triggers/thresholdControl';
+import withApi from 'sentry/utils/withApi';
+import withConfig from 'sentry/utils/withConfig';
 
 import {
   AlertRuleThreshold,

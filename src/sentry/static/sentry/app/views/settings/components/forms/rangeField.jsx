@@ -1,7 +1,7 @@
 import React from 'react';
 
-import InputField from 'app/views/settings/components/forms/inputField';
-import RangeSlider from 'app/views/settings/components/forms/controls/rangeSlider';
+import InputField from 'sentry/views/settings/components/forms/inputField';
+import RangeSlider from 'sentry/views/settings/components/forms/controls/rangeSlider';
 
 export default class RangeField extends React.Component {
   static defaultProps = {

@@ -7,21 +7,21 @@ import {
   ActionType,
   MetricActionTemplate,
   TargetType,
-} from 'app/views/settings/incidentRules/types';
-import {Organization, Project, SelectValue} from 'app/types';
-import {PanelItem} from 'app/components/panels';
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {removeAtArrayIndex} from 'app/utils/removeAtArrayIndex';
-import {replaceAtArrayIndex} from 'app/utils/replaceAtArrayIndex';
-import {t} from 'app/locale';
-import DeleteActionButton from 'app/views/settings/incidentRules/triggers/actionsPanel/deleteActionButton';
-import Input from 'app/views/settings/components/forms/controls/input';
-import LoadingIndicator from 'app/components/loadingIndicator';
-import PanelSubHeader from 'app/views/settings/incidentRules/triggers/panelSubHeader';
-import SelectControl from 'app/components/forms/selectControl';
-import SelectMembers from 'app/components/selectMembers';
-import space from 'app/styles/space';
-import withOrganization from 'app/utils/withOrganization';
+} from 'sentry/views/settings/incidentRules/types';
+import {Organization, Project, SelectValue} from 'sentry/types';
+import {PanelItem} from 'sentry/components/panels';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {removeAtArrayIndex} from 'sentry/utils/removeAtArrayIndex';
+import {replaceAtArrayIndex} from 'sentry/utils/replaceAtArrayIndex';
+import {t} from 'sentry/locale';
+import DeleteActionButton from 'sentry/views/settings/incidentRules/triggers/actionsPanel/deleteActionButton';
+import Input from 'sentry/views/settings/components/forms/controls/input';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
+import PanelSubHeader from 'sentry/views/settings/incidentRules/triggers/panelSubHeader';
+import SelectControl from 'sentry/components/forms/selectControl';
+import SelectMembers from 'sentry/components/selectMembers';
+import space from 'sentry/styles/space';
+import withOrganization from 'sentry/utils/withOrganization';
 
 const ActionLabel = {
   [ActionType.EMAIL]: t('E-mail'),

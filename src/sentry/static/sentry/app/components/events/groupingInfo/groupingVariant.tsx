@@ -4,7 +4,11 @@ import capitalize from 'lodash/capitalize';
 
 import {t} from 'sentry/locale';
 import KeyValueList from 'sentry/components/events/interfaces/keyValueList/keyValueList';
-import {EventGroupVariant, EventGroupVariantType, EventGroupComponent} from 'sentry/types';
+import {
+  EventGroupVariant,
+  EventGroupVariantType,
+  EventGroupComponent,
+} from 'sentry/types';
 import ButtonBar from 'sentry/components/buttonBar';
 import Button from 'sentry/components/button';
 import theme from 'sentry/utils/theme';
