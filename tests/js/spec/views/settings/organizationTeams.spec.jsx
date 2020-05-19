@@ -8,7 +8,7 @@ import recreateRoute from 'sentry/utils/recreateRoute';
 
 recreateRoute.mockReturnValue('');
 
-jest.mock('app/actionCreators/modal', () => ({
+jest.mock('sentry/actionCreators/modal', () => ({
   openCreateTeamModal: jest.fn(),
 }));
 

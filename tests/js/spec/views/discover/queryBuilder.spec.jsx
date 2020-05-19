@@ -2,7 +2,7 @@ import createQueryBuilder from 'sentry/views/discover/queryBuilder';
 import {openModal} from 'sentry/actionCreators/modal';
 import ConfigStore from 'sentry/stores/configStore';
 
-jest.mock('app/actionCreators/modal');
+jest.mock('sentry/actionCreators/modal');
 
 describe('Query Builder', function() {
   beforeEach(function() {

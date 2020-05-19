@@ -5,7 +5,7 @@ import App from 'sentry/views/app';
 import ProjectTeams from 'sentry/views/settings/project/projectTeams';
 import * as modals from 'sentry/actionCreators/modal';
 
-jest.unmock('app/actionCreators/modal');
+jest.unmock('sentry/actionCreators/modal');
 
 describe('ProjectTeams', function() {
   let org;

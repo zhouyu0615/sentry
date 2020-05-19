@@ -8,8 +8,8 @@ import OrganizationMembersList from 'sentry/views/settings/organizationMembers/o
 import OrganizationsStore from 'sentry/stores/organizationsStore';
 import {addSuccessMessage, addErrorMessage} from 'sentry/actionCreators/indicator';
 
-jest.mock('app/api');
-jest.mock('app/actionCreators/indicator');
+jest.mock('sentry/api');
+jest.mock('sentry/actionCreators/indicator');
 
 const roles = [
   {

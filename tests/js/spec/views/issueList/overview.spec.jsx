@@ -11,10 +11,10 @@ import StreamGroup from 'sentry/components/stream/group';
 import TagStore from 'sentry/stores/tagStore';
 
 // Mock <IssueListSidebar> and <IssueListActions>
-jest.mock('app/views/issueList/sidebar', () => jest.fn(() => null));
-jest.mock('app/views/issueList/actions', () => jest.fn(() => null));
-jest.mock('app/components/stream/group', () => jest.fn(() => null));
-jest.mock('app/views/issueList/noGroupsHandler/congratsRobots', () =>
+jest.mock('sentry/views/issueList/sidebar', () => jest.fn(() => null));
+jest.mock('sentry/views/issueList/actions', () => jest.fn(() => null));
+jest.mock('sentry/components/stream/group', () => jest.fn(() => null));
+jest.mock('sentry/views/issueList/noGroupsHandler/congratsRobots', () =>
   jest.fn(() => null)
 );
 

@@ -5,7 +5,7 @@ import ConfigStore from 'sentry/stores/configStore';
 import SidebarContainer, {Sidebar} from 'sentry/components/sidebar';
 import * as incidentActions from 'sentry/actionCreators/serviceIncidents';
 
-jest.mock('app/actionCreators/serviceIncidents');
+jest.mock('sentry/actionCreators/serviceIncidents');
 
 describe('Sidebar', function() {
   let wrapper;

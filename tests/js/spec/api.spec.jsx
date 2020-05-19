@@ -5,7 +5,7 @@ import {Client, Request, paramsToQueryArgs} from 'sentry/api';
 import GroupActions from 'sentry/actions/groupActions';
 import {PROJECT_MOVED} from 'sentry/constants/apiErrorCodes';
 
-jest.unmock('app/api');
+jest.unmock('sentry/api');
 
 describe('api', function() {
   let api;

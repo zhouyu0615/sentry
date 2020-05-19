@@ -7,7 +7,7 @@ import DashboardsContainer from 'sentry/views/dashboards';
 import OverviewDashboard from 'sentry/views/dashboards/overviewDashboard';
 import ProjectsStore from 'sentry/stores/projectsStore';
 
-jest.mock('app/utils/withLatestContext');
+jest.mock('sentry/utils/withLatestContext');
 
 describe('OverviewDashboard', function() {
   let wrapper;

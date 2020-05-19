@@ -5,7 +5,7 @@ import ProjectEnvironments from 'sentry/views/settings/project/projectEnvironmen
 import recreateRoute from 'sentry/utils/recreateRoute';
 import {ALL_ENVIRONMENTS_KEY} from 'sentry/constants';
 
-jest.mock('app/utils/recreateRoute');
+jest.mock('sentry/utils/recreateRoute');
 recreateRoute.mockReturnValue('/org-slug/project-slug/settings/environments/');
 
 function mountComponent(isHidden) {

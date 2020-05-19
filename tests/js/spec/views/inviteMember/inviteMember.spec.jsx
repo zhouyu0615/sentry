@@ -5,7 +5,7 @@ import {shallow, mountWithTheme} from 'sentry-test/enzyme';
 import {InviteMember} from 'sentry/views/settings/organizationMembers/inviteMember';
 import ConfigStore from 'sentry/stores/configStore';
 
-jest.mock('app/api');
+jest.mock('sentry/api');
 jest.mock('jquery');
 
 describe('InviteMember', function() {

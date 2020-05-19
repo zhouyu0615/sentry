@@ -10,7 +10,7 @@ import {mountWithTheme} from 'sentry-test/enzyme';
 import EventsContainer from 'sentry/views/events';
 import ProjectsStore from 'sentry/stores/projectsStore';
 
-jest.mock('app/utils/withLatestContext');
+jest.mock('sentry/utils/withLatestContext');
 
 const generatePageLinks = (current, windowSize) => {
   const previous = current - windowSize;

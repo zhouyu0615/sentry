@@ -4,7 +4,7 @@ import {shallow} from 'sentry-test/enzyme';
 import GroupStore from 'sentry/stores/groupStore';
 import StreamGroup from 'sentry/components/stream/group';
 
-// jest.mock('app/mixins/projectState');
+// jest.mock('sentry/mixins/projectState');
 
 describe('StreamGroup', function() {
   let GROUP_1;

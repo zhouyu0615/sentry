@@ -7,7 +7,7 @@ import {initializeOrg} from 'sentry-test/initializeOrg';
 import {mount} from 'sentry-test/enzyme';
 import * as globalSelection from 'sentry/actionCreators/globalSelection';
 
-jest.mock('app/views/events/utils/eventsRequest', () => jest.fn(() => null));
+jest.mock('sentry/views/events/utils/eventsRequest', () => jest.fn(() => null));
 jest.spyOn(globalSelection, 'updateDateTime');
 
 describe('EventsChart', function() {

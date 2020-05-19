@@ -4,7 +4,7 @@ import {mount} from 'sentry-test/enzyme';
 import ConfigStore from 'sentry/stores/configStore';
 import InstallWizard from 'sentry/views/installWizard';
 
-jest.mock('app/stores/configStore', () => ({
+jest.mock('sentry/stores/configStore', () => ({
   get: jest.fn(),
 }));
 

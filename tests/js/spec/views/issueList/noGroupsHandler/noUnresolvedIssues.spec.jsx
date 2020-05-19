@@ -5,7 +5,7 @@ import NoUnresolvedIssues from 'sentry/views/issueList/noGroupsHandler/noUnresol
 import CongratsRobotsVideo from 'sentry/views/issueList/noGroupsHandler/congratsRobots';
 
 // Mocking this because of https://github.com/airbnb/enzyme/issues/2326
-jest.mock('app/views/issueList/noGroupsHandler/congratsRobots', () =>
+jest.mock('sentry/views/issueList/noGroupsHandler/congratsRobots', () =>
   jest.fn(() => null)
 );
 

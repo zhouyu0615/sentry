@@ -9,10 +9,10 @@ import ProjectsStore from 'sentry/stores/projectsStore';
 import TeamStore from 'sentry/stores/teamStore';
 import OrganizationStore from 'sentry/stores/organizationStore';
 
-jest.mock('app/stores/configStore', () => ({
+jest.mock('sentry/stores/configStore', () => ({
   get: jest.fn(),
 }));
-jest.mock('app/actionCreators/modal', () => ({
+jest.mock('sentry/actionCreators/modal', () => ({
   openSudo: jest.fn(),
 }));
 

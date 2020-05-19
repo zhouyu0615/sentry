@@ -5,11 +5,11 @@ import {OrganizationRoot} from 'sentry/views/organizationRoot';
 import {setActiveProject} from 'sentry/actionCreators/projects';
 import {setLastRoute} from 'sentry/actionCreators/navigation';
 
-jest.mock('app/actionCreators/projects', () => ({
+jest.mock('sentry/actionCreators/projects', () => ({
   setActiveProject: jest.fn(),
 }));
 
-jest.mock('app/actionCreators/navigation', () => ({
+jest.mock('sentry/actionCreators/navigation', () => ({
   setLastRoute: jest.fn(),
 }));
 

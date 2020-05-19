@@ -8,8 +8,8 @@ import ProjectAlerts from 'sentry/views/settings/projectAlerts';
 import IssueEditor from 'sentry/views/settings/projectAlerts/issueEditor';
 import {updateOnboardingTask} from 'sentry/actionCreators/onboardingTasks';
 
-jest.unmock('app/utils/recreateRoute');
-jest.mock('app/actionCreators/onboardingTasks');
+jest.unmock('sentry/utils/recreateRoute');
+jest.mock('sentry/actionCreators/onboardingTasks');
 
 describe('ProjectAlerts -> IssueEditor', function() {
   const projectAlertRuleDetailsRoutes = [
