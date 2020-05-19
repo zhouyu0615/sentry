@@ -3,15 +3,15 @@ import React from 'react';
 import {
   AssigneeSelectorComponent,
   putSessionUserFirst,
-} from 'app/components/assigneeSelector';
-import {Client} from 'app/api';
+} from 'sentry/components/assigneeSelector';
+import {Client} from 'sentry/api';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import ConfigStore from 'app/stores/configStore';
-import GroupStore from 'app/stores/groupStore';
-import MemberListStore from 'app/stores/memberListStore';
-import ProjectsStore from 'app/stores/projectsStore';
-import TeamStore from 'app/stores/teamStore';
-import {openInviteMembersModal} from 'app/actionCreators/modal';
+import ConfigStore from 'sentry/stores/configStore';
+import GroupStore from 'sentry/stores/groupStore';
+import MemberListStore from 'sentry/stores/memberListStore';
+import ProjectsStore from 'sentry/stores/projectsStore';
+import TeamStore from 'sentry/stores/teamStore';
+import {openInviteMembersModal} from 'sentry/actionCreators/modal';
 
 jest.mock('app/actionCreators/modal', () => ({
   openInviteMembersModal: jest.fn(),

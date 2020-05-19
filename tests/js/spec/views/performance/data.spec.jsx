@@ -1,7 +1,7 @@
 import {
   generatePerformanceQuery,
   PERFORMANCE_EVENT_VIEW,
-} from 'app/views/performance/data';
+} from 'sentry/views/performance/data';
 
 describe('generatePerformanceQuery()', function() {
   it('generates default values', function() {

@@ -1,4 +1,4 @@
-import getDynamicText from 'app/utils/getDynamicText';
+import getDynamicText from 'sentry/utils/getDynamicText';
 
 describe('getDynamicText', function() {
   it('renders actual value', function() {

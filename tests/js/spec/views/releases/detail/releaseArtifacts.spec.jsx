@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {shallow, mount} from 'sentry-test/enzyme';
-import {Client} from 'app/api';
-import {ReleaseArtifacts} from 'app/views/releases/detail/releaseArtifacts';
+import {Client} from 'sentry/api';
+import {ReleaseArtifacts} from 'sentry/views/releases/detail/releaseArtifacts';
 
 describe('ReleaseArtifacts', function() {
   let wrapper;

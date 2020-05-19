@@ -2,9 +2,9 @@ import React from 'react';
 
 import {initializeOrg} from 'sentry-test/initializeOrg';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import IssueList from 'app/views/issueList/overview';
-import StreamGroup from 'app/components/stream/group';
-import TagStore from 'app/stores/tagStore';
+import IssueList from 'sentry/views/issueList/overview';
+import StreamGroup from 'sentry/components/stream/group';
+import TagStore from 'sentry/stores/tagStore';
 
 // Mock <IssueListSidebar> (need <IssueListActions> to toggling real time polling)
 jest.mock('app/views/issueList/sidebar', () => jest.fn(() => null));

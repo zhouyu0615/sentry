@@ -1,4 +1,4 @@
-import {getInterval, getDiffInMinutes} from 'app/components/charts/utils';
+import {getInterval, getDiffInMinutes} from 'sentry/components/charts/utils';
 
 describe('Chart Utils', function() {
   describe('getInterval()', function() {

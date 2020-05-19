@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {Client} from 'app/api';
+import {Client} from 'sentry/api';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import OrganizationDeveloperSettings from 'app/views/settings/organizationDeveloperSettings/index';
-import App from 'app/views/app';
+import OrganizationDeveloperSettings from 'sentry/views/settings/organizationDeveloperSettings/index';
+import App from 'sentry/views/app';
 
 describe('Organization Developer Settings', function() {
   const org = TestStubs.Organization();

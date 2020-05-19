@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {EventsChart} from 'app/views/events/eventsChart';
+import {EventsChart} from 'sentry/views/events/eventsChart';
 import {mockZoomRange} from 'sentry-test/charts';
 import {initializeOrg} from 'sentry-test/initializeOrg';
 import {mountWithTheme} from 'sentry-test/enzyme';

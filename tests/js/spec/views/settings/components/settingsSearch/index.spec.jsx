@@ -1,9 +1,9 @@
 import React from 'react';
 
 import {mountWithTheme} from 'sentry-test/enzyme';
-import {SettingsSearch} from 'app/views/settings/components/settingsSearch';
-import FormSearchStore from 'app/stores/formSearchStore';
-import {navigateTo} from 'app/actionCreators/navigation';
+import {SettingsSearch} from 'sentry/views/settings/components/settingsSearch';
+import FormSearchStore from 'sentry/stores/formSearchStore';
+import {navigateTo} from 'sentry/actionCreators/navigation';
 
 jest.mock('jquery');
 jest.mock('app/actionCreators/formSearch');

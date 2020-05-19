@@ -3,8 +3,8 @@ import {browserHistory} from 'react-router';
 
 import {mountWithTheme} from 'sentry-test/enzyme';
 import {initializeOrg} from 'sentry-test/initializeOrg';
-import CellAction from 'app/views/eventsV2/table/cellAction';
-import EventView from 'app/utils/discover/eventView';
+import CellAction from 'sentry/views/eventsV2/table/cellAction';
+import EventView from 'sentry/utils/discover/eventView';
 
 function makeWrapper(eventView, initial) {
   const data = {transaction: 'best-transaction', count: 19};

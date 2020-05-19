@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {shallow} from 'sentry-test/enzyme';
-import {MultipleCheckboxField} from 'app/components/forms';
+import {MultipleCheckboxField} from 'sentry/components/forms';
 
 describe('MultipleCheckboxField', function() {
   describe('render()', function() {

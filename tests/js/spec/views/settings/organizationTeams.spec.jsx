@@ -2,9 +2,9 @@ import React from 'react';
 
 import {initializeOrg} from 'sentry-test/initializeOrg';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import {openCreateTeamModal} from 'app/actionCreators/modal';
-import OrganizationTeams from 'app/views/settings/organizationTeams/organizationTeams';
-import recreateRoute from 'app/utils/recreateRoute';
+import {openCreateTeamModal} from 'sentry/actionCreators/modal';
+import OrganizationTeams from 'sentry/views/settings/organizationTeams/organizationTeams';
+import recreateRoute from 'sentry/utils/recreateRoute';
 
 recreateRoute.mockReturnValue('');
 

@@ -2,7 +2,7 @@ import {
   formatFloat,
   formatAbbreviatedNumber,
   formatPercentage,
-} from 'app/utils/formatters';
+} from 'sentry/utils/formatters';
 
 describe('formatAbbreviatedNumber()', function() {
   it('should abbreviate numbers', function() {

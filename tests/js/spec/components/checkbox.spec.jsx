@@ -2,7 +2,7 @@ import React from 'react';
 import toJson from 'enzyme-to-json';
 
 import {shallow} from 'sentry-test/enzyme';
-import Checkbox from 'app/components/checkbox';
+import Checkbox from 'sentry/components/checkbox';
 
 describe('Checkbox', function() {
   it('renders', function() {

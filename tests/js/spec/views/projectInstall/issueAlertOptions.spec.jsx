@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {mountWithTheme} from 'sentry-test/enzyme';
-import IssueAlertOptions from 'app/views/projectInstall/issueAlertOptions';
+import IssueAlertOptions from 'sentry/views/projectInstall/issueAlertOptions';
 import {initializeOrg} from 'sentry-test/initializeOrg';
 import {
   MOCK_RESP_VERBOSE,

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {shallow, mountWithTheme} from 'sentry-test/enzyme';
-import {CreateProject} from 'app/views/projectInstall/createProject';
-import {openCreateTeamModal} from 'app/actionCreators/modal';
+import {CreateProject} from 'sentry/views/projectInstall/createProject';
+import {openCreateTeamModal} from 'sentry/actionCreators/modal';
 import {MOCK_RESP_VERBOSE} from 'sentry-test/fixtures/ruleConditions';
 
 jest.mock('app/actionCreators/modal');

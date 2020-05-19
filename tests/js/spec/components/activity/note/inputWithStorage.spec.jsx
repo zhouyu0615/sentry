@@ -2,8 +2,8 @@ import React from 'react';
 
 import {mountWithTheme} from 'sentry-test/enzyme';
 import changeReactMentionsInput from 'sentry-test/changeReactMentionsInput';
-import NoteInputWithStorage from 'app/components/activity/note/inputWithStorage';
-import localStorage from 'app/utils/localStorage';
+import NoteInputWithStorage from 'sentry/components/activity/note/inputWithStorage';
+import localStorage from 'sentry/utils/localStorage';
 
 jest.mock('app/utils/localStorage');
 

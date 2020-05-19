@@ -2,7 +2,7 @@ import React from 'react';
 import * as Sentry from '@sentry/browser';
 
 import {mount} from 'sentry-test/enzyme';
-import {RouteError} from 'app/views/routeError';
+import {RouteError} from 'sentry/views/routeError';
 
 jest.mock('jquery');
 

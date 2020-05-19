@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {Client} from 'app/api';
+import {Client} from 'sentry/api';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import IntegrationRepos from 'app/views/organizationIntegrations/integrationRepos';
+import IntegrationRepos from 'sentry/views/organizationIntegrations/integrationRepos';
 
 describe('IntegrationRepos', function() {
   beforeEach(function() {

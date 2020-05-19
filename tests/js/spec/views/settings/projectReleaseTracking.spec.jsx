@@ -3,8 +3,8 @@ import React from 'react';
 import {mountWithTheme} from 'sentry-test/enzyme';
 import ProjectReleaseTrackingContainer, {
   ProjectReleaseTracking,
-} from 'app/views/settings/project/projectReleaseTracking';
-import {fetchPlugins} from 'app/actionCreators/plugins';
+} from 'sentry/views/settings/project/projectReleaseTracking';
+import {fetchPlugins} from 'sentry/actionCreators/plugins';
 
 jest.mock('app/actionCreators/plugins', () => ({
   fetchPlugins: jest.fn().mockResolvedValue([]),

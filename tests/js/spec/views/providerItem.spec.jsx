@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {descopeFeatureName} from 'app/utils';
+import {descopeFeatureName} from 'sentry/utils';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import ProviderItem from 'app/views/settings/organizationAuth/providerItem';
+import ProviderItem from 'sentry/views/settings/organizationAuth/providerItem';
 
 describe('ProviderItem', function() {
   const provider = TestStubs.AuthProviders()[0];

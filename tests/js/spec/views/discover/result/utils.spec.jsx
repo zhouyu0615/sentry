@@ -6,7 +6,7 @@ import {
   getDisplayValue,
   getDisplayText,
   downloadAsCsv,
-} from 'app/views/discover/result/utils';
+} from 'sentry/views/discover/result/utils';
 
 describe('Utils', function() {
   describe('getChartData()', function() {

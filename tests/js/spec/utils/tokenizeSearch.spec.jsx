@@ -1,4 +1,4 @@
-import {tokenizeSearch, stringifyQueryObject} from 'app/utils/tokenizeSearch';
+import {tokenizeSearch, stringifyQueryObject} from 'sentry/utils/tokenizeSearch';
 
 describe('utils/tokenizeSearch', function() {
   describe('tokenizeSearch()', function() {

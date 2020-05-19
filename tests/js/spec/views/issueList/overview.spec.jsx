@@ -4,11 +4,11 @@ import React from 'react';
 
 import {initializeOrg} from 'sentry-test/initializeOrg';
 import {mountWithTheme, shallow} from 'sentry-test/enzyme';
-import ErrorRobot from 'app/components/errorRobot';
-import GroupStore from 'app/stores/groupStore';
-import IssueListWithStores, {IssueListOverview} from 'app/views/issueList/overview';
-import StreamGroup from 'app/components/stream/group';
-import TagStore from 'app/stores/tagStore';
+import ErrorRobot from 'sentry/components/errorRobot';
+import GroupStore from 'sentry/stores/groupStore';
+import IssueListWithStores, {IssueListOverview} from 'sentry/views/issueList/overview';
+import StreamGroup from 'sentry/components/stream/group';
+import TagStore from 'sentry/stores/tagStore';
 
 // Mock <IssueListSidebar> and <IssueListActions>
 jest.mock('app/views/issueList/sidebar', () => jest.fn(() => null));

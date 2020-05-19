@@ -1,5 +1,5 @@
-import {trackQuery} from 'app/views/discover/analytics';
-import {analytics} from 'app/utils/analytics';
+import {trackQuery} from 'sentry/views/discover/analytics';
+import {analytics} from 'sentry/utils/analytics';
 
 jest.mock('app/utils/analytics');
 

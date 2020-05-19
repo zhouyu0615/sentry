@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {Client} from 'app/api';
+import {Client} from 'sentry/api';
 import {initializeOrg} from 'sentry-test/initializeOrg';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import AccountSecurityDetails from 'app/views/settings/account/accountSecurity/accountSecurityDetails';
-import AccountSecurityWrapper from 'app/views/settings/account/accountSecurity/accountSecurityWrapper';
+import AccountSecurityDetails from 'sentry/views/settings/account/accountSecurity/accountSecurityDetails';
+import AccountSecurityWrapper from 'sentry/views/settings/account/accountSecurity/accountSecurityWrapper';
 
 const ENDPOINT = '/users/me/authenticators/';
 const ORG_ENDPOINT = '/organizations/';

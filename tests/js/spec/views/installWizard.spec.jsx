@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {mount} from 'sentry-test/enzyme';
-import ConfigStore from 'app/stores/configStore';
-import InstallWizard from 'app/views/installWizard';
+import ConfigStore from 'sentry/stores/configStore';
+import InstallWizard from 'sentry/views/installWizard';
 
 jest.mock('app/stores/configStore', () => ({
   get: jest.fn(),

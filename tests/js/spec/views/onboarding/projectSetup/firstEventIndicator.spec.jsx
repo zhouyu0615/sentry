@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Indicator} from 'app/views/onboarding/projectSetup/firstEventIndicator';
+import {Indicator} from 'sentry/views/onboarding/projectSetup/firstEventIndicator';
 import {mountWithTheme} from 'sentry-test/enzyme';
 
 describe('FirstEventIndicator', function() {

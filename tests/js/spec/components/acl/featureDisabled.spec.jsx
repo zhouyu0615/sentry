@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {PanelAlert} from 'app/components/panels';
+import {PanelAlert} from 'sentry/components/panels';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import FeatureDisabled from 'app/components/acl/featureDisabled';
+import FeatureDisabled from 'sentry/components/acl/featureDisabled';
 
 describe('FeatureDisabled', function() {
   const routerContext = TestStubs.routerContext();

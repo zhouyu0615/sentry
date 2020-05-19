@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {Client} from 'app/api';
+import {Client} from 'sentry/api';
 import {mountWithTheme} from 'sentry-test/enzyme';
-import SentryApplicationDashboard from 'app/views/settings/organizationDeveloperSettings/sentryApplicationDashboard';
+import SentryApplicationDashboard from 'sentry/views/settings/organizationDeveloperSettings/sentryApplicationDashboard';
 
 describe('Sentry Application Dashboard', function() {
   const NUM_INSTALLS = 5;
