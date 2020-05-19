@@ -215,7 +215,7 @@ let appConfig = {
     /**
      * Main Sentry SPA
      */
-    app: 'app',
+    app: 'sentry',
 
     /**
      * Legacy CSS Webpack appConfig for Django-powered views.
@@ -253,7 +253,7 @@ let appConfig = {
         },
       },
       {
-        test: /app\/icons\/.*\.svg$/,
+        test: /sentry\/icons\/.*\.svg$/,
         use: ['svg-sprite-loader', 'svgo-loader'],
       },
       {
@@ -267,7 +267,7 @@ let appConfig = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|svg|png|gif|ico|jpg|mp4)($|\?)/,
-        exclude: /app\/icons\/.*\.svg$/,
+        exclude: /sentry\/icons\/.*\.svg$/,
         use: [
           {
             loader: 'file-loader',
