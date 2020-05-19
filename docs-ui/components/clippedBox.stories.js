@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 // import {action} from '@storybook/addon-actions';
 
-import ClippedBox from 'app/components/clippedBox';
+import ClippedBox from 'sentry/components/clippedBox';
 
 storiesOf('UI|ClippedBox', module).add(
   'default',

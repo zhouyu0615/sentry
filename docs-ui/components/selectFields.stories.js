@@ -3,9 +3,9 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {action} from '@storybook/addon-actions';
 
-import {Form as LegacyForm} from 'app/components/forms';
-import SelectField from 'app/components/forms/selectField';
-import SelectCreatableField from 'app/components/forms/selectCreatableField';
+import {Form as LegacyForm} from 'sentry/components/forms';
+import SelectField from 'sentry/components/forms/selectField';
+import SelectCreatableField from 'sentry/components/forms/selectCreatableField';
 
 // eslint-disable-next-line
 storiesOf('Forms|Fields/Old', module)

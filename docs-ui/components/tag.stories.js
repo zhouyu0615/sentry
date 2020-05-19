@@ -2,8 +2,8 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Tooltip from 'app/components/tooltip';
-import Tag from 'app/views/settings/components/tag';
+import Tooltip from 'sentry/components/tooltip';
+import Tag from 'sentry/views/settings/components/tag';
 
 storiesOf('UI|Tags', module)
   .add(

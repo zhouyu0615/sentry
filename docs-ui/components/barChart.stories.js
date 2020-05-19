@@ -3,7 +3,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import BarChart from 'app/components/charts/barChart';
+import BarChart from 'sentry/components/charts/barChart';
 
 storiesOf('Charts|BarChart', module).add(
   'BarChart',

@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import SpreadLayout from 'app/components/spreadLayout';
+import SpreadLayout from 'sentry/components/spreadLayout';
 
 storiesOf('Deprecated|ComponentLayouts/SpreadLayout', module)
   .add(

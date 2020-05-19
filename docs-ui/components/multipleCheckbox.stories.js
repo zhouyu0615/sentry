@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {action} from '@storybook/addon-actions';
 
-import MultipleCheckbox from 'app/views/settings/components/forms/controls/multipleCheckbox';
+import MultipleCheckbox from 'sentry/views/settings/components/forms/controls/multipleCheckbox';
 
 storiesOf('Forms|Controls', module).add(
   'MultipleCheckbox',

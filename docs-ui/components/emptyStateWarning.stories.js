@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import EmptyStateWarning from 'app/components/emptyStateWarning';
+import EmptyStateWarning from 'sentry/components/emptyStateWarning';
 
 storiesOf('UI|EmptyStateWarning', module).add(
   'default',

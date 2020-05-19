@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import RangeSlider from 'app/views/settings/components/forms/controls/rangeSlider';
+import RangeSlider from 'sentry/views/settings/components/forms/controls/rangeSlider';
 
 storiesOf('Forms|Controls', module).add(
   'RangeSlider',

@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import styled from '@emotion/styled';
 
-import theme from 'app/utils/theme';
+import theme from 'sentry/utils/theme';
 
 storiesOf('Style|Colors', module).add(
   'default',

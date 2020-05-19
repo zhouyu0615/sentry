@@ -3,7 +3,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import PercentageAreaChart from 'app/components/charts/percentageAreaChart';
+import PercentageAreaChart from 'sentry/components/charts/percentageAreaChart';
 
 const TOTAL = 6;
 

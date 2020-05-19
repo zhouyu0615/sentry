@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import getDynamicText from 'app/utils/getDynamicText';
+import getDynamicText from 'sentry/utils/getDynamicText';
 
 storiesOf('Utility|getDynamicText', module).add(
   'getDynamicText',

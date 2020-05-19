@@ -3,8 +3,8 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {text, boolean} from '@storybook/addon-knobs';
 
-import DropdownControl, {DropdownItem} from 'app/components/dropdownControl';
-import MenuItem from 'app/components/menuItem';
+import DropdownControl, {DropdownItem} from 'sentry/components/dropdownControl';
+import MenuItem from 'sentry/components/menuItem';
 
 storiesOf('UI|Dropdowns/DropdownControl', module)
   .add(

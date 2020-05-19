@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Text from 'app/components/text';
+import Text from 'sentry/components/text';
 
 storiesOf('Style|Text', module).add(
   'default',

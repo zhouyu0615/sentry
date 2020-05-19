@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import styled from '@emotion/styled';
 
-import * as newIconset from 'app/icons';
+import * as newIconset from 'sentry/icons';
 
 storiesOf('Style|Icons', module).add(
   'Icon Set',

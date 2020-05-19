@@ -2,7 +2,7 @@ import React from 'react';
 
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
-import FeatureDisabled from 'app/components/acl/featureDisabled';
+import FeatureDisabled from 'sentry/components/acl/featureDisabled';
 
 storiesOf('UI|FeatureDisabled', module)
   .add(

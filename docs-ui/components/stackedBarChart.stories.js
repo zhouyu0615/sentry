@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import StackedBarChart from 'app/components/stackedBarChart';
+import StackedBarChart from 'sentry/components/stackedBarChart';
 
 storiesOf('Charts|StackedBarChart (old)', module).add(
   'StackedBarChart',

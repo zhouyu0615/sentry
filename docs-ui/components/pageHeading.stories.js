@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import PageHeading from 'app/components/pageHeading';
+import PageHeading from 'sentry/components/pageHeading';
 
 storiesOf('UI|PageHeading', module).add(
   'default',

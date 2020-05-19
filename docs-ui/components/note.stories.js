@@ -3,8 +3,8 @@ import {action} from '@storybook/addon-actions';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import ConfigStore from 'app/stores/configStore';
-import Note from 'app/components/activity/note';
+import ConfigStore from 'sentry/stores/configStore';
+import Note from 'sentry/components/activity/note';
 
 const user = {
   username: 'billy@sentry.io',

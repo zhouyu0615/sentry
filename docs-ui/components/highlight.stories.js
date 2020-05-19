@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Highlight from 'app/components/highlight';
+import Highlight from 'sentry/components/highlight';
 
 storiesOf('Utility|Highlight', module).add(
   'Highlight a substring',

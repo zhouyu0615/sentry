@@ -3,7 +3,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import LineChart from 'app/components/charts/lineChart';
+import LineChart from 'sentry/components/charts/lineChart';
 
 storiesOf('Charts|LineChart', module).add(
   'default',

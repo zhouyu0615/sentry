@@ -2,15 +2,15 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Button from 'app/components/button';
+import Button from 'sentry/components/button';
 import {
   Panel,
   PanelHeader,
   PanelBody,
   PanelItem,
   PanelTable,
-} from 'app/components/panels';
-import Field from 'app/views/settings/components/forms/field';
+} from 'sentry/components/panels';
+import Field from 'sentry/views/settings/components/forms/field';
 
 storiesOf('UI|Panels', module)
   .add(

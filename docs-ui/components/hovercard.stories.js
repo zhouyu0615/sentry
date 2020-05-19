@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {text, select} from '@storybook/addon-knobs';
 
-import Hovercard from 'app/components/hovercard';
+import Hovercard from 'sentry/components/hovercard';
 
 const positionOptions = {
   top: 'top',

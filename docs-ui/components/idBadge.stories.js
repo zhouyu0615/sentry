@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import styled from '@emotion/styled';
 
-import IdBadge from 'app/components/idBadge';
+import IdBadge from 'sentry/components/idBadge';
 
 const Item = styled('div')`
   padding: 8px;

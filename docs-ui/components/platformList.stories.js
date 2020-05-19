@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import PlatformList from 'app/components/platformList';
+import PlatformList from 'sentry/components/platformList';
 
 storiesOf('UI|Platform List', module).add(
   'Platform List',

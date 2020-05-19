@@ -2,8 +2,8 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import FlowLayout from 'app/components/flowLayout';
-import SpreadLayout from 'app/components/spreadLayout';
+import FlowLayout from 'sentry/components/flowLayout';
+import SpreadLayout from 'sentry/components/spreadLayout';
 
 storiesOf('Deprecated|ComponentLayouts/FlowLayout', module)
   .add(

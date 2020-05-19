@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
 import {withInfo} from '@storybook/addon-info';
 
-import LoadingError from 'app/components/loadingError';
+import LoadingError from 'sentry/components/loadingError';
 
 storiesOf('UI|Loaders/LoadingError', module)
   .add(

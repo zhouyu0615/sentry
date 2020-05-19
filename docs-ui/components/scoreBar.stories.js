@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {number, boolean, array, color} from '@storybook/addon-knobs';
 
-import ScoreBar from 'app/components/scoreBar';
+import ScoreBar from 'sentry/components/scoreBar';
 
 storiesOf('Other|ScoreBar', module)
   .add(

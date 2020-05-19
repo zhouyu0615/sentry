@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {number, boolean} from '@storybook/addon-knobs';
 
-import CircleIndicator from 'app/components/circleIndicator';
+import CircleIndicator from 'sentry/components/circleIndicator';
 
 storiesOf('UI|CircleIndicator', module).add(
   'default',

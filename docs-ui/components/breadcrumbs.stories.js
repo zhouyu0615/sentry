@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Breadcrumbs from 'app/components/breadcrumbs';
+import Breadcrumbs from 'sentry/components/breadcrumbs';
 
 storiesOf('UI|Breadcrumbs', module).add(
   'default',

@@ -3,8 +3,8 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {action} from '@storybook/addon-actions';
 
-import Confirm from 'app/components/confirm';
-import Button from 'app/components/button';
+import Confirm from 'sentry/components/confirm';
+import Button from 'sentry/components/button';
 
 storiesOf('UI|Confirm', module).add(
   'Confirm',

@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {withKnobs, boolean} from '@storybook/addon-knobs';
 
-import Well from 'app/components/well';
+import Well from 'sentry/components/well';
 
 const stories = storiesOf('UI|Well', module);
 stories.addDecorator(withKnobs);

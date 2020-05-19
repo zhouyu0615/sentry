@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Qrcode from 'app/components/qrcode';
+import Qrcode from 'sentry/components/qrcode';
 
 storiesOf('UI|Qrcode', module).add(
   'default',

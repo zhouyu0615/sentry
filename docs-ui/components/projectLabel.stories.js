@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import ProjectLabel from 'app/components/projectLabel';
+import ProjectLabel from 'sentry/components/projectLabel';
 
 storiesOf('Deprecated|ProjectLabel', module).add(
   'default',

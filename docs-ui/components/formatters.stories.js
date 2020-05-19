@@ -4,11 +4,11 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {text, boolean} from '@storybook/addon-knobs';
 
-import FileSize from 'app/components/fileSize';
-import Duration from 'app/components/duration';
-import DateTime from 'app/components/dateTime';
-import Count from 'app/components/count';
-import Version from 'app/components/version';
+import FileSize from 'sentry/components/fileSize';
+import Duration from 'sentry/components/duration';
+import DateTime from 'sentry/components/dateTime';
+import Count from 'sentry/components/count';
+import Version from 'sentry/components/version';
 
 storiesOf('Utility|Formatters', module)
   .add(

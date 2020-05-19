@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import space from 'app/styles/space';
-import IssueSyncListElement from 'app/components/issueSyncListElement';
+import space from 'sentry/styles/space';
+import IssueSyncListElement from 'sentry/components/issueSyncListElement';
 
 storiesOf('Other|IssueSyncListElement', module)
   .add(

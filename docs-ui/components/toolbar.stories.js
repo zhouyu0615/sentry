@@ -2,9 +2,9 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Toolbar from 'app/components/toolbar';
-import ToolbarHeader from 'app/components/toolbarHeader';
-import SpreadLayout from 'app/components/spreadLayout';
+import Toolbar from 'sentry/components/toolbar';
+import ToolbarHeader from 'sentry/components/toolbarHeader';
+import SpreadLayout from 'sentry/components/spreadLayout';
 
 storiesOf('Deprecated|Toolbar', module).add(
   'default',

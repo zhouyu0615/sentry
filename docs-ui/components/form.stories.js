@@ -6,24 +6,24 @@ import {
   TextField as LegacyTextField,
   PasswordField,
   BooleanField,
-} from 'app/components/forms';
-import {Panel} from 'app/components/panels';
+} from 'sentry/components/forms';
+import {Panel} from 'sentry/components/panels';
 import {action} from '@storybook/addon-actions';
 import {number, boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
-import DatePickerField from 'app/views/settings/components/forms/datePickerField';
-import Form from 'app/views/settings/components/forms/form';
-import FormField from 'app/views/settings/components/forms/formField';
-import NewBooleanField from 'app/views/settings/components/forms/booleanField';
-import RadioField from 'app/views/settings/components/forms/radioField';
-import RadioGroup from 'app/views/settings/components/forms/controls/radioGroup';
-import RangeField from 'app/views/settings/components/forms/rangeField';
-import RangeSlider from 'app/views/settings/components/forms/controls/rangeSlider';
-import SelectField from 'app/views/settings/components/forms/selectField';
-import Switch from 'app/components/switch';
-import TextField from 'app/views/settings/components/forms/textField';
-import TextareaField from 'app/views/settings/components/forms/textareaField';
+import DatePickerField from 'sentry/views/settings/components/forms/datePickerField';
+import Form from 'sentry/views/settings/components/forms/form';
+import FormField from 'sentry/views/settings/components/forms/formField';
+import NewBooleanField from 'sentry/views/settings/components/forms/booleanField';
+import RadioField from 'sentry/views/settings/components/forms/radioField';
+import RadioGroup from 'sentry/views/settings/components/forms/controls/radioGroup';
+import RangeField from 'sentry/views/settings/components/forms/rangeField';
+import RangeSlider from 'sentry/views/settings/components/forms/controls/rangeSlider';
+import SelectField from 'sentry/views/settings/components/forms/selectField';
+import Switch from 'sentry/components/switch';
+import TextField from 'sentry/views/settings/components/forms/textField';
+import TextareaField from 'sentry/views/settings/components/forms/textareaField';
 
 class UndoButton extends React.Component {
   handleClick(e) {

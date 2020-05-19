@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {text, number} from '@storybook/addon-knobs';
 
-import Placeholder from 'app/components/placeholder';
+import Placeholder from 'sentry/components/placeholder';
 
 storiesOf('UI|Loaders/Placeholder', module).add(
   'default',

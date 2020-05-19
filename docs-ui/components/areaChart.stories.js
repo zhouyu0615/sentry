@@ -3,7 +3,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import AreaChart from 'app/components/charts/areaChart';
+import AreaChart from 'sentry/components/charts/areaChart';
 
 storiesOf('Charts|AreaChart', module).add(
   'AreaChart',

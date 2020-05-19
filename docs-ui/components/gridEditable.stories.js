@@ -4,8 +4,8 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import styled from '@emotion/styled';
 
-import Button from 'app/components/button';
-import GridEditable from 'app/components/gridEditable';
+import Button from 'sentry/components/button';
+import GridEditable from 'sentry/components/gridEditable';
 
 const Section = styled('div')`
   margin-bottom: 32px;

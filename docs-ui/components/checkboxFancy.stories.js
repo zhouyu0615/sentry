@@ -4,7 +4,7 @@ import {withInfo} from '@storybook/addon-info';
 import {number, boolean} from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 
-import CheckboxFancy from 'app/components/checkboxFancy/checkboxFancy';
+import CheckboxFancy from 'sentry/components/checkboxFancy/checkboxFancy';
 
 storiesOf('Style|Icons', module).add(
   'CheckboxFancy',

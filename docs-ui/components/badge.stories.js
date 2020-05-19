@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 // import {action} from '@storybook/addon-actions';
 import {withInfo} from '@storybook/addon-info';
 
-import Badge from 'app/components/badge';
+import Badge from 'sentry/components/badge';
 
 storiesOf('UI|Badge', module).add(
   'default',

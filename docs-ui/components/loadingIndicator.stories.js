@@ -2,7 +2,7 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import LoadingIndicator from 'app/components/loadingIndicator';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
 
 storiesOf('UI|Loaders/LoadingIndicator', module)
   .add(

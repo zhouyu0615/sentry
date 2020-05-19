@@ -5,7 +5,7 @@ import {boolean} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import U2fEnrolledDetails from 'app/views/settings/account/accountSecurity/components/u2fEnrolledDetails';
+import U2fEnrolledDetails from 'sentry/views/settings/account/accountSecurity/components/u2fEnrolledDetails';
 
 storiesOf('Other|U2fEnrolledDetails', module).add(
   'U2fEnrolledDetails',

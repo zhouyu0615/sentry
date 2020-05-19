@@ -2,8 +2,8 @@ import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
-import Pills from 'app/components/pills';
-import Pill from 'app/components/pill';
+import Pills from 'sentry/components/pills';
+import Pill from 'sentry/components/pill';
 
 storiesOf('UI|Pills', module).add(
   'all',

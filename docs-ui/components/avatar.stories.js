@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 import {boolean} from '@storybook/addon-knobs';
 
-import Avatar from 'app/components/avatar';
+import Avatar from 'sentry/components/avatar';
 
 const USER = {
   id: 1,
