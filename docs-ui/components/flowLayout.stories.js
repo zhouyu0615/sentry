@@ -36,7 +36,7 @@ storiesOf('Deprecated|ComponentLayouts/FlowLayout', module)
       <div>
         <h3 style={{marginBottom: 0, marginTop: 24}}>With "truncate"</h3>
         <SpreadLayout style={{backgroundColor: 'white', width: 250}}>
-          <FlowLayout truncate={true}>
+          <FlowLayout truncate>
             <span className="truncate" style={{whiteSpace: 'nowrap'}}>
               Very very long content Very very long content Very very long content Very
               very long content

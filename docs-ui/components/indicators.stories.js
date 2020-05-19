@@ -16,7 +16,7 @@ storiesOf('UI|Toast Indicators', module)
   .add(
     'static',
     withInfo('Toast Indicators')(() => {
-      let type = select(
+      const type = select(
         'Type',
         {success: 'success', error: 'error', loading: 'loading'},
         'success'

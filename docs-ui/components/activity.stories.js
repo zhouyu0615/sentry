@@ -1,8 +1,8 @@
 import React from 'react';
-
 import {boolean, color} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
+
 import ActivityAvatar from 'sentry/components/activity/item/avatar';
 import ActivityBubble from 'sentry/components/activity/item/bubble';
 import ActivityItem from 'sentry/components/activity/item';

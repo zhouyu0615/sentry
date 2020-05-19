@@ -10,7 +10,7 @@ storiesOf('UI|Pills', module).add(
   withInfo('When you have key/value data but are tight on space.')(() => (
     <Pills>
       <Pill name="key" value="value" />
-      <Pill name="good" value={true}>
+      <Pill name="good" value>
         thing
       </Pill>
       <Pill name="bad" value={false}>

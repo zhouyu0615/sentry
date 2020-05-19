@@ -24,7 +24,7 @@ storiesOf('UI|NavTabs', module)
     'underlined',
     withInfo('NavTabs with bottom border applied')(() => {
       return (
-        <NavTabs underlined={true}>
+        <NavTabs underlined>
           <li className="active">
             <a href="#">link one</a>
           </li>

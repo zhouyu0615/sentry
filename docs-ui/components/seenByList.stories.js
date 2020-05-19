@@ -1,8 +1,8 @@
 import React from 'react';
-
 import {number, string} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
+
 import SeenByList from 'sentry/components/seenByList';
 
 const USER = {

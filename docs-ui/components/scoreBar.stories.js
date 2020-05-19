@@ -37,7 +37,7 @@ storiesOf('Other|ScoreBar', module)
   .add(
     'custom palette',
     withInfo('Description')(() => {
-      let palette = array('Palette', [
+      const palette = array('Palette', [
         color('Lower', 'pink'),
         color('Low', 'yellow'),
         color('Med', 'lime'),

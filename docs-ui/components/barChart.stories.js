@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {storiesOf} from '@storybook/react';
 import {withInfo} from '@storybook/addon-info';
 
@@ -14,7 +13,7 @@ storiesOf('Charts|BarChart', module).add(
 
         <BarChart
           style={{height: 250}}
-          stacked={true}
+          stacked
           series={[
             {
               seriesName: 'Unhandled Errors',
@@ -54,7 +53,7 @@ storiesOf('Charts|BarChart', module).add(
         />
         <BarChart
           style={{height: 400}}
-          stacked={true}
+          stacked
           series={[
             {
               seriesName: 'Chrome',

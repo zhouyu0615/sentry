@@ -18,11 +18,19 @@ storiesOf('Forms|Fields/Old', module)
       <LegacyForm onSubmit={action('onSubmit')}>
         <SelectField
           name="foos"
-          choices={[['foo', 'Foo'], ['bar', 'Bar'], ['baz', 'Baz']]}
+          choices={[
+            ['foo', 'Foo'],
+            ['bar', 'Bar'],
+            ['baz', 'Baz'],
+          ]}
         />
         <SelectField
           name="multi_foos"
-          choices={[['foo', 'Foo'], ['bar', 'Bar'], ['baz', 'Baz']]}
+          choices={[
+            ['foo', 'Foo'],
+            ['bar', 'Bar'],
+            ['baz', 'Baz'],
+          ]}
           multiple
         />
       </LegacyForm>
@@ -38,13 +46,21 @@ storiesOf('Forms|Fields/Old', module)
         <SelectCreatableField
           label="Creatable"
           name="creatable_foos"
-          choices={[['foo', 'Foo'], ['bar', 'Bar'], ['baz', 'Baz']]}
+          choices={[
+            ['foo', 'Foo'],
+            ['bar', 'Bar'],
+            ['baz', 'Baz'],
+          ]}
         />
         <SelectCreatableField
           label="Creatable (and Multiple)"
           name="creatable_multi_foos"
           multiple
-          choices={[['foo', 'Foo'], ['bar', 'Bar'], ['baz', 'Baz']]}
+          choices={[
+            ['foo', 'Foo'],
+            ['bar', 'Bar'],
+            ['baz', 'Baz'],
+          ]}
         />
       </LegacyForm>
     ))
