@@ -1,11 +1,11 @@
-import {GridColumnOrder, GridColumnSortBy} from 'app/components/gridEditable';
-import {MetaType} from 'app/utils/discover/eventView';
+import {GridColumnOrder, GridColumnSortBy} from 'sentry/components/gridEditable';
+import {MetaType} from 'sentry/utils/discover/eventView';
 import {
   Column,
   ColumnType,
   ColumnValueType,
   AggregateParameter,
-} from 'app/utils/discover/fields';
+} from 'sentry/utils/discover/fields';
 
 /**
  * It is assumed that `aggregation` and `field` have the same ColumnValueType

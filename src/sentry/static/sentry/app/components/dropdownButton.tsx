@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Button from 'app/components/button';
-import InlineSvg from 'app/components/inlineSvg';
+import Button from 'sentry/components/button';
+import InlineSvg from 'sentry/components/inlineSvg';
 
 type Props = React.ComponentProps<typeof Button> & {
   isOpen?: boolean;

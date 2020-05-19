@@ -8,15 +8,15 @@ import {
   EventsStats,
   MultiSeriesEventsStats,
   EventsStatsData,
-} from 'app/types';
-import {Series, SeriesDataUnit} from 'app/types/echarts';
-import LoadingPanel from 'app/components/charts/loadingPanel';
-import {Client} from 'app/api';
-import {doEventsRequest} from 'app/actionCreators/events';
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {canIncludePreviousPeriod} from 'app/views/events/utils/canIncludePreviousPeriod';
-import {t} from 'app/locale';
-import SentryTypes from 'app/sentryTypes';
+} from 'sentry/types';
+import {Series, SeriesDataUnit} from 'sentry/types/echarts';
+import LoadingPanel from 'sentry/components/charts/loadingPanel';
+import {Client} from 'sentry/api';
+import {doEventsRequest} from 'sentry/actionCreators/events';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {canIncludePreviousPeriod} from 'sentry/views/events/utils/canIncludePreviousPeriod';
+import {t} from 'sentry/locale';
+import SentryTypes from 'sentry/sentryTypes';
 
 export type TimeSeriesData = {
   // timeseries data

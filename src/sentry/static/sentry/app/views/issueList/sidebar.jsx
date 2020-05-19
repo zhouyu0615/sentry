@@ -5,9 +5,9 @@ import isEqual from 'lodash/isEqual';
 import debounce from 'lodash/debounce';
 import map from 'lodash/map';
 
-import LoadingIndicator from 'app/components/loadingIndicator';
-import {queryToObj, objToQuery} from 'app/utils/stream';
-import {t} from 'app/locale';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
+import {queryToObj, objToQuery} from 'sentry/utils/stream';
+import {t} from 'sentry/locale';
 
 import IssueListTagFilter from './tagFilter';
 

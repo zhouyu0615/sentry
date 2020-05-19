@@ -2,20 +2,20 @@ import React from 'react';
 import {Location} from 'history';
 import partial from 'lodash/partial';
 
-import {Organization} from 'app/types';
-import {t, tct} from 'app/locale';
-import Count from 'app/components/count';
-import Duration from 'app/components/duration';
-import ProjectBadge from 'app/components/idBadge/projectBadge';
-import ScoreBar from 'app/components/scoreBar';
-import Tooltip from 'app/components/tooltip';
-import UserBadge from 'app/components/idBadge/userBadge';
-import Version from 'app/components/version';
-import getDynamicText from 'app/utils/getDynamicText';
-import {formatFloat, formatPercentage} from 'app/utils/formatters';
-import {getAggregateAlias} from 'app/utils/discover/fields';
-import Projects from 'app/utils/projects';
-import theme from 'app/utils/theme';
+import {Organization} from 'sentry/types';
+import {t, tct} from 'sentry/locale';
+import Count from 'sentry/components/count';
+import Duration from 'sentry/components/duration';
+import ProjectBadge from 'sentry/components/idBadge/projectBadge';
+import ScoreBar from 'sentry/components/scoreBar';
+import Tooltip from 'sentry/components/tooltip';
+import UserBadge from 'sentry/components/idBadge/userBadge';
+import Version from 'sentry/components/version';
+import getDynamicText from 'sentry/utils/getDynamicText';
+import {formatFloat, formatPercentage} from 'sentry/utils/formatters';
+import {getAggregateAlias} from 'sentry/utils/discover/fields';
+import Projects from 'sentry/utils/projects';
+import theme from 'sentry/utils/theme';
 
 import {
   Container,

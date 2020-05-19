@@ -1,9 +1,9 @@
 import DocumentTitle from 'react-document-title';
 import React from 'react';
 
-import Hook from 'app/components/hook';
-import ListLink from 'app/components/links/listLink';
-import Sidebar from 'app/components/sidebar';
+import Hook from 'sentry/components/hook';
+import ListLink from 'sentry/components/links/listLink';
+import Sidebar from 'sentry/components/sidebar';
 
 export default class AdminLayout extends React.Component {
   getTitle = () => 'Sentry Admin';

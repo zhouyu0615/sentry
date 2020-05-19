@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import InlineSvg from 'app/components/inlineSvg';
-import space from 'app/styles/space';
+import InlineSvg from 'sentry/components/inlineSvg';
+import space from 'sentry/styles/space';
 
 /* styles common to the guide and support cue/drawer. */
 const AssistantContainer = styled('div')`

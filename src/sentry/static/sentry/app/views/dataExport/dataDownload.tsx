@@ -2,13 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {RouteComponentProps} from 'react-router/lib/Router';
 
-import Button from 'app/components/button';
-import {ExportQueryType} from 'app/components/dataExport';
-import DateTime from 'app/components/dateTime';
-import AsyncView from 'app/views/asyncView';
-import Layout from 'app/views/auth/layout';
-import space from 'app/styles/space';
-import {t} from 'app/locale';
+import Button from 'sentry/components/button';
+import {ExportQueryType} from 'sentry/components/dataExport';
+import DateTime from 'sentry/components/dateTime';
+import AsyncView from 'sentry/views/asyncView';
+import Layout from 'sentry/views/auth/layout';
+import space from 'sentry/styles/space';
+import {t} from 'sentry/locale';
 
 export enum DownloadStatus {
   Early = 'EARLY',

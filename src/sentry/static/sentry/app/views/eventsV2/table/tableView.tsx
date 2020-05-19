@@ -3,28 +3,28 @@ import styled from '@emotion/styled';
 import {browserHistory} from 'react-router';
 import {Location, LocationDescriptorObject} from 'history';
 
-import {Organization, OrganizationSummary} from 'app/types';
-import {trackAnalyticsEvent} from 'app/utils/analytics';
-import GridEditable, {COL_WIDTH_UNDEFINED} from 'app/components/gridEditable';
-import SortLink from 'app/components/gridEditable/sortLink';
-import Feature from 'app/components/acl/feature';
-import DataExport, {ExportQueryType} from 'app/components/dataExport';
-import FeatureDisabled from 'app/components/acl/featureDisabled';
-import Hovercard from 'app/components/hovercard';
-import {IconDownload, IconEdit, IconEvent, IconStack} from 'app/icons';
-import {t} from 'app/locale';
-import {openModal} from 'app/actionCreators/modal';
-import Link from 'app/components/links/link';
-import Tooltip from 'app/components/tooltip';
+import {Organization, OrganizationSummary} from 'sentry/types';
+import {trackAnalyticsEvent} from 'sentry/utils/analytics';
+import GridEditable, {COL_WIDTH_UNDEFINED} from 'sentry/components/gridEditable';
+import SortLink from 'sentry/components/gridEditable/sortLink';
+import Feature from 'sentry/components/acl/feature';
+import DataExport, {ExportQueryType} from 'sentry/components/dataExport';
+import FeatureDisabled from 'sentry/components/acl/featureDisabled';
+import Hovercard from 'sentry/components/hovercard';
+import {IconDownload, IconEdit, IconEvent, IconStack} from 'sentry/icons';
+import {t} from 'sentry/locale';
+import {openModal} from 'sentry/actionCreators/modal';
+import Link from 'sentry/components/links/link';
+import Tooltip from 'sentry/components/tooltip';
 import EventView, {
   isFieldSortable,
   MetaType,
   pickRelevantLocationQueryStrings,
-} from 'app/utils/discover/eventView';
-import {Column} from 'app/utils/discover/fields';
-import {getFieldRenderer} from 'app/utils/discover/fieldRenderers';
-import {generateEventSlug, eventDetailsRouteWithEventView} from 'app/utils/discover/urls';
-import space from 'app/styles/space';
+} from 'sentry/utils/discover/eventView';
+import {Column} from 'sentry/utils/discover/fields';
+import {getFieldRenderer} from 'sentry/utils/discover/fieldRenderers';
+import {generateEventSlug, eventDetailsRouteWithEventView} from 'sentry/utils/discover/urls';
+import space from 'sentry/styles/space';
 
 import {downloadAsCsv, getExpandedResults, pushEventViewToLocation} from '../utils';
 import ColumnEditModal, {modalCss} from './columnEditModal';

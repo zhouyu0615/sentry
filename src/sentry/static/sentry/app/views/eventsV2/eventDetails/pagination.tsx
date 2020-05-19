@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Button from 'app/components/button';
-import ButtonBar from 'app/components/buttonBar';
-import {IconPrevious, IconNext} from 'app/icons';
-import {t} from 'app/locale';
-import space from 'app/styles/space';
-import {Event, Organization} from 'app/types';
-import EventView from 'app/utils/discover/eventView';
-import {eventDetailsRouteWithEventView} from 'app/utils/discover/urls';
+import Button from 'sentry/components/button';
+import ButtonBar from 'sentry/components/buttonBar';
+import {IconPrevious, IconNext} from 'sentry/icons';
+import {t} from 'sentry/locale';
+import space from 'sentry/styles/space';
+import {Event, Organization} from 'sentry/types';
+import EventView from 'sentry/utils/discover/eventView';
+import {eventDetailsRouteWithEventView} from 'sentry/utils/discover/urls';
 
 type LinksType = {
   oldest: null;

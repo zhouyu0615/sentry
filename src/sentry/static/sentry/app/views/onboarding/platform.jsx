@@ -2,17 +2,17 @@ import {ClassNames} from '@emotion/core';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {createProject} from 'app/actionCreators/projects';
-import {stepPropTypes} from 'app/views/onboarding/onboarding';
-import {t, tct} from 'app/locale';
-import Button from 'app/components/button';
-import PlatformPicker from 'app/components/platformPicker';
-import ProjectActions from 'app/actions/projectActions';
-import SentryTypes from 'app/sentryTypes';
-import space from 'app/styles/space';
-import withApi from 'app/utils/withApi';
-import withTeams from 'app/utils/withTeams';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {createProject} from 'sentry/actionCreators/projects';
+import {stepPropTypes} from 'sentry/views/onboarding/onboarding';
+import {t, tct} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import PlatformPicker from 'sentry/components/platformPicker';
+import ProjectActions from 'sentry/actions/projectActions';
+import SentryTypes from 'sentry/sentryTypes';
+import space from 'sentry/styles/space';
+import withApi from 'sentry/utils/withApi';
+import withTeams from 'sentry/utils/withTeams';
 
 class OnboardingPlatform extends React.Component {
   static propTypes = {

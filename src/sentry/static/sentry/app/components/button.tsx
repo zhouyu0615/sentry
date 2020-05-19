@@ -5,10 +5,10 @@ import React from 'react';
 import isPropValid from '@emotion/is-prop-valid';
 import styled from '@emotion/styled';
 
-import {Theme} from 'app/utils/theme';
-import ExternalLink from 'app/components/links/externalLink';
-import InlineSvg from 'app/components/inlineSvg';
-import Tooltip from 'app/components/tooltip';
+import {Theme} from 'sentry/utils/theme';
+import ExternalLink from 'sentry/components/links/externalLink';
+import InlineSvg from 'sentry/components/inlineSvg';
+import Tooltip from 'sentry/components/tooltip';
 
 /**
  * The button can actually also be an anchor or React router Link (which seems

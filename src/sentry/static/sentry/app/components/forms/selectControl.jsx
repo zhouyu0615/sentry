@@ -4,9 +4,9 @@ import Async from 'react-select/async';
 import Creatable from 'react-select/creatable';
 import AsyncCreatable from 'react-select/async-creatable';
 
-import theme from 'app/utils/theme';
-import InlineSvg from 'app/components/inlineSvg';
-import convertFromSelect2Choices from 'app/utils/convertFromSelect2Choices';
+import theme from 'sentry/utils/theme';
+import InlineSvg from 'sentry/components/inlineSvg';
+import convertFromSelect2Choices from 'sentry/utils/convertFromSelect2Choices';
 
 import SelectControlLegacy from './selectControlLegacy';
 

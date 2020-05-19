@@ -1,4 +1,4 @@
-import {t} from 'app/locale';
+import {t} from 'sentry/locale';
 
 export const PERFORMANCE_TERMS: Record<string, string> = {
   apdex: t(

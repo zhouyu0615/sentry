@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Feature from 'app/components/acl/feature';
-import BreadcrumbsInterface from 'app/components/events/interfaces/breadcrumbs/breadcrumbs';
-import BreadcrumbsInterfaceV2 from 'app/components/events/interfaces/breadcrumbsV2/breadcrumbs';
+import Feature from 'sentry/components/acl/feature';
+import BreadcrumbsInterface from 'sentry/components/events/interfaces/breadcrumbs/breadcrumbs';
+import BreadcrumbsInterfaceV2 from 'sentry/components/events/interfaces/breadcrumbsV2/breadcrumbs';
 
 type Props = React.ComponentProps<typeof BreadcrumbsInterfaceV2>;
 type BreadcrumbsInterfaceProps = React.ComponentProps<typeof BreadcrumbsInterface>;

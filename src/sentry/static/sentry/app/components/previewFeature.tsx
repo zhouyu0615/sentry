@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {t} from 'app/locale';
-import Alert, {Props as AlertProps} from 'app/components/alert';
+import {t} from 'sentry/locale';
+import Alert, {Props as AlertProps} from 'sentry/components/alert';
 
 type Props = {
   type?: AlertProps['type'];

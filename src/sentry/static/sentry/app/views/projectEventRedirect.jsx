@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {PageContent} from 'app/styles/organization';
-import {t} from 'app/locale';
-import DetailedError from 'app/components/errors/detailedError';
+import {PageContent} from 'sentry/styles/organization';
+import {t} from 'sentry/locale';
+import DetailedError from 'sentry/components/errors/detailedError';
 
 /**
  * This component performs a client-side redirect to Event Details given only

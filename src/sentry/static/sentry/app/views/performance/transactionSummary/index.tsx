@@ -5,20 +5,20 @@ import {Location} from 'history';
 import styled from '@emotion/styled';
 import * as Sentry from '@sentry/browser';
 
-import {Client} from 'app/api';
-import {t} from 'app/locale';
-import {fetchTotalCount} from 'app/actionCreators/events';
-import {Organization, Project} from 'app/types';
-import withOrganization from 'app/utils/withOrganization';
-import withProjects from 'app/utils/withProjects';
-import SentryDocumentTitle from 'app/components/sentryDocumentTitle';
-import GlobalSelectionHeader from 'app/components/organizations/globalSelectionHeader';
-import {PageContent} from 'app/styles/organization';
-import EventView, {isAPIPayloadSimilar} from 'app/utils/discover/eventView';
-import {decodeScalar} from 'app/utils/queryString';
-import {stringifyQueryObject} from 'app/utils/tokenizeSearch';
-import LightWeightNoProjectMessage from 'app/components/lightWeightNoProjectMessage';
-import withApi from 'app/utils/withApi';
+import {Client} from 'sentry/api';
+import {t} from 'sentry/locale';
+import {fetchTotalCount} from 'sentry/actionCreators/events';
+import {Organization, Project} from 'sentry/types';
+import withOrganization from 'sentry/utils/withOrganization';
+import withProjects from 'sentry/utils/withProjects';
+import SentryDocumentTitle from 'sentry/components/sentryDocumentTitle';
+import GlobalSelectionHeader from 'sentry/components/organizations/globalSelectionHeader';
+import {PageContent} from 'sentry/styles/organization';
+import EventView, {isAPIPayloadSimilar} from 'sentry/utils/discover/eventView';
+import {decodeScalar} from 'sentry/utils/queryString';
+import {stringifyQueryObject} from 'sentry/utils/tokenizeSearch';
+import LightWeightNoProjectMessage from 'sentry/components/lightWeightNoProjectMessage';
+import withApi from 'sentry/utils/withApi';
 
 import SummaryContent from './content';
 

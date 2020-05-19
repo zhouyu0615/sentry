@@ -1,8 +1,8 @@
 import {withRouter} from 'react-router';
 import React from 'react';
 
-import {setActiveProject} from 'app/actionCreators/projects';
-import {setLastRoute} from 'app/actionCreators/navigation';
+import {setActiveProject} from 'sentry/actionCreators/projects';
+import {setLastRoute} from 'sentry/actionCreators/navigation';
 
 /**
  * This is the parent container for organization-level views such

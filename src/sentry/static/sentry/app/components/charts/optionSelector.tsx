@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import DropdownButton from 'app/components/dropdownButton';
-import {InlineContainer, SectionHeading} from 'app/components/charts/styles';
-import DropdownControl, {DropdownItem} from 'app/components/dropdownControl';
-import space from 'app/styles/space';
+import DropdownButton from 'sentry/components/dropdownButton';
+import {InlineContainer, SectionHeading} from 'sentry/components/charts/styles';
+import DropdownControl, {DropdownItem} from 'sentry/components/dropdownControl';
+import space from 'sentry/styles/space';
 
 type Option = {
   label: string;

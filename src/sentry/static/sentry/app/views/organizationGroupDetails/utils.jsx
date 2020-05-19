@@ -1,4 +1,4 @@
-import {Client} from 'app/api';
+import {Client} from 'sentry/api';
 
 /**
  * Fetches group data and mark as seen

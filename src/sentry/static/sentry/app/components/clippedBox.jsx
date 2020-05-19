@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 
-import {t} from 'app/locale';
-import Button from 'app/components/button';
+import {t} from 'sentry/locale';
+import Button from 'sentry/components/button';
 
 class ClippedBox extends React.Component {
   static propTypes = {

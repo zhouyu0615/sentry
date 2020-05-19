@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {Meta} from 'app/types';
-import Tooltip from 'app/components/tooltip';
-import AnnotatedText from 'app/components/events/meta/annotatedText';
-import {t} from 'app/locale';
+import {Meta} from 'sentry/types';
+import Tooltip from 'sentry/components/tooltip';
+import AnnotatedText from 'sentry/components/events/meta/annotatedText';
+import {t} from 'sentry/locale';
 
 const REGISTER_VIEWS = [t('Hexadecimal'), t('Numeric')];
 

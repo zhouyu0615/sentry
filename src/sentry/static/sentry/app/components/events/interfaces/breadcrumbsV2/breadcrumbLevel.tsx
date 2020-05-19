@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Tag from 'app/views/settings/components/tag';
-import {t} from 'app/locale';
+import Tag from 'sentry/views/settings/components/tag';
+import {t} from 'sentry/locale';
 
 import {BreadcrumbLevelType} from './types';
 

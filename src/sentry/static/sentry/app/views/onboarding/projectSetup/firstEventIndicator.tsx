@@ -2,14 +2,14 @@ import React from 'react';
 import posed, {PoseGroup} from 'react-pose';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import Button from 'app/components/button';
-import EventWaiter from 'app/utils/eventWaiter';
-import InlineSvg from 'app/components/inlineSvg';
-import space from 'app/styles/space';
-import testablePose from 'app/utils/testablePose';
-import pulsingIndicatorStyles from 'app/styles/pulsingIndicator';
-import {Group, Organization} from 'app/types';
+import {t} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import EventWaiter from 'sentry/utils/eventWaiter';
+import InlineSvg from 'sentry/components/inlineSvg';
+import space from 'sentry/styles/space';
+import testablePose from 'sentry/utils/testablePose';
+import pulsingIndicatorStyles from 'sentry/styles/pulsingIndicator';
+import {Group, Organization} from 'sentry/types';
 
 type EventWaiterProps = Omit<React.ComponentProps<typeof EventWaiter>, 'children'>;
 type FirstIssue = null | true | Group;

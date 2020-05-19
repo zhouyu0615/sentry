@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import {ResolutionStatusDetails} from 'app/types';
-import {t, tn} from 'app/locale';
-import MenuItem from 'app/components/menuItem';
-import DropdownLink from 'app/components/dropdownLink';
-import Duration from 'app/components/duration';
-import CustomIgnoreCountModal from 'app/components/customIgnoreCountModal';
-import CustomIgnoreDurationModal from 'app/components/customIgnoreDurationModal';
-import ActionLink from 'app/components/actions/actionLink';
-import Tooltip from 'app/components/tooltip';
+import {ResolutionStatusDetails} from 'sentry/types';
+import {t, tn} from 'sentry/locale';
+import MenuItem from 'sentry/components/menuItem';
+import DropdownLink from 'sentry/components/dropdownLink';
+import Duration from 'sentry/components/duration';
+import CustomIgnoreCountModal from 'sentry/components/customIgnoreCountModal';
+import CustomIgnoreDurationModal from 'sentry/components/customIgnoreDurationModal';
+import ActionLink from 'sentry/components/actions/actionLink';
+import Tooltip from 'sentry/components/tooltip';
 
 enum ModalStates {
   COUNT,

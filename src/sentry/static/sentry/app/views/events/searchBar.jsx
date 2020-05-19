@@ -7,14 +7,14 @@ import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {NEGATION_OPERATOR, SEARCH_WILDCARD} from 'app/constants';
-import {defined} from 'app/utils';
-import {fetchTagValues} from 'app/actionCreators/tags';
-import SentryTypes from 'app/sentryTypes';
-import SmartSearchBar, {SearchType} from 'app/components/smartSearchBar';
-import {FIELDS, TRACING_FIELDS} from 'app/utils/discover/fields';
-import withApi from 'app/utils/withApi';
-import withTags from 'app/utils/withTags';
+import {NEGATION_OPERATOR, SEARCH_WILDCARD} from 'sentry/constants';
+import {defined} from 'sentry/utils';
+import {fetchTagValues} from 'sentry/actionCreators/tags';
+import SentryTypes from 'sentry/sentryTypes';
+import SmartSearchBar, {SearchType} from 'sentry/components/smartSearchBar';
+import {FIELDS, TRACING_FIELDS} from 'sentry/utils/discover/fields';
+import withApi from 'sentry/utils/withApi';
+import withTags from 'sentry/utils/withTags';
 
 const SEARCH_SPECIAL_CHARS_REGEXP = new RegExp(
   `^${NEGATION_OPERATOR}|\\${SEARCH_WILDCARD}`,

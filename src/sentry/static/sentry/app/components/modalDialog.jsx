@@ -2,9 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import InlineSvg from 'app/components/inlineSvg';
-import space from 'app/styles/space';
-import {callIfFunction} from 'app/utils/callIfFunction';
+import InlineSvg from 'sentry/components/inlineSvg';
+import space from 'sentry/styles/space';
+import {callIfFunction} from 'sentry/utils/callIfFunction';
 
 /**
  * Simple/Naive implementation of a dialog/modal window.

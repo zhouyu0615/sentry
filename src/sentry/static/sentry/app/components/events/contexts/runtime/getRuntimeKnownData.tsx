@@ -1,5 +1,5 @@
-import {KeyValueListData} from 'app/components/events/interfaces/keyValueList/types';
-import {getMeta} from 'app/components/events/meta/metaProxy';
+import {KeyValueListData} from 'sentry/components/events/interfaces/keyValueList/types';
+import {getMeta} from 'sentry/components/events/meta/metaProxy';
 
 import getRuntimeKnownDataDetails from './getRuntimeKnownDataDetails';
 import {RuntimeData, RuntimeKnownDataType} from './types';

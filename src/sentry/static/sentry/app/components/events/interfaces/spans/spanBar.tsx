@@ -2,14 +2,14 @@ import React from 'react';
 import styled from '@emotion/styled';
 import 'intersection-observer'; // this is a polyfill
 
-import {t} from 'app/locale';
-import {defined, OmitHtmlDivProps} from 'app/utils';
-import space from 'app/styles/space';
-import Count from 'app/components/count';
-import Tooltip from 'app/components/tooltip';
-import InlineSvg from 'app/components/inlineSvg';
-import EventView from 'app/utils/discover/eventView';
-import {TableDataRow} from 'app/views/eventsV2/table/types';
+import {t} from 'sentry/locale';
+import {defined, OmitHtmlDivProps} from 'sentry/utils';
+import space from 'sentry/styles/space';
+import Count from 'sentry/components/count';
+import Tooltip from 'sentry/components/tooltip';
+import InlineSvg from 'sentry/components/inlineSvg';
+import EventView from 'sentry/utils/discover/eventView';
+import {TableDataRow} from 'sentry/views/eventsV2/table/types';
 
 import {
   toPercent,

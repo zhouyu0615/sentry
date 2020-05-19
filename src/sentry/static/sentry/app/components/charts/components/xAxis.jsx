@@ -1,5 +1,5 @@
-import {getFormattedDate, getTimeFormat} from 'app/utils/dates';
-import theme from 'app/utils/theme';
+import {getFormattedDate, getTimeFormat} from 'sentry/utils/dates';
+import theme from 'sentry/utils/theme';
 
 import {truncationFormatter, useShortInterval} from '../utils';
 

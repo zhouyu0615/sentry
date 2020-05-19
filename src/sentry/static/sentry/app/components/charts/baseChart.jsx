@@ -6,10 +6,10 @@ import ReactEchartsCore from 'echarts-for-react/lib/core';
 import echarts from 'echarts/lib/echarts';
 import styled from '@emotion/styled';
 
-import {callIfFunction} from 'app/utils/callIfFunction';
-import SentryTypes from 'app/sentryTypes';
-import space from 'app/styles/space';
-import theme from 'app/utils/theme';
+import {callIfFunction} from 'sentry/utils/callIfFunction';
+import SentryTypes from 'sentry/sentryTypes';
+import space from 'sentry/styles/space';
+import theme from 'sentry/utils/theme';
 
 import Grid from './components/grid';
 import Legend from './components/legend';

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import space from 'app/styles/space';
-import TextOverflow from 'app/components/textOverflow';
-import Tooltip from 'app/components/tooltip';
-import InlineSvg from 'app/components/inlineSvg';
-import {EntryTypeData} from 'app/types';
+import {t} from 'sentry/locale';
+import space from 'sentry/styles/space';
+import TextOverflow from 'sentry/components/textOverflow';
+import Tooltip from 'sentry/components/tooltip';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {EntryTypeData} from 'sentry/types';
 
 type Props = {
   id: string;

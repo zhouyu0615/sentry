@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {PluginWithProjectList, PluginProjectItem} from 'app/types';
-import space from 'app/styles/space';
-import withOrganization from 'app/utils/withOrganization';
-import Button from 'app/components/button';
-import InstalledPlugin from 'app/views/organizationIntegrations/installedPlugin';
-import * as modal from 'app/actionCreators/modal';
-import ContextPickerModal from 'app/components/contextPickerModal';
-import {t} from 'app/locale';
+import {PluginWithProjectList, PluginProjectItem} from 'sentry/types';
+import space from 'sentry/styles/space';
+import withOrganization from 'sentry/utils/withOrganization';
+import Button from 'sentry/components/button';
+import InstalledPlugin from 'sentry/views/organizationIntegrations/installedPlugin';
+import * as modal from 'sentry/actionCreators/modal';
+import ContextPickerModal from 'sentry/components/contextPickerModal';
+import {t} from 'sentry/locale';
 
 import AbstractIntegrationDetailedView from './abstractIntegrationDetailedView';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import BaseBadge from 'app/components/idBadge/baseBadge';
-import BadgeDisplayName from 'app/components/idBadge/badgeDisplayName';
+import BaseBadge from 'sentry/components/idBadge/baseBadge';
+import BadgeDisplayName from 'sentry/components/idBadge/badgeDisplayName';
 
 export default class ProjectBadge extends React.PureComponent {
   static propTypes = {

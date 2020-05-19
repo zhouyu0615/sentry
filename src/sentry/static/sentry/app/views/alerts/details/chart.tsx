@@ -1,11 +1,11 @@
 import React from 'react';
 import moment from 'moment';
 
-import {AlertRuleAggregations} from 'app/views/settings/incidentRules/types';
-import {getDisplayForAlertRuleAggregation} from 'app/views/alerts/utils';
-import {t} from 'app/locale';
-import LineChart from 'app/components/charts/lineChart';
-import MarkPoint from 'app/components/charts/components/markPoint';
+import {AlertRuleAggregations} from 'sentry/views/settings/incidentRules/types';
+import {getDisplayForAlertRuleAggregation} from 'sentry/views/alerts/utils';
+import {t} from 'sentry/locale';
+import LineChart from 'sentry/components/charts/lineChart';
+import MarkPoint from 'sentry/components/charts/components/markPoint';
 
 import closedSymbol from './closedSymbol';
 import detectedSymbol from './detectedSymbol';

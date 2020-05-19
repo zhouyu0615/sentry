@@ -2,22 +2,22 @@ import React from 'react';
 import {Location} from 'history';
 import styled from '@emotion/styled';
 
-import {Organization} from 'app/types';
-import space from 'app/styles/space';
-import {t} from 'app/locale';
-import Button from 'app/components/button';
-import {SectionHeading} from 'app/components/charts/styles';
-import PanelTable from 'app/components/panels/panelTable';
-import Link from 'app/components/links/link';
-import {TableData, TableDataRow, TableColumn} from 'app/views/eventsV2/table/types';
-import HeaderCell from 'app/views/eventsV2/table/headerCell';
-import EventView, {isFieldSortable, MetaType} from 'app/utils/discover/eventView';
-import SortLink from 'app/components/gridEditable/sortLink';
-import {getFieldRenderer} from 'app/utils/discover/fieldRenderers';
-import {getAggregateAlias} from 'app/utils/discover/fields';
-import {generateEventSlug, eventDetailsRouteWithEventView} from 'app/utils/discover/urls';
-import {tokenizeSearch} from 'app/utils/tokenizeSearch';
-import {trackAnalyticsEvent} from 'app/utils/analytics';
+import {Organization} from 'sentry/types';
+import space from 'sentry/styles/space';
+import {t} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import {SectionHeading} from 'sentry/components/charts/styles';
+import PanelTable from 'sentry/components/panels/panelTable';
+import Link from 'sentry/components/links/link';
+import {TableData, TableDataRow, TableColumn} from 'sentry/views/eventsV2/table/types';
+import HeaderCell from 'sentry/views/eventsV2/table/headerCell';
+import EventView, {isFieldSortable, MetaType} from 'sentry/utils/discover/eventView';
+import SortLink from 'sentry/components/gridEditable/sortLink';
+import {getFieldRenderer} from 'sentry/utils/discover/fieldRenderers';
+import {getAggregateAlias} from 'sentry/utils/discover/fields';
+import {generateEventSlug, eventDetailsRouteWithEventView} from 'sentry/utils/discover/urls';
+import {tokenizeSearch} from 'sentry/utils/tokenizeSearch';
+import {trackAnalyticsEvent} from 'sentry/utils/analytics';
 
 import {GridBodyCell, GridBodyCellNumber, GridHeadCell} from '../styles';
 

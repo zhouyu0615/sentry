@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {SentryTransactionEvent} from 'app/types';
-import {t} from 'app/locale';
-import EventView from 'app/utils/discover/eventView';
-import {TableData} from 'app/views/eventsV2/table/types';
+import {SentryTransactionEvent} from 'sentry/types';
+import {t} from 'sentry/locale';
+import EventView from 'sentry/utils/discover/eventView';
+import {TableData} from 'sentry/views/eventsV2/table/types';
 
 import {
   ProcessedSpanType,

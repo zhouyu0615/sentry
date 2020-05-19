@@ -1,10 +1,10 @@
 import React from 'react';
 import * as ReactRouter from 'react-router';
 
-import {Series} from 'app/types/echarts';
-import AreaChart from 'app/components/charts/areaChart';
-import ChartZoom from 'app/components/charts/chartZoom';
-import theme from 'app/utils/theme';
+import {Series} from 'sentry/types/echarts';
+import AreaChart from 'sentry/components/charts/areaChart';
+import ChartZoom from 'sentry/components/charts/chartZoom';
+import theme from 'sentry/utils/theme';
 
 type Props = {
   data: Series[];

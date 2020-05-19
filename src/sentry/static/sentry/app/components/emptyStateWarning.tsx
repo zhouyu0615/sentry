@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
 
-import HeroIcon from 'app/components/heroIcon';
-import EmptyMessage from 'app/views/settings/components/emptyMessage';
-import {IconWarning} from 'app/icons';
-import theme from 'app/utils/theme';
-import space from 'app/styles/space';
+import HeroIcon from 'sentry/components/heroIcon';
+import EmptyMessage from 'sentry/views/settings/components/emptyMessage';
+import {IconWarning} from 'sentry/icons';
+import theme from 'sentry/utils/theme';
+import space from 'sentry/styles/space';
 
 type Props = {
   small?: boolean;

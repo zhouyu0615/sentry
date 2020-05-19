@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {getMeta} from 'app/components/events/meta/metaProxy';
-import overflowEllipsis from 'app/styles/overflowEllipsis';
-import {defined} from 'app/utils';
+import {getMeta} from 'sentry/components/events/meta/metaProxy';
+import overflowEllipsis from 'sentry/styles/overflowEllipsis';
+import {defined} from 'sentry/utils';
 
 import getBreadcrumbCustomRendererValue from '../../breadcrumbs/getBreadcrumbCustomRendererValue';
 

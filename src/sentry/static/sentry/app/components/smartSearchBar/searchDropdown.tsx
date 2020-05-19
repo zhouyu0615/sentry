@@ -2,10 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import LoadingIndicator from 'app/components/loadingIndicator';
-import overflowEllipsis from 'app/styles/overflowEllipsis';
-import space from 'app/styles/space';
+import {t} from 'sentry/locale';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
+import overflowEllipsis from 'sentry/styles/overflowEllipsis';
+import space from 'sentry/styles/space';
 
 import {SearchGroup, SearchItem} from './types';
 

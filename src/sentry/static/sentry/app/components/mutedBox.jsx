@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {BannerContainer, BannerSummary} from 'app/components/events/styles';
-import DateTime from 'app/components/dateTime';
-import Duration from 'app/components/duration';
-import {t} from 'app/locale';
-import theme from 'app/utils/theme';
+import {BannerContainer, BannerSummary} from 'sentry/components/events/styles';
+import DateTime from 'sentry/components/dateTime';
+import Duration from 'sentry/components/duration';
+import {t} from 'sentry/locale';
+import theme from 'sentry/utils/theme';
 
 export default class MutedBox extends React.PureComponent {
   static propTypes = {

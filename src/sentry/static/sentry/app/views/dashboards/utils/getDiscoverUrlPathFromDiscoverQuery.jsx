@@ -1,7 +1,7 @@
 import qs from 'query-string';
 
-import {getExternal, getInternal} from 'app/views/discover/aggregations/utils';
-import {getQueryStringFromQuery} from 'app/views/discover/utils';
+import {getExternal, getInternal} from 'sentry/views/discover/aggregations/utils';
+import {getQueryStringFromQuery} from 'sentry/views/discover/utils';
 
 export function getDiscoverUrlPathFromDiscoverQuery({organization, selection, query}) {
   const {

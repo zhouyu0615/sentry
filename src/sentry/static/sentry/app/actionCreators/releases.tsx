@@ -1,7 +1,7 @@
-import ReleaseActions from 'app/actions/releaseActions';
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {t} from 'app/locale';
-import {Client} from 'app/api';
+import ReleaseActions from 'sentry/actions/releaseActions';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {t} from 'sentry/locale';
+import {Client} from 'sentry/api';
 
 /**
  * Fetch a subset of releases for an organization or project. To fetch releases

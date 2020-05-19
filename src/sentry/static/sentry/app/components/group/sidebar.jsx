@@ -5,19 +5,19 @@ import isObject from 'lodash/isObject';
 import keyBy from 'lodash/keyBy';
 import pickBy from 'lodash/pickBy';
 
-import {addLoadingMessage, clearIndicators} from 'app/actionCreators/indicator';
-import {t, tct} from 'app/locale';
-import ErrorBoundary from 'app/components/errorBoundary';
-import ExternalIssueList from 'app/components/group/externalIssuesList';
-import GroupParticipants from 'app/components/group/participants';
-import GroupReleaseStats from 'app/components/group/releaseStats';
-import GroupTagDistributionMeter from 'app/components/group/tagDistributionMeter';
-import GuideAnchor from 'app/components/assistant/guideAnchor';
-import LoadingError from 'app/components/loadingError';
-import SentryTypes from 'app/sentryTypes';
-import SubscribeButton from 'app/components/subscribeButton';
-import SuggestedOwners from 'app/components/group/suggestedOwners';
-import withApi from 'app/utils/withApi';
+import {addLoadingMessage, clearIndicators} from 'sentry/actionCreators/indicator';
+import {t, tct} from 'sentry/locale';
+import ErrorBoundary from 'sentry/components/errorBoundary';
+import ExternalIssueList from 'sentry/components/group/externalIssuesList';
+import GroupParticipants from 'sentry/components/group/participants';
+import GroupReleaseStats from 'sentry/components/group/releaseStats';
+import GroupTagDistributionMeter from 'sentry/components/group/tagDistributionMeter';
+import GuideAnchor from 'sentry/components/assistant/guideAnchor';
+import LoadingError from 'sentry/components/loadingError';
+import SentryTypes from 'sentry/sentryTypes';
+import SubscribeButton from 'sentry/components/subscribeButton';
+import SuggestedOwners from 'sentry/components/group/suggestedOwners';
+import withApi from 'sentry/utils/withApi';
 
 const SUBSCRIPTION_REASONS = {
   commented: t("You're receiving updates because you have commented on this issue."),

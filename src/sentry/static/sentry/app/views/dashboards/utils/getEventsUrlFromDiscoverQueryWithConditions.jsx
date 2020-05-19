@@ -9,8 +9,8 @@
  */
 import zipWith from 'lodash/zipWith';
 
-import {OPERATOR} from 'app/views/discover/data';
-import {escapeQuotes} from 'app/components/events/interfaces/utils';
+import {OPERATOR} from 'sentry/views/discover/data';
+import {escapeQuotes} from 'sentry/components/events/interfaces/utils';
 
 import {getEventsUrlPathFromDiscoverQuery} from './getEventsUrlPathFromDiscoverQuery';
 

@@ -3,31 +3,31 @@ import styled from '@emotion/styled';
 import {RouteComponentProps} from 'react-router/lib/Router';
 import startCase from 'lodash/startCase';
 
-import {t} from 'app/locale';
-import AsyncComponent from 'app/components/asyncComponent';
-import space from 'app/styles/space';
-import Tag from 'app/views/settings/components/tag';
-import PluginIcon from 'app/plugins/components/pluginIcon';
-import Access from 'app/components/acl/access';
-import Tooltip from 'app/components/tooltip';
-import Alert, {Props as AlertProps} from 'app/components/alert';
-import ExternalLink from 'app/components/links/externalLink';
-import marked, {singleLineRenderer} from 'app/utils/marked';
-import {IconClose, IconGithub, IconGeneric, IconDocs, IconProject} from 'app/icons';
+import {t} from 'sentry/locale';
+import AsyncComponent from 'sentry/components/asyncComponent';
+import space from 'sentry/styles/space';
+import Tag from 'sentry/views/settings/components/tag';
+import PluginIcon from 'sentry/plugins/components/pluginIcon';
+import Access from 'sentry/components/acl/access';
+import Tooltip from 'sentry/components/tooltip';
+import Alert, {Props as AlertProps} from 'sentry/components/alert';
+import ExternalLink from 'sentry/components/links/externalLink';
+import marked, {singleLineRenderer} from 'sentry/utils/marked';
+import {IconClose, IconGithub, IconGeneric, IconDocs, IconProject} from 'sentry/icons';
 import {
   Organization,
   IntegrationFeature,
   IntegrationInstallationStatus,
   SentryAppStatus,
-} from 'app/types';
+} from 'sentry/types';
 import {
   getIntegrationFeatureGate,
   trackIntegrationEvent,
   SingleIntegrationEvent,
   getCategories,
-} from 'app/utils/integrationUtil';
-import {Panel} from 'app/components/panels';
-import EmptyMessage from 'app/views/settings/components/emptyMessage';
+} from 'sentry/utils/integrationUtil';
+import {Panel} from 'sentry/components/panels';
+import EmptyMessage from 'sentry/views/settings/components/emptyMessage';
 
 import IntegrationStatus from './integrationStatus';
 

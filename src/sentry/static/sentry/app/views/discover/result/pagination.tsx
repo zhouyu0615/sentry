@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Button from 'app/components/button';
+import Button from 'sentry/components/button';
 
 type PaginationProps = {
   getNextPage: () => void;

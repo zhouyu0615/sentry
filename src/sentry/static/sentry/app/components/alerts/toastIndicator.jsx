@@ -4,10 +4,10 @@ import classNames from 'classnames';
 import posed from 'react-pose';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import InlineSvg from 'app/components/inlineSvg';
-import LoadingIndicator from 'app/components/loadingIndicator';
-import testablePose from 'app/utils/testablePose';
+import {t} from 'sentry/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
+import testablePose from 'sentry/utils/testablePose';
 
 const transition = {
   type: 'spring',

@@ -2,8 +2,8 @@
  * Common constants here
  */
 
-import {t} from 'app/locale';
-import {Scope} from 'app/types';
+import {t} from 'sentry/locale';
+import {Scope} from 'sentry/types';
 
 export const API_ACCESS_SCOPES = [
   'project:read',

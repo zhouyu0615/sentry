@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import PlatformIcon from 'app/components/platformIcon';
+import PlatformIcon from 'sentry/components/platformIcon';
 
 class PlatformList extends React.Component {
   static propTypes = {

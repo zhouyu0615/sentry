@@ -4,17 +4,17 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {Link} from 'react-router';
 
-import SentryTypes from 'app/sentryTypes';
-import {analytics} from 'app/utils/analytics';
-import {ALL_ACCESS_PROJECTS} from 'app/constants/globalSelectionHeader';
-import getRouteStringFromRoutes from 'app/utils/getRouteStringFromRoutes';
-import {t, tct} from 'app/locale';
-import Button from 'app/components/button';
-import InlineSvg from 'app/components/inlineSvg';
-import Tooltip from 'app/components/tooltip';
-import HeaderItem from 'app/components/organizations/headerItem';
-import {growIn} from 'app/styles/animations';
-import space from 'app/styles/space';
+import SentryTypes from 'sentry/sentryTypes';
+import {analytics} from 'sentry/utils/analytics';
+import {ALL_ACCESS_PROJECTS} from 'sentry/constants/globalSelectionHeader';
+import getRouteStringFromRoutes from 'sentry/utils/getRouteStringFromRoutes';
+import {t, tct} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import InlineSvg from 'sentry/components/inlineSvg';
+import Tooltip from 'sentry/components/tooltip';
+import HeaderItem from 'sentry/components/organizations/headerItem';
+import {growIn} from 'sentry/styles/animations';
+import space from 'sentry/styles/space';
 
 import ProjectSelector from './projectSelector';
 

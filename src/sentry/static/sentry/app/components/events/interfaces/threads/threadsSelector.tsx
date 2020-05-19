@@ -2,12 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {ClassNames} from '@emotion/core';
 
-import {Thread} from 'app/types/events';
-import {Event, EntryTypeData} from 'app/types';
-import DropdownAutoComplete from 'app/components/dropdownAutoComplete';
-import DropdownButton from 'app/components/dropdownButton';
-import space from 'app/styles/space';
-import theme from 'app/utils/theme';
+import {Thread} from 'sentry/types/events';
+import {Event, EntryTypeData} from 'sentry/types';
+import DropdownAutoComplete from 'sentry/components/dropdownAutoComplete';
+import DropdownButton from 'sentry/components/dropdownButton';
+import space from 'sentry/styles/space';
+import theme from 'sentry/utils/theme';
 
 import filterThreadInfo from './filterThreadInfo';
 import getThreadException from './getThreadException';

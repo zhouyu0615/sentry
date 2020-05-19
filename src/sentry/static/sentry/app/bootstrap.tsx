@@ -20,12 +20,12 @@ import createReactClass from 'create-react-class';
 import jQuery from 'jquery';
 import moment from 'moment';
 
-import {metric} from 'app/utils/analytics';
-import {init as initApiSentryClient} from 'app/utils/apiSentryClient';
-import ConfigStore from 'app/stores/configStore';
-import Main from 'app/main';
-import ajaxCsrfSetup from 'app/utils/ajaxCsrfSetup';
-import plugins from 'app/plugins';
+import {metric} from 'sentry/utils/analytics';
+import {init as initApiSentryClient} from 'sentry/utils/apiSentryClient';
+import ConfigStore from 'sentry/stores/configStore';
+import Main from 'sentry/main';
+import ajaxCsrfSetup from 'sentry/utils/ajaxCsrfSetup';
+import plugins from 'sentry/plugins';
 
 function getSentryIntegrations(hasReplays: boolean = false) {
   const integrations = [

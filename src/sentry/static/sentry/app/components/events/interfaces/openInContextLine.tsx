@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {SentryAppIcon} from 'app/components/sentryAppIcon';
-import {addQueryParamsToExistingUrl} from 'app/utils/queryString';
-import space from 'app/styles/space';
-import {t} from 'app/locale';
-import {recordInteraction} from 'app/utils/recordSentryAppInteraction';
-import Link from 'app/components/links/link';
-import {SentryAppComponent} from 'app/types';
+import {SentryAppIcon} from 'sentry/components/sentryAppIcon';
+import {addQueryParamsToExistingUrl} from 'sentry/utils/queryString';
+import space from 'sentry/styles/space';
+import {t} from 'sentry/locale';
+import {recordInteraction} from 'sentry/utils/recordSentryAppInteraction';
+import Link from 'sentry/components/links/link';
+import {SentryAppComponent} from 'sentry/types';
 
 type Props = {
   lineNo: number;

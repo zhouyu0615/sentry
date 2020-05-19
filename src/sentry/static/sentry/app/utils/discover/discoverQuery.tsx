@@ -1,10 +1,10 @@
 import React from 'react';
 import {Location} from 'history';
 
-import {Client} from 'app/api';
-import withApi from 'app/utils/withApi';
-import EventView, {isAPIPayloadSimilar} from 'app/utils/discover/eventView';
-import {TableData} from 'app/views/eventsV2/table/types';
+import {Client} from 'sentry/api';
+import withApi from 'sentry/utils/withApi';
+import EventView, {isAPIPayloadSimilar} from 'sentry/utils/discover/eventView';
+import {TableData} from 'sentry/views/eventsV2/table/types';
 
 type ChildrenProps = {
   isLoading: boolean;

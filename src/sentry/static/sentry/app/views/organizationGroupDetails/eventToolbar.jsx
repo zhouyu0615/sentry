@@ -5,18 +5,18 @@ import createReactClass from 'create-react-class';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import Button from 'app/components/button';
-import ButtonBar from 'app/components/buttonBar';
-import ConfigStore from 'app/stores/configStore';
-import DateTime from 'app/components/dateTime';
-import ExternalLink from 'app/components/links/externalLink';
-import FileSize from 'app/components/fileSize';
-import SentryTypes from 'app/sentryTypes';
-import Tooltip from 'app/components/tooltip';
-import getDynamicText from 'app/utils/getDynamicText';
-import space from 'app/styles/space';
-import {transactionSummaryRouteWithQuery} from 'app/views/performance/transactionSummary/utils';
+import {t} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import ButtonBar from 'sentry/components/buttonBar';
+import ConfigStore from 'sentry/stores/configStore';
+import DateTime from 'sentry/components/dateTime';
+import ExternalLink from 'sentry/components/links/externalLink';
+import FileSize from 'sentry/components/fileSize';
+import SentryTypes from 'sentry/sentryTypes';
+import Tooltip from 'sentry/components/tooltip';
+import getDynamicText from 'sentry/utils/getDynamicText';
+import space from 'sentry/styles/space';
+import {transactionSummaryRouteWithQuery} from 'sentry/views/performance/transactionSummary/utils';
 
 const formatDateDelta = (reference, observed) => {
   const duration = moment.duration(Math.abs(+observed - +reference));

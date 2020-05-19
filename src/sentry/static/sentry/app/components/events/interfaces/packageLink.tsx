@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Tooltip from 'app/components/tooltip';
-import space from 'app/styles/space';
-import {defined} from 'app/utils';
-import {trimPackage} from 'app/components/events/interfaces/frame/utils';
-import InlineSvg from 'app/components/inlineSvg';
-import {PackageStatusIcon} from 'app/components/events/interfaces/packageStatus';
-import overflowEllipsis from 'app/styles/overflowEllipsis';
+import Tooltip from 'sentry/components/tooltip';
+import space from 'sentry/styles/space';
+import {defined} from 'sentry/utils';
+import {trimPackage} from 'sentry/components/events/interfaces/frame/utils';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {PackageStatusIcon} from 'sentry/components/events/interfaces/packageStatus';
+import overflowEllipsis from 'sentry/styles/overflowEllipsis';
 
 type Props = {
   packagePath: string;

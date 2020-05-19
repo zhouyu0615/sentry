@@ -1,7 +1,7 @@
 import React from 'react';
 import {Global, css} from '@emotion/core';
 
-import {Theme} from 'app/utils/theme';
+import {Theme} from 'sentry/utils/theme';
 
 const styles = (theme: Theme) => css`
   body {

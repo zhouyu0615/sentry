@@ -1,8 +1,8 @@
 import React from 'react';
 
-import InlineSvg from 'app/components/inlineSvg';
-import {t} from 'app/locale';
-import Link from 'app/components/links/link';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {t} from 'sentry/locale';
+import Link from 'sentry/components/links/link';
 
 import ConditionRow from './condition';
 import {PlaceholderText, SelectListItem, AddText, SidebarLabel} from '../styles';

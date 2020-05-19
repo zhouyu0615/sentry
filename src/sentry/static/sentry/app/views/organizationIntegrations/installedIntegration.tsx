@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import Access from 'app/components/acl/access';
-import Alert from 'app/components/alert';
-import Button from 'app/components/button';
-import Confirm from 'app/components/confirm';
-import IntegrationItem from 'app/views/organizationIntegrations/integrationItem';
-import Tooltip from 'app/components/tooltip';
-import {IntegrationProvider, Integration, Organization, ObjectStatus} from 'app/types';
-import {SingleIntegrationEvent} from 'app/utils/integrationUtil';
-import CircleIndicator from 'app/components/circleIndicator';
-import theme from 'app/utils/theme';
-import space from 'app/styles/space';
-import {IconDelete, IconSettings, IconWarning} from 'app/icons';
-import AddIntegrationButton from 'app/views/organizationIntegrations/addIntegrationButton';
+import {t} from 'sentry/locale';
+import Access from 'sentry/components/acl/access';
+import Alert from 'sentry/components/alert';
+import Button from 'sentry/components/button';
+import Confirm from 'sentry/components/confirm';
+import IntegrationItem from 'sentry/views/organizationIntegrations/integrationItem';
+import Tooltip from 'sentry/components/tooltip';
+import {IntegrationProvider, Integration, Organization, ObjectStatus} from 'sentry/types';
+import {SingleIntegrationEvent} from 'sentry/utils/integrationUtil';
+import CircleIndicator from 'sentry/components/circleIndicator';
+import theme from 'sentry/utils/theme';
+import space from 'sentry/styles/space';
+import {IconDelete, IconSettings, IconWarning} from 'sentry/icons';
+import AddIntegrationButton from 'sentry/views/organizationIntegrations/addIntegrationButton';
 
 const CONFIGURABLE_FEATURES = ['commits', 'alert-rule'];
 

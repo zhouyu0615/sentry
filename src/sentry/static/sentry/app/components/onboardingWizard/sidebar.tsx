@@ -2,17 +2,17 @@ import React from 'react';
 import styled from '@emotion/styled';
 import posed, {PoseGroup} from 'react-pose';
 
-import withApi from 'app/utils/withApi';
-import withOrganization from 'app/utils/withOrganization';
-import {Client} from 'app/api';
-import {Organization, OnboardingTask, OnboardingTaskKey} from 'app/types';
-import {updateOnboardingTask} from 'app/actionCreators/onboardingTasks';
-import space from 'app/styles/space';
-import {t} from 'app/locale';
-import {IconLightning, IconLock, IconCheckmark} from 'app/icons';
-import Tooltip from 'app/components/tooltip';
-import SidebarPanel from 'app/components/sidebar/sidebarPanel';
-import {CommonSidebarProps} from 'app/components/sidebar/types';
+import withApi from 'sentry/utils/withApi';
+import withOrganization from 'sentry/utils/withOrganization';
+import {Client} from 'sentry/api';
+import {Organization, OnboardingTask, OnboardingTaskKey} from 'sentry/types';
+import {updateOnboardingTask} from 'sentry/actionCreators/onboardingTasks';
+import space from 'sentry/styles/space';
+import {t} from 'sentry/locale';
+import {IconLightning, IconLock, IconCheckmark} from 'sentry/icons';
+import Tooltip from 'sentry/components/tooltip';
+import SidebarPanel from 'sentry/components/sidebar/sidebarPanel';
+import {CommonSidebarProps} from 'sentry/components/sidebar/types';
 
 import {findUpcomingTasks, findCompleteTasks, findActiveTasks, taskIsDone} from './utils';
 import {getMergedTasks} from './taskConfig';

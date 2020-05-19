@@ -5,15 +5,15 @@ import * as Sentry from '@sentry/browser';
 import {RouteComponentProps} from 'react-router/lib/Router';
 import {WithRouterProps} from 'react-router/lib/withRouter';
 
-import {Client} from 'app/api';
-import {metric} from 'app/utils/analytics';
-import {t} from 'app/locale';
-import AsyncComponentSearchInput from 'app/components/asyncComponentSearchInput';
-import LoadingError from 'app/components/loadingError';
-import LoadingIndicator from 'app/components/loadingIndicator';
-import PermissionDenied from 'app/views/permissionDenied';
-import RouteError from 'app/views/routeError';
-import getRouteStringFromRoutes from 'app/utils/getRouteStringFromRoutes';
+import {Client} from 'sentry/api';
+import {metric} from 'sentry/utils/analytics';
+import {t} from 'sentry/locale';
+import AsyncComponentSearchInput from 'sentry/components/asyncComponentSearchInput';
+import LoadingError from 'sentry/components/loadingError';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
+import PermissionDenied from 'sentry/views/permissionDenied';
+import RouteError from 'sentry/views/routeError';
+import getRouteStringFromRoutes from 'sentry/utils/getRouteStringFromRoutes';
 
 type AsyncComponentProps = {
   /**

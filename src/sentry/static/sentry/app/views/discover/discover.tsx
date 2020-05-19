@@ -3,18 +3,18 @@ import React from 'react';
 import moment from 'moment';
 import styled from '@emotion/styled';
 
-import {addErrorMessage, addSuccessMessage} from 'app/actionCreators/indicator';
-import {getUtcDateString} from 'app/utils/dates';
-import {t, tct} from 'app/locale';
-import {updateProjects, updateDateTime} from 'app/actionCreators/globalSelection';
-import ConfigStore from 'app/stores/configStore';
-import {trackAnalyticsEvent} from 'app/utils/analytics';
-import Feature from 'app/components/acl/feature';
-import PageHeading from 'app/components/pageHeading';
-import {Organization} from 'app/types';
-import space from 'app/styles/space';
-import localStorage from 'app/utils/localStorage';
-import {getDiscoverLandingUrl} from 'app/views/eventsV2/utils';
+import {addErrorMessage, addSuccessMessage} from 'sentry/actionCreators/indicator';
+import {getUtcDateString} from 'sentry/utils/dates';
+import {t, tct} from 'sentry/locale';
+import {updateProjects, updateDateTime} from 'sentry/actionCreators/globalSelection';
+import ConfigStore from 'sentry/stores/configStore';
+import {trackAnalyticsEvent} from 'sentry/utils/analytics';
+import Feature from 'sentry/components/acl/feature';
+import PageHeading from 'sentry/components/pageHeading';
+import {Organization} from 'sentry/types';
+import space from 'sentry/styles/space';
+import localStorage from 'sentry/utils/localStorage';
+import {getDiscoverLandingUrl} from 'sentry/views/eventsV2/utils';
 
 import {
   DiscoverContainer,

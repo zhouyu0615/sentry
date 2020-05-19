@@ -1,6 +1,6 @@
 import 'echarts/lib/component/tooltip';
 
-import {getFormattedDate, getTimeFormat} from 'app/utils/dates';
+import {getFormattedDate, getTimeFormat} from 'sentry/utils/dates';
 
 import {truncationFormatter} from '../utils';
 

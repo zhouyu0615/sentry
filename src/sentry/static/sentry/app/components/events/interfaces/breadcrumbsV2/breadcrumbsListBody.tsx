@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Tooltip from 'app/components/tooltip';
-import space from 'app/styles/space';
+import Tooltip from 'sentry/components/tooltip';
+import space from 'sentry/styles/space';
 
 import BreadcrumbTime from './breadcrumbTime';
 import BreadcrumbCollapsed from './breadcrumbCollapsed';

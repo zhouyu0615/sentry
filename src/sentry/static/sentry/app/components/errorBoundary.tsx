@@ -4,9 +4,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import * as Sentry from '@sentry/browser';
 
-import {t} from 'app/locale';
-import Alert from 'app/components/alert';
-import DetailedError from 'app/components/errors/detailedError';
+import {t} from 'sentry/locale';
+import Alert from 'sentry/components/alert';
+import DetailedError from 'sentry/components/errors/detailedError';
 
 type DefaultProps = {
   mini: boolean;

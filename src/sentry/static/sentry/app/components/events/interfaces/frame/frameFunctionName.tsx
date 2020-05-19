@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {t} from 'app/locale';
-import {Meta} from 'app/types';
-import {getMeta} from 'app/components/events/meta/metaProxy';
-import AnnotatedText from 'app/components/events/meta/annotatedText';
+import {t} from 'sentry/locale';
+import {Meta} from 'sentry/types';
+import {getMeta} from 'sentry/components/events/meta/metaProxy';
+import AnnotatedText from 'sentry/components/events/meta/annotatedText';
 
 import {Frame} from './types';
 

@@ -2,14 +2,14 @@ import React from 'react';
 import {Location} from 'history';
 import styled from '@emotion/styled';
 
-import {Client} from 'app/api';
-import {t} from 'app/locale';
-import {Organization, Tag} from 'app/types';
-import {metric} from 'app/utils/analytics';
-import withApi from 'app/utils/withApi';
-import withTags from 'app/utils/withTags';
-import Pagination from 'app/components/pagination';
-import EventView, {isAPIPayloadSimilar} from 'app/utils/discover/eventView';
+import {Client} from 'sentry/api';
+import {t} from 'sentry/locale';
+import {Organization, Tag} from 'sentry/types';
+import {metric} from 'sentry/utils/analytics';
+import withApi from 'sentry/utils/withApi';
+import withTags from 'sentry/utils/withTags';
+import Pagination from 'sentry/components/pagination';
+import EventView, {isAPIPayloadSimilar} from 'sentry/utils/discover/eventView';
 
 import TableView from './tableView';
 import {TableData} from './types';

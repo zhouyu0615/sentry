@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {analytics} from 'app/utils/analytics';
-import {stepPropTypes} from 'app/views/onboarding/onboarding';
-import {t, tct} from 'app/locale';
-import Button from 'app/components/button';
-import SentryTypes from 'app/sentryTypes';
-import withConfig from 'app/utils/withConfig';
-import withOrganization from 'app/utils/withOrganization';
+import {analytics} from 'sentry/utils/analytics';
+import {stepPropTypes} from 'sentry/views/onboarding/onboarding';
+import {t, tct} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import SentryTypes from 'sentry/sentryTypes';
+import withConfig from 'sentry/utils/withConfig';
+import withOrganization from 'sentry/utils/withOrganization';
 
 const recordAnalyticsOnboardingSkipped = ({organization}) =>
   analytics('onboarding_v2.skipped', {

@@ -1,6 +1,6 @@
 import flatMap from 'lodash/flatMap';
 
-import {escapeDoubleQuotes} from 'app/utils';
+import {escapeDoubleQuotes} from 'sentry/utils';
 
 export type QueryResults = {
   /**

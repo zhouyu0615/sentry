@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styled from '@emotion/styled';
 
-import TimeSince from 'app/components/timeSince';
-import {t, tn, tct} from 'app/locale';
+import TimeSince from 'sentry/components/timeSince';
+import {t, tn, tct} from 'sentry/locale';
 
 class ProcessingIssueHint extends React.Component {
   static propTypes = {

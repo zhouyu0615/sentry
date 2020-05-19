@@ -3,9 +3,9 @@ import React from 'react';
 import classNames from 'classnames';
 import * as Sentry from '@sentry/browser';
 
-import {t} from 'app/locale';
-import InlineSvg from 'app/components/inlineSvg';
-import Button from 'app/components/button';
+import {t} from 'sentry/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import Button from 'sentry/components/button';
 
 type DefaultProps = {
   /**

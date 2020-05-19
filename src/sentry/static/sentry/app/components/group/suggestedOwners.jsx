@@ -3,20 +3,20 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {ClassNames} from '@emotion/core';
 
-import {assignToUser, assignToActor} from 'app/actionCreators/group';
-import {IconInfo} from 'app/icons';
-import {openCreateOwnershipRule} from 'app/actionCreators/modal';
-import {t} from 'app/locale';
-import Access from 'app/components/acl/access';
-import ActorAvatar from 'app/components/avatar/actorAvatar';
-import Button from 'app/components/button';
-import GuideAnchor from 'app/components/assistant/guideAnchor';
-import Hovercard from 'app/components/hovercard';
-import SentryTypes from 'app/sentryTypes';
-import space from 'app/styles/space';
-import SuggestedOwnerHovercard from 'app/components/group/suggestedOwnerHovercard';
-import withApi from 'app/utils/withApi';
-import withOrganization from 'app/utils/withOrganization';
+import {assignToUser, assignToActor} from 'sentry/actionCreators/group';
+import {IconInfo} from 'sentry/icons';
+import {openCreateOwnershipRule} from 'sentry/actionCreators/modal';
+import {t} from 'sentry/locale';
+import Access from 'sentry/components/acl/access';
+import ActorAvatar from 'sentry/components/avatar/actorAvatar';
+import Button from 'sentry/components/button';
+import GuideAnchor from 'sentry/components/assistant/guideAnchor';
+import Hovercard from 'sentry/components/hovercard';
+import SentryTypes from 'sentry/sentryTypes';
+import space from 'sentry/styles/space';
+import SuggestedOwnerHovercard from 'sentry/components/group/suggestedOwnerHovercard';
+import withApi from 'sentry/utils/withApi';
+import withOrganization from 'sentry/utils/withOrganization';
 
 class SuggestedOwners extends React.Component {
   static propTypes = {

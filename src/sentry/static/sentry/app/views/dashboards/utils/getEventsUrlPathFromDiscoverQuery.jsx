@@ -1,7 +1,7 @@
 import pickBy from 'lodash/pickBy';
 import qs from 'query-string';
 
-import {getUtcDateString} from 'app/utils/dates';
+import {getUtcDateString} from 'sentry/utils/dates';
 
 import {getDiscoverConditionsToSearchString} from './getDiscoverConditionsToSearchString';
 

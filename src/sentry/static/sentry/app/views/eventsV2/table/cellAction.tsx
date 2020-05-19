@@ -5,14 +5,14 @@ import {browserHistory} from 'react-router';
 import * as PopperJS from 'popper.js';
 import {Manager, Reference, Popper} from 'react-popper';
 
-import {t} from 'app/locale';
-import {IconEllipsis} from 'app/icons';
-import EventView from 'app/utils/discover/eventView';
-import space from 'app/styles/space';
-import theme from 'app/utils/theme';
-import {tokenizeSearch, stringifyQueryObject} from 'app/utils/tokenizeSearch';
-import {OrganizationSummary} from 'app/types';
-import {trackAnalyticsEvent} from 'app/utils/analytics';
+import {t} from 'sentry/locale';
+import {IconEllipsis} from 'sentry/icons';
+import EventView from 'sentry/utils/discover/eventView';
+import space from 'sentry/styles/space';
+import theme from 'sentry/utils/theme';
+import {tokenizeSearch, stringifyQueryObject} from 'sentry/utils/tokenizeSearch';
+import {OrganizationSummary} from 'sentry/types';
+import {trackAnalyticsEvent} from 'sentry/utils/analytics';
 
 import {TableColumn, TableDataRow} from './types';
 

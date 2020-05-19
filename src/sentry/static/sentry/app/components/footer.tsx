@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import ConfigStore from 'app/stores/configStore';
-import ExternalLink from 'app/components/links/externalLink';
-import Hook from 'app/components/hook';
-import getDynamicText from 'app/utils/getDynamicText';
-import space from 'app/styles/space';
+import {t} from 'sentry/locale';
+import ConfigStore from 'sentry/stores/configStore';
+import ExternalLink from 'sentry/components/links/externalLink';
+import Hook from 'sentry/components/hook';
+import getDynamicText from 'sentry/utils/getDynamicText';
+import space from 'sentry/styles/space';
 
 const Footer = () => {
   const config = ConfigStore.getConfig();

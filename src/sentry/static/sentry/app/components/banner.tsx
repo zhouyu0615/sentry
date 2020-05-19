@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import InlineSvg from 'app/components/inlineSvg';
-import theme from 'app/utils/theme';
-import space from 'app/styles/space';
-import {t} from 'app/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import theme from 'sentry/utils/theme';
+import space from 'sentry/styles/space';
+import {t} from 'sentry/locale';
 
 type Props = {
   title?: string;

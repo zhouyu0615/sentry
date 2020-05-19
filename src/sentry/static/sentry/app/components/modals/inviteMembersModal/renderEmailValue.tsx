@@ -3,10 +3,10 @@ import styled from '@emotion/styled';
 import {css} from '@emotion/core';
 import {Value} from 'react-select-legacy';
 
-import InlineSvg from 'app/components/inlineSvg';
-import space from 'app/styles/space';
-import Tooltip from 'app/components/tooltip';
-import LoadingIndicator from 'app/components/loadingIndicator';
+import InlineSvg from 'sentry/components/inlineSvg';
+import space from 'sentry/styles/space';
+import Tooltip from 'sentry/components/tooltip';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
 
 import {InviteStatus} from './types';
 

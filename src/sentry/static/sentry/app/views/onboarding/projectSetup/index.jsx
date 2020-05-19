@@ -1,13 +1,13 @@
 import React from 'react';
 import posed, {PoseGroup} from 'react-pose';
 
-import {analytics} from 'app/utils/analytics';
-import {stepPropTypes} from 'app/views/onboarding/onboarding';
-import {t} from 'app/locale';
-import HookOrDefault from 'app/components/hookOrDefault';
-import SentryTypes from 'app/sentryTypes';
-import testablePose from 'app/utils/testablePose';
-import withOrganization from 'app/utils/withOrganization';
+import {analytics} from 'sentry/utils/analytics';
+import {stepPropTypes} from 'sentry/views/onboarding/onboarding';
+import {t} from 'sentry/locale';
+import HookOrDefault from 'sentry/components/hookOrDefault';
+import SentryTypes from 'sentry/sentryTypes';
+import testablePose from 'sentry/utils/testablePose';
+import withOrganization from 'sentry/utils/withOrganization';
 
 import InviteMembers from './inviteMembers';
 import LearnMore from './learnMore';

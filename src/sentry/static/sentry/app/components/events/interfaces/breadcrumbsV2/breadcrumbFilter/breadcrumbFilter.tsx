@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 import isEqual from 'lodash/isEqual';
 import {css} from '@emotion/core';
 
-import {t, tn} from 'app/locale';
-import DropdownControl from 'app/components/dropdownControl';
-import DropdownButton from 'app/components/dropdownButton';
+import {t, tn} from 'sentry/locale';
+import DropdownControl from 'sentry/components/dropdownControl';
+import DropdownButton from 'sentry/components/dropdownButton';
 
 import BreadcrumbFilterGroup from './breadcrumbFilterGroup';
 import BreadcrumbFilterHeader from './breadcrumbFilterHeader';

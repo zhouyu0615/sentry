@@ -2,17 +2,17 @@ import React from 'react';
 import * as Sentry from '@sentry/browser';
 import {Location} from 'history';
 
-import {t} from 'app/locale';
-import {Client} from 'app/api';
+import {t} from 'sentry/locale';
+import {Client} from 'sentry/api';
 import {
   ChartControls,
   InlineContainer,
   SectionHeading,
   SectionValue,
-} from 'app/components/charts/styles';
-import {fetchTotalCount} from 'app/actionCreators/events';
-import EventView, {isAPIPayloadSimilar} from 'app/utils/discover/eventView';
-import {Organization} from 'app/types';
+} from 'sentry/components/charts/styles';
+import {fetchTotalCount} from 'sentry/actionCreators/events';
+import EventView, {isAPIPayloadSimilar} from 'sentry/utils/discover/eventView';
+import {Organization} from 'sentry/types';
 
 type Props = {
   api: Client;

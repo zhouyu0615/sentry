@@ -1,6 +1,6 @@
 import Reflux from 'reflux';
 
-import TeamActions from 'app/actions/teamActions';
+import TeamActions from 'sentry/actions/teamActions';
 
 const TeamStore = Reflux.createStore({
   init() {

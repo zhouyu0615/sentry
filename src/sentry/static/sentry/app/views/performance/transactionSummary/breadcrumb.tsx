@@ -1,10 +1,10 @@
 import React from 'react';
 import {Location} from 'history';
 
-import {t} from 'app/locale';
-import {Organization} from 'app/types';
-import EventView from 'app/utils/discover/eventView';
-import Breadcrumbs, {Crumb} from 'app/components/breadcrumbs';
+import {t} from 'sentry/locale';
+import {Organization} from 'sentry/types';
+import EventView from 'sentry/utils/discover/eventView';
+import Breadcrumbs, {Crumb} from 'sentry/components/breadcrumbs';
 
 import {getPerformanceLandingUrl} from '../utils';
 import {transactionSummaryRouteWithQuery} from './utils';

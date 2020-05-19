@@ -4,26 +4,26 @@ import {browserHistory} from 'react-router';
 import styled from '@emotion/styled';
 import {Location} from 'history';
 
-import {Client} from 'app/api';
-import {t} from 'app/locale';
-import SentryTypes from 'app/sentryTypes';
-import {getInterval} from 'app/components/charts/utils';
+import {Client} from 'sentry/api';
+import {t} from 'sentry/locale';
+import SentryTypes from 'sentry/sentryTypes';
+import {getInterval} from 'sentry/components/charts/utils';
 import {
   getFormattedDate,
   getUtcDateString,
   intervalToMilliseconds,
-} from 'app/utils/dates';
-import EventsRequest from 'app/views/events/utils/eventsRequest';
-import LineChart from 'app/components/charts/lineChart';
-import MarkLine from 'app/components/charts/components/markLine';
-import {Panel} from 'app/components/panels';
-import withApi from 'app/utils/withApi';
-import withGlobalSelection from 'app/utils/withGlobalSelection';
-import {tokenizeSearch, stringifyQueryObject} from 'app/utils/tokenizeSearch';
-import theme from 'app/utils/theme';
-import {Event, Organization, GlobalSelection} from 'app/types';
-import EventView from 'app/utils/discover/eventView';
-import {eventDetailsRouteWithEventView, generateEventSlug} from 'app/utils/discover/urls';
+} from 'sentry/utils/dates';
+import EventsRequest from 'sentry/views/events/utils/eventsRequest';
+import LineChart from 'sentry/components/charts/lineChart';
+import MarkLine from 'sentry/components/charts/components/markLine';
+import {Panel} from 'sentry/components/panels';
+import withApi from 'sentry/utils/withApi';
+import withGlobalSelection from 'sentry/utils/withGlobalSelection';
+import {tokenizeSearch, stringifyQueryObject} from 'sentry/utils/tokenizeSearch';
+import theme from 'sentry/utils/theme';
+import {Event, Organization, GlobalSelection} from 'sentry/types';
+import EventView from 'sentry/utils/discover/eventView';
+import {eventDetailsRouteWithEventView, generateEventSlug} from 'sentry/utils/discover/urls';
 
 import {PIN_ICON} from '../data';
 

@@ -4,7 +4,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import capitalize from 'lodash/capitalize';
 
-import InlineSvg from 'app/components/inlineSvg';
+import InlineSvg from 'sentry/components/inlineSvg';
 import {
   IconBitbucket,
   IconGeneric,
@@ -12,10 +12,10 @@ import {
   IconGitlab,
   IconJira,
   IconVsts,
-} from 'app/icons';
-import space from 'app/styles/space';
-import Hovercard from 'app/components/hovercard';
-import {callIfFunction} from 'app/utils/callIfFunction';
+} from 'sentry/icons';
+import space from 'sentry/styles/space';
+import Hovercard from 'sentry/components/hovercard';
+import {callIfFunction} from 'sentry/utils/callIfFunction';
 
 type Props = {
   externalIssueLink: string | null;

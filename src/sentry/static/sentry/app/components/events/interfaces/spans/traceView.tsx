@@ -1,12 +1,12 @@
 import React from 'react';
 import pick from 'lodash/pick';
 
-import {t} from 'app/locale';
-import EmptyStateWarning from 'app/components/emptyStateWarning';
-import {createFuzzySearch} from 'app/utils/createFuzzySearch';
-import EventView from 'app/utils/discover/eventView';
-import {TableData} from 'app/views/eventsV2/table/types';
-import {SentryTransactionEvent} from 'app/types';
+import {t} from 'sentry/locale';
+import EmptyStateWarning from 'sentry/components/emptyStateWarning';
+import {createFuzzySearch} from 'sentry/utils/createFuzzySearch';
+import EventView from 'sentry/utils/discover/eventView';
+import {TableData} from 'sentry/views/eventsV2/table/types';
+import {SentryTransactionEvent} from 'sentry/types';
 
 import DragManager, {DragManagerChildrenProps} from './dragManager';
 import SpanTree from './spanTree';

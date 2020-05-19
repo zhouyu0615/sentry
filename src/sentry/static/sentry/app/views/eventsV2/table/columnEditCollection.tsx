@@ -2,18 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from '@emotion/styled';
 
-import Button from 'app/components/button';
-import {SectionHeading} from 'app/components/charts/styles';
+import Button from 'sentry/components/button';
+import {SectionHeading} from 'sentry/components/charts/styles';
 import {
   UserSelectValues,
   setBodyUserSelect,
-} from 'app/components/events/interfaces/spans/utils';
-import {IconAdd, IconDelete, IconGrabbable} from 'app/icons';
-import {t} from 'app/locale';
-import {SelectValue, OrganizationSummary} from 'app/types';
-import space from 'app/styles/space';
-import theme from 'app/utils/theme';
-import {Column, AGGREGATIONS, FIELDS, TRACING_FIELDS} from 'app/utils/discover/fields';
+} from 'sentry/components/events/interfaces/spans/utils';
+import {IconAdd, IconDelete, IconGrabbable} from 'sentry/icons';
+import {t} from 'sentry/locale';
+import {SelectValue, OrganizationSummary} from 'sentry/types';
+import space from 'sentry/styles/space';
+import theme from 'sentry/utils/theme';
+import {Column, AGGREGATIONS, FIELDS, TRACING_FIELDS} from 'sentry/utils/discover/fields';
 
 import {FieldValue, FieldValueKind} from './types';
 import {QueryField} from './queryField';

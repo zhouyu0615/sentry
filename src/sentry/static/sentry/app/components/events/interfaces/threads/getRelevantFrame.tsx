@@ -1,4 +1,4 @@
-import {Frame} from 'app/types/events';
+import {Frame} from 'sentry/types/events';
 
 // TODO(ts): define correct stacktrace type
 function getRelevantFrame(stacktrace: any): Frame {

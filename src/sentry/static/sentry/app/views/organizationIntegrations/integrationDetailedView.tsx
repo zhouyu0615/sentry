@@ -2,20 +2,20 @@ import React from 'react';
 import styled from '@emotion/styled';
 import keyBy from 'lodash/keyBy';
 
-import {IconWarning} from 'app/icons';
-import Feature from 'app/components/acl/feature';
-import Alert from 'app/components/alert';
-import {Integration, IntegrationProvider} from 'app/types';
-import {RequestOptions} from 'app/api';
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {t} from 'app/locale';
-import space from 'app/styles/space';
-import AddIntegrationButton from 'app/views/organizationIntegrations/addIntegrationButton';
-import Button from 'app/components/button';
-import InstalledIntegration from 'app/views/organizationIntegrations/installedIntegration';
-import withOrganization from 'app/utils/withOrganization';
-import {sortArray} from 'app/utils';
-import {isSlackWorkspaceApp, getReauthAlertText} from 'app/utils/integrationUtil';
+import {IconWarning} from 'sentry/icons';
+import Feature from 'sentry/components/acl/feature';
+import Alert from 'sentry/components/alert';
+import {Integration, IntegrationProvider} from 'sentry/types';
+import {RequestOptions} from 'sentry/api';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {t} from 'sentry/locale';
+import space from 'sentry/styles/space';
+import AddIntegrationButton from 'sentry/views/organizationIntegrations/addIntegrationButton';
+import Button from 'sentry/components/button';
+import InstalledIntegration from 'sentry/views/organizationIntegrations/installedIntegration';
+import withOrganization from 'sentry/utils/withOrganization';
+import {sortArray} from 'sentry/utils';
+import {isSlackWorkspaceApp, getReauthAlertText} from 'sentry/utils/integrationUtil';
 
 import AbstractIntegrationDetailedView from './abstractIntegrationDetailedView';
 

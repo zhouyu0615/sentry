@@ -3,17 +3,17 @@ import memoize from 'lodash/memoize';
 import moment from 'moment';
 import styled from '@emotion/styled';
 
-import {PanelItem} from 'app/components/panels';
-import AsyncComponent from 'app/components/asyncComponent';
-import Count from 'app/components/count';
-import Duration from 'app/components/duration';
-import IdBadge from 'app/components/idBadge';
-import Link from 'app/components/links/link';
-import Placeholder from 'app/components/placeholder';
-import Projects from 'app/utils/projects';
-import getDynamicText from 'app/utils/getDynamicText';
-import overflowEllipsis from 'app/styles/overflowEllipsis';
-import space from 'app/styles/space';
+import {PanelItem} from 'sentry/components/panels';
+import AsyncComponent from 'sentry/components/asyncComponent';
+import Count from 'sentry/components/count';
+import Duration from 'sentry/components/duration';
+import IdBadge from 'sentry/components/idBadge';
+import Link from 'sentry/components/links/link';
+import Placeholder from 'sentry/components/placeholder';
+import Projects from 'sentry/utils/projects';
+import getDynamicText from 'sentry/utils/getDynamicText';
+import overflowEllipsis from 'sentry/styles/overflowEllipsis';
+import space from 'sentry/styles/space';
 
 import {Incident, IncidentStats} from '../types';
 import {TableLayout, TitleAndSparkLine} from './styles';

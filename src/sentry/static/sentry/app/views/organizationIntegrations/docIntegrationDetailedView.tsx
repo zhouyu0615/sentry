@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Button from 'app/components/button';
-import space from 'app/styles/space';
-import {t} from 'app/locale';
-import {DocumentIntegration} from 'app/types';
-import withOrganization from 'app/utils/withOrganization';
-import ExternalLink from 'app/components/links/externalLink';
-import {IconOpen} from 'app/icons';
+import Button from 'sentry/components/button';
+import space from 'sentry/styles/space';
+import {t} from 'sentry/locale';
+import {DocumentIntegration} from 'sentry/types';
+import withOrganization from 'sentry/utils/withOrganization';
+import ExternalLink from 'sentry/components/links/externalLink';
+import {IconOpen} from 'sentry/icons';
 
 import AbstractIntegrationDetailedView from './abstractIntegrationDetailedView';
 import {documentIntegrations} from './constants';

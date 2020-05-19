@@ -3,8 +3,8 @@ import {cache} from 'emotion'; // eslint-disable-line emotion/no-vanilla
 import React from 'react';
 import {Router, browserHistory} from 'react-router';
 
-import routes from 'app/routes';
-import {loadPreferencesState} from 'app/actionCreators/preferences';
+import routes from 'sentry/routes';
+import {loadPreferencesState} from 'sentry/actionCreators/preferences';
 
 class Main extends React.Component {
   componentDidMount() {

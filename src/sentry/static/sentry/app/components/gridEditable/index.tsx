@@ -1,11 +1,11 @@
 import React from 'react';
 import {Location} from 'history';
 
-import {t} from 'app/locale';
-import EmptyStateWarning from 'app/components/emptyStateWarning';
-import LoadingIndicator from 'app/components/loadingIndicator';
-import {IconWarning} from 'app/icons';
-import theme from 'app/utils/theme';
+import {t} from 'sentry/locale';
+import EmptyStateWarning from 'sentry/components/emptyStateWarning';
+import LoadingIndicator from 'sentry/components/loadingIndicator';
+import {IconWarning} from 'sentry/icons';
+import theme from 'sentry/utils/theme';
 
 import {
   GridColumn,

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import Button from 'app/components/button';
-import InlineSvg from 'app/components/inlineSvg';
-import {loadIncidents} from 'app/actionCreators/serviceIncidents';
-import {SentryServiceStatus} from 'app/types';
-import space from 'app/styles/space';
+import {t} from 'sentry/locale';
+import Button from 'sentry/components/button';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {loadIncidents} from 'sentry/actionCreators/serviceIncidents';
+import {SentryServiceStatus} from 'sentry/types';
+import space from 'sentry/styles/space';
 
 import {CommonSidebarProps} from './types';
 import SidebarPanelEmpty from './sidebarPanelEmpty';

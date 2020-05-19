@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import space from 'app/styles/space';
-import CheckboxFancy from 'app/components/checkboxFancy/checkboxFancy';
+import space from 'sentry/styles/space';
+import CheckboxFancy from 'sentry/components/checkboxFancy/checkboxFancy';
 
 import {FilterType, FilterGroupType, FilterGroup} from './types';
 

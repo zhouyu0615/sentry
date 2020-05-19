@@ -2,9 +2,9 @@ import React from 'react';
 import Reflux from 'reflux';
 import createReactClass from 'create-react-class';
 
-import getDisplayName from 'app/utils/getDisplayName';
-import TagStore from 'app/stores/tagStore';
-import {Tag} from 'app/types';
+import getDisplayName from 'sentry/utils/getDisplayName';
+import TagStore from 'sentry/stores/tagStore';
+import {Tag} from 'sentry/types';
 
 type TagCollection = {[key: string]: Tag};
 

@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 import React from 'react';
 import omit from 'lodash/omit';
 
-import Link from 'app/components/links/link';
-import ExternalLink from 'app/components/links/externalLink';
-import InlineSvg from 'app/components/inlineSvg';
-import {IconChevron} from 'app/icons';
-import space from 'app/styles/space';
+import Link from 'sentry/components/links/link';
+import ExternalLink from 'sentry/components/links/externalLink';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {IconChevron} from 'sentry/icons';
+import space from 'sentry/styles/space';
 
 type Size = 'small' | 'normal';
 type Priority = 'info' | 'warning' | 'success' | 'error' | 'muted';

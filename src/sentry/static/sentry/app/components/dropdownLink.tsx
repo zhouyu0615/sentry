@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
-import DropdownMenu from 'app/components/dropdownMenu';
+import DropdownMenu from 'sentry/components/dropdownMenu';
 
 // .dropdown-actor-title = flexbox to fix vertical alignment on firefox Need
 // the extra container because dropdown-menu alignment is off if

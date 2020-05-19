@@ -2,15 +2,15 @@ import React from 'react';
 import styled from '@emotion/styled';
 import capitalize from 'lodash/capitalize';
 
-import {t} from 'app/locale';
-import KeyValueList from 'app/components/events/interfaces/keyValueList/keyValueList';
-import {EventGroupVariant, EventGroupVariantType, EventGroupComponent} from 'app/types';
-import ButtonBar from 'app/components/buttonBar';
-import Button from 'app/components/button';
-import theme from 'app/utils/theme';
-import {IconCheckmark, IconClose} from 'app/icons';
-import space from 'app/styles/space';
-import Tooltip from 'app/components/tooltip';
+import {t} from 'sentry/locale';
+import KeyValueList from 'sentry/components/events/interfaces/keyValueList/keyValueList';
+import {EventGroupVariant, EventGroupVariantType, EventGroupComponent} from 'sentry/types';
+import ButtonBar from 'sentry/components/buttonBar';
+import Button from 'sentry/components/button';
+import theme from 'sentry/utils/theme';
+import {IconCheckmark, IconClose} from 'sentry/icons';
+import space from 'sentry/styles/space';
+import Tooltip from 'sentry/components/tooltip';
 
 import {hasNonContributingComponent} from './utils';
 import GroupingComponent from './groupingComponent';

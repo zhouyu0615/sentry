@@ -1,26 +1,26 @@
 import React from 'react';
 import * as ReactRouter from 'react-router';
 
-import {OrganizationSummary} from 'app/types';
-import {Client} from 'app/api';
-import {t} from 'app/locale';
-import AreaChart from 'app/components/charts/areaChart';
-import ChartZoom from 'app/components/charts/chartZoom';
-import ErrorPanel from 'app/components/charts/errorPanel';
-import TransparentLoadingMask from 'app/components/charts/transparentLoadingMask';
-import TransitionChart from 'app/components/charts/transitionChart';
-import ReleaseSeries from 'app/components/charts/releaseSeries';
-import QuestionTooltip from 'app/components/questionTooltip';
-import {getInterval} from 'app/components/charts/utils';
-import {IconWarning} from 'app/icons';
-import EventsRequest from 'app/views/events/utils/eventsRequest';
-import {getUtcToLocalDateObject} from 'app/utils/dates';
-import EventView from 'app/utils/discover/eventView';
-import withApi from 'app/utils/withApi';
-import {decodeScalar} from 'app/utils/queryString';
-import theme from 'app/utils/theme';
-import {getDuration} from 'app/utils/formatters';
-import getDynamicText from 'app/utils/getDynamicText';
+import {OrganizationSummary} from 'sentry/types';
+import {Client} from 'sentry/api';
+import {t} from 'sentry/locale';
+import AreaChart from 'sentry/components/charts/areaChart';
+import ChartZoom from 'sentry/components/charts/chartZoom';
+import ErrorPanel from 'sentry/components/charts/errorPanel';
+import TransparentLoadingMask from 'sentry/components/charts/transparentLoadingMask';
+import TransitionChart from 'sentry/components/charts/transitionChart';
+import ReleaseSeries from 'sentry/components/charts/releaseSeries';
+import QuestionTooltip from 'sentry/components/questionTooltip';
+import {getInterval} from 'sentry/components/charts/utils';
+import {IconWarning} from 'sentry/icons';
+import EventsRequest from 'sentry/views/events/utils/eventsRequest';
+import {getUtcToLocalDateObject} from 'sentry/utils/dates';
+import EventView from 'sentry/utils/discover/eventView';
+import withApi from 'sentry/utils/withApi';
+import {decodeScalar} from 'sentry/utils/queryString';
+import theme from 'sentry/utils/theme';
+import {getDuration} from 'sentry/utils/formatters';
+import getDynamicText from 'sentry/utils/getDynamicText';
 
 import {HeaderTitleLegend} from '../styles';
 

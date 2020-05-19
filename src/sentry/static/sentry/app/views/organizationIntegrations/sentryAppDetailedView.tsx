@@ -1,25 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {addErrorMessage, addSuccessMessage} from 'app/actionCreators/indicator';
-import Button from 'app/components/button';
-import space from 'app/styles/space';
-import {t, tct} from 'app/locale';
-import {addQueryParamsToExistingUrl} from 'app/utils/queryString';
+import {addErrorMessage, addSuccessMessage} from 'sentry/actionCreators/indicator';
+import Button from 'sentry/components/button';
+import space from 'sentry/styles/space';
+import {t, tct} from 'sentry/locale';
+import {addQueryParamsToExistingUrl} from 'sentry/utils/queryString';
 import {
   installSentryApp,
   uninstallSentryApp,
-} from 'app/actionCreators/sentryAppInstallations';
-import {toPermissions} from 'app/utils/consolidatedScopes';
-import CircleIndicator from 'app/components/circleIndicator';
-import {IntegrationFeature, SentryApp, SentryAppInstallation} from 'app/types';
-import withOrganization from 'app/utils/withOrganization';
-import SplitInstallationIdModal from 'app/views/organizationIntegrations/SplitInstallationIdModal';
-import {openModal} from 'app/actionCreators/modal';
-import {getSentryAppInstallStatus} from 'app/utils/integrationUtil';
-import Confirm from 'app/components/confirm';
-import {IconSubtract} from 'app/icons';
-import {recordInteraction} from 'app/utils/recordSentryAppInteraction';
+} from 'sentry/actionCreators/sentryAppInstallations';
+import {toPermissions} from 'sentry/utils/consolidatedScopes';
+import CircleIndicator from 'sentry/components/circleIndicator';
+import {IntegrationFeature, SentryApp, SentryAppInstallation} from 'sentry/types';
+import withOrganization from 'sentry/utils/withOrganization';
+import SplitInstallationIdModal from 'sentry/views/organizationIntegrations/SplitInstallationIdModal';
+import {openModal} from 'sentry/actionCreators/modal';
+import {getSentryAppInstallStatus} from 'sentry/utils/integrationUtil';
+import Confirm from 'sentry/components/confirm';
+import {IconSubtract} from 'sentry/icons';
+import {recordInteraction} from 'sentry/utils/recordSentryAppInteraction';
 
 import AbstractIntegrationDetailedView from './abstractIntegrationDetailedView';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import TextField from 'app/components/forms/textField';
-import NumberField from 'app/components/forms/numberField';
-import SelectControl from 'app/components/forms/selectControl';
-import Badge from 'app/components/badge';
-import getDynamicText from 'app/utils/getDynamicText';
+import {t} from 'sentry/locale';
+import TextField from 'sentry/components/forms/textField';
+import NumberField from 'sentry/components/forms/numberField';
+import SelectControl from 'sentry/components/forms/selectControl';
+import Badge from 'sentry/components/badge';
+import getDynamicText from 'sentry/utils/getDynamicText';
 
 import Aggregations from '../aggregations';
 import Conditions from '../conditions';

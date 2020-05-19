@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {ColumnValueType, getAggregateAlias} from 'app/utils/discover/fields';
-import {Alignments} from 'app/components/gridEditable/sortLink';
+import {ColumnValueType, getAggregateAlias} from 'sentry/utils/discover/fields';
+import {Alignments} from 'sentry/components/gridEditable/sortLink';
 
 import {TableColumn, TableData, TableDataRow} from './types';
 

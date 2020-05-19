@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import {t} from 'app/locale';
-import CustomResolutionModal from 'app/components/customResolutionModal';
-import MenuItem from 'app/components/menuItem';
-import DropdownLink from 'app/components/dropdownLink';
-import ActionLink from 'app/components/actions/actionLink';
-import Tooltip from 'app/components/tooltip';
-import {formatVersion} from 'app/utils/formatters';
+import {t} from 'sentry/locale';
+import CustomResolutionModal from 'sentry/components/customResolutionModal';
+import MenuItem from 'sentry/components/menuItem';
+import DropdownLink from 'sentry/components/dropdownLink';
+import ActionLink from 'sentry/components/actions/actionLink';
+import Tooltip from 'sentry/components/tooltip';
+import {formatVersion} from 'sentry/utils/formatters';
 import {
   Release,
   ResolutionStatus,
   ResolutionStatusDetails,
   UpdateResolutionStatus,
-} from 'app/types';
+} from 'sentry/types';
 
 const defaultProps = {
   isResolved: false,

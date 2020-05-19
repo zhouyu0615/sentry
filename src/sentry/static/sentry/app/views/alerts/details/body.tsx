@@ -6,26 +6,26 @@ import {
   AlertRuleAggregations,
   AlertRuleThresholdType,
   Trigger,
-} from 'app/views/settings/incidentRules/types';
-import {NewQuery, Project} from 'app/types';
-import {PageContent} from 'app/styles/organization';
-import {defined} from 'app/utils';
-import {getDisplayForAlertRuleAggregation} from 'app/views/alerts/utils';
-import {getUtcDateString} from 'app/utils/dates';
-import {t} from 'app/locale';
-import Alert from 'app/components/alert';
-import Duration from 'app/components/duration';
-import EventView from 'app/utils/discover/eventView';
-import Feature from 'app/components/acl/feature';
-import Link from 'app/components/links/link';
-import NavTabs from 'app/components/navTabs';
-import Placeholder from 'app/components/placeholder';
-import SeenByList from 'app/components/seenByList';
-import {IconTelescope, IconWarning, IconLink} from 'app/icons';
-import {SectionHeading} from 'app/components/charts/styles';
-import Projects from 'app/utils/projects';
-import space from 'app/styles/space';
-import theme from 'app/utils/theme';
+} from 'sentry/views/settings/incidentRules/types';
+import {NewQuery, Project} from 'sentry/types';
+import {PageContent} from 'sentry/styles/organization';
+import {defined} from 'sentry/utils';
+import {getDisplayForAlertRuleAggregation} from 'sentry/views/alerts/utils';
+import {getUtcDateString} from 'sentry/utils/dates';
+import {t} from 'sentry/locale';
+import Alert from 'sentry/components/alert';
+import Duration from 'sentry/components/duration';
+import EventView from 'sentry/utils/discover/eventView';
+import Feature from 'sentry/components/acl/feature';
+import Link from 'sentry/components/links/link';
+import NavTabs from 'sentry/components/navTabs';
+import Placeholder from 'sentry/components/placeholder';
+import SeenByList from 'sentry/components/seenByList';
+import {IconTelescope, IconWarning, IconLink} from 'sentry/icons';
+import {SectionHeading} from 'sentry/components/charts/styles';
+import Projects from 'sentry/utils/projects';
+import space from 'sentry/styles/space';
+import theme from 'sentry/utils/theme';
 
 import {
   Incident,

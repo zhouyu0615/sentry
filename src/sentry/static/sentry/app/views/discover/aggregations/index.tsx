@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {t} from 'app/locale';
-import InlineSvg from 'app/components/inlineSvg';
-import Link from 'app/components/links/link';
+import {t} from 'sentry/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import Link from 'sentry/components/links/link';
 
 import AggregationRow from './aggregation';
 import {PlaceholderText, SelectListItem, AddText, SidebarLabel} from '../styles';

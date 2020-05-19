@@ -1,7 +1,7 @@
 import React from 'react';
 
-import InlineSvg from 'app/components/inlineSvg';
-import PageHeading from 'app/components/pageHeading';
+import InlineSvg from 'sentry/components/inlineSvg';
+import PageHeading from 'sentry/components/pageHeading';
 
 import {QueryPanelContainer, QueryPanelTitle, QueryPanelCloseLink} from '../styles';
 

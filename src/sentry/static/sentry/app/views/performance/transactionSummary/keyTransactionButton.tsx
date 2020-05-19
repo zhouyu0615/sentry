@@ -1,14 +1,14 @@
 import React from 'react';
 
-import withApi from 'app/utils/withApi';
-import {Client} from 'app/api';
-import Button from 'app/components/button';
-import {IconStar} from 'app/icons';
-import {t} from 'app/locale';
-import theme from 'app/utils/theme';
-import EventView from 'app/utils/discover/eventView';
-import {Organization} from 'app/types';
-import {saveKeyTransaction, deleteKeyTransaction} from 'app/actionCreators/performance';
+import withApi from 'sentry/utils/withApi';
+import {Client} from 'sentry/api';
+import Button from 'sentry/components/button';
+import {IconStar} from 'sentry/icons';
+import {t} from 'sentry/locale';
+import theme from 'sentry/utils/theme';
+import EventView from 'sentry/utils/discover/eventView';
+import {Organization} from 'sentry/types';
+import {saveKeyTransaction, deleteKeyTransaction} from 'sentry/actionCreators/performance';
 
 type Props = {
   api: Client;

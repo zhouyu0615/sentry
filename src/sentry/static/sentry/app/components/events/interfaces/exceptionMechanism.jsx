@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
 
-import space from 'app/styles/space';
-import Pills from 'app/components/pills';
-import Pill from 'app/components/pill';
-import Hovercard from 'app/components/hovercard';
-import InlineSvg from 'app/components/inlineSvg';
-import {t} from 'app/locale';
-import {isUrl} from 'app/utils';
+import space from 'sentry/styles/space';
+import Pills from 'sentry/components/pills';
+import Pill from 'sentry/components/pill';
+import Hovercard from 'sentry/components/hovercard';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {t} from 'sentry/locale';
+import {isUrl} from 'sentry/utils';
 
 class ExceptionMechanism extends React.Component {
   static propTypes = {

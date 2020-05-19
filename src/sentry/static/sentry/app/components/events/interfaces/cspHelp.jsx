@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {t} from 'app/locale';
+import {t} from 'sentry/locale';
 
 const help = {
   'base-uri': t(

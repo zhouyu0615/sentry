@@ -6,19 +6,19 @@ import posed, {PoseGroup} from 'react-pose';
 import scrollToElement from 'scroll-to-element';
 import styled from '@emotion/styled';
 
-import {analytics} from 'app/utils/analytics';
-import {t} from 'app/locale';
-import Hook from 'app/components/hook';
-import InlineSvg from 'app/components/inlineSvg';
-import OnboardingPlatform from 'app/views/onboarding/platform';
-import OnboardingProjectSetup from 'app/views/onboarding/projectSetup';
-import OnboardingWelcome from 'app/views/onboarding/welcome';
-import PageHeading from 'app/components/pageHeading';
-import SentryTypes from 'app/sentryTypes';
-import space from 'app/styles/space';
-import testablePose from 'app/utils/testablePose';
-import withOrganization from 'app/utils/withOrganization';
-import withProjects from 'app/utils/withProjects';
+import {analytics} from 'sentry/utils/analytics';
+import {t} from 'sentry/locale';
+import Hook from 'sentry/components/hook';
+import InlineSvg from 'sentry/components/inlineSvg';
+import OnboardingPlatform from 'sentry/views/onboarding/platform';
+import OnboardingProjectSetup from 'sentry/views/onboarding/projectSetup';
+import OnboardingWelcome from 'sentry/views/onboarding/welcome';
+import PageHeading from 'sentry/components/pageHeading';
+import SentryTypes from 'sentry/sentryTypes';
+import space from 'sentry/styles/space';
+import testablePose from 'sentry/utils/testablePose';
+import withOrganization from 'sentry/utils/withOrganization';
+import withProjects from 'sentry/utils/withProjects';
 
 const recordAnalyticStepComplete = ({organization, project, step}) =>
   analytics('onboarding_v2.step_compete', {

@@ -2,12 +2,12 @@ import React from 'react';
 import {Location} from 'history';
 import styled from '@emotion/styled';
 
-import {Organization} from 'app/types';
-import overflowEllipsis from 'app/styles/overflowEllipsis';
-import EventView from 'app/utils/discover/eventView';
-import Tags from 'app/views/eventsV2/tags';
-import {ContentBox, HeaderBox, Main, Side} from 'app/utils/discover/styles';
-import DiscoverQuery from 'app/utils/discover/discoverQuery';
+import {Organization} from 'sentry/types';
+import overflowEllipsis from 'sentry/styles/overflowEllipsis';
+import EventView from 'sentry/utils/discover/eventView';
+import Tags from 'sentry/views/eventsV2/tags';
+import {ContentBox, HeaderBox, Main, Side} from 'sentry/utils/discover/styles';
+import DiscoverQuery from 'sentry/utils/discover/discoverQuery';
 
 import SummaryContentTable from './table';
 import Breadcrumb from './breadcrumb';

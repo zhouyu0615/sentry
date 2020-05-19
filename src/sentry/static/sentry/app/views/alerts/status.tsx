@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {t} from 'app/locale';
-import InlineSvg from 'app/components/inlineSvg';
-import space from 'app/styles/space';
+import {t} from 'sentry/locale';
+import InlineSvg from 'sentry/components/inlineSvg';
+import space from 'sentry/styles/space';
 
 import {Incident, IncidentStatus} from './types';
 

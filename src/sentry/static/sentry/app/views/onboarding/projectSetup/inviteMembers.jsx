@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {addSuccessMessage} from 'app/actionCreators/indicator';
-import {analytics} from 'app/utils/analytics';
-import {getCurrentMember} from 'app/actionCreators/members';
-import {t, tct} from 'app/locale';
-import Alert from 'app/components/alert';
-import EmailField from 'app/views/settings/components/forms/emailField';
-import Form from 'app/views/settings/components/forms/form';
-import Panel from 'app/components/panels/panel';
-import SelectField from 'app/views/settings/components/forms/selectField';
-import SentryTypes from 'app/sentryTypes';
-import TextBlock from 'app/views/settings/components/text/textBlock';
-import space from 'app/styles/space';
-import withApi from 'app/utils/withApi';
-import withConfig from 'app/utils/withConfig';
-import withOrganization from 'app/utils/withOrganization';
+import {addSuccessMessage} from 'sentry/actionCreators/indicator';
+import {analytics} from 'sentry/utils/analytics';
+import {getCurrentMember} from 'sentry/actionCreators/members';
+import {t, tct} from 'sentry/locale';
+import Alert from 'sentry/components/alert';
+import EmailField from 'sentry/views/settings/components/forms/emailField';
+import Form from 'sentry/views/settings/components/forms/form';
+import Panel from 'sentry/components/panels/panel';
+import SelectField from 'sentry/views/settings/components/forms/selectField';
+import SentryTypes from 'sentry/sentryTypes';
+import TextBlock from 'sentry/views/settings/components/text/textBlock';
+import space from 'sentry/styles/space';
+import withApi from 'sentry/utils/withApi';
+import withConfig from 'sentry/utils/withConfig';
+import withOrganization from 'sentry/utils/withOrganization';
 
 const recordAnalyticsUserInvited = ({organization, project}) =>
   analytics('onboarding_v2.user_invited', {

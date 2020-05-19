@@ -10,8 +10,8 @@ import {
   IconStack,
   IconMobile,
   IconSwitch,
-} from 'app/icons';
-import {t} from 'app/locale';
+} from 'sentry/icons';
+import {t} from 'sentry/locale';
 
 import {BreadcrumbType, BreadcrumbDetails} from './types';
 

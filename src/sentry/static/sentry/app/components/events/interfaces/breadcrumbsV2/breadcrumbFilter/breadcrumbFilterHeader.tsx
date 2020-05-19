@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import space from 'app/styles/space';
-import {t, tct} from 'app/locale';
-import CheckboxFancy from 'app/components/checkboxFancy/checkboxFancy';
+import space from 'sentry/styles/space';
+import {t, tct} from 'sentry/locale';
+import CheckboxFancy from 'sentry/components/checkboxFancy/checkboxFancy';
 
 type Props = {
   selectedQuantity: number;

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import NavTabs from 'app/components/navTabs';
+import NavTabs from 'sentry/components/navTabs';
 
 const itemsShape = PropTypes.shape({
   title: PropTypes.string.isRequired,

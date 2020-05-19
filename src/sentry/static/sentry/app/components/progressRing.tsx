@@ -2,8 +2,8 @@ import React from 'react';
 import styled, {SerializedStyles} from '@emotion/styled';
 import posed, {PoseGroup} from 'react-pose';
 
-import theme, {Theme} from 'app/utils/theme';
-import testablePose from 'app/utils/testablePose';
+import theme, {Theme} from 'sentry/utils/theme';
+import testablePose from 'sentry/utils/testablePose';
 
 type TextProps = {
   textCss?: Props['textCss'];

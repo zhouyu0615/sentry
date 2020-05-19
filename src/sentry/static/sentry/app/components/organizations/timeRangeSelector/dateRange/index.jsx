@@ -8,22 +8,22 @@ import * as Sentry from '@sentry/browser';
 import moment from 'moment';
 import styled from '@emotion/styled';
 
-import {addErrorMessage} from 'app/actionCreators/indicator';
-import {analytics} from 'app/utils/analytics';
+import {addErrorMessage} from 'sentry/actionCreators/indicator';
+import {analytics} from 'sentry/utils/analytics';
 import {
   getEndOfDay,
   getStartOfPeriodAgo,
   isValidTime,
   setDateToTime,
-} from 'app/utils/dates';
-import {MAX_PICKABLE_DAYS} from 'app/constants';
-import {t} from 'app/locale';
-import Checkbox from 'app/components/checkbox';
-import SentryTypes from 'app/sentryTypes';
-import TimePicker from 'app/components/organizations/timeRangeSelector/timePicker';
-import getRouteStringFromRoutes from 'app/utils/getRouteStringFromRoutes';
-import space from 'app/styles/space';
-import theme from 'app/utils/theme';
+} from 'sentry/utils/dates';
+import {MAX_PICKABLE_DAYS} from 'sentry/constants';
+import {t} from 'sentry/locale';
+import Checkbox from 'sentry/components/checkbox';
+import SentryTypes from 'sentry/sentryTypes';
+import TimePicker from 'sentry/components/organizations/timeRangeSelector/timePicker';
+import getRouteStringFromRoutes from 'sentry/utils/getRouteStringFromRoutes';
+import space from 'sentry/styles/space';
+import theme from 'sentry/utils/theme';
 
 class DateRange extends React.Component {
   static propTypes = {

@@ -4,7 +4,7 @@ import ReactSelect, {Async, Creatable, AsyncCreatable} from 'react-select-legacy
 import styled from '@emotion/styled';
 import {css} from '@emotion/core';
 
-import convertFromSelect2Choices from 'app/utils/convertFromSelect2Choices';
+import convertFromSelect2Choices from 'sentry/utils/convertFromSelect2Choices';
 
 /**
  * The library has `value` defined as `PropTypes.object`, but this

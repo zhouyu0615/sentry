@@ -4,28 +4,28 @@ import React from 'react';
 import styled from '@emotion/styled';
 import isEqual from 'lodash/isEqual';
 
-import space from 'app/styles/space';
-import Access from 'app/components/acl/access';
-import GuideAnchor from 'app/components/assistant/guideAnchor';
-import Button from 'app/components/button';
-import Checkbox from 'app/components/checkbox';
-import DebugFileFeature from 'app/components/debugFileFeature';
-import EventDataSection from 'app/components/events/eventDataSection';
-import InlineSvg from 'app/components/inlineSvg';
-import {Panel, PanelBody, PanelItem} from 'app/components/panels';
-import Tooltip from 'app/components/tooltip';
-import DebugMetaStore, {DebugMetaActions} from 'app/stores/debugMetaStore';
-import SearchBar from 'app/components/searchBar';
+import space from 'sentry/styles/space';
+import Access from 'sentry/components/acl/access';
+import GuideAnchor from 'sentry/components/assistant/guideAnchor';
+import Button from 'sentry/components/button';
+import Checkbox from 'sentry/components/checkbox';
+import DebugFileFeature from 'sentry/components/debugFileFeature';
+import EventDataSection from 'sentry/components/events/eventDataSection';
+import InlineSvg from 'sentry/components/inlineSvg';
+import {Panel, PanelBody, PanelItem} from 'sentry/components/panels';
+import Tooltip from 'sentry/components/tooltip';
+import DebugMetaStore, {DebugMetaActions} from 'sentry/stores/debugMetaStore';
+import SearchBar from 'sentry/components/searchBar';
 import {
   formatAddress,
   parseAddress,
   getImageRange,
-} from 'app/components/events/interfaces/utils';
-import ImageForBar from 'app/components/events/interfaces/imageForBar';
-import {t, tct} from 'app/locale';
-import SentryTypes from 'app/sentryTypes';
-import {IconSearch} from 'app/icons';
-import ClippedBox from 'app/components/clippedBox';
+} from 'sentry/components/events/interfaces/utils';
+import ImageForBar from 'sentry/components/events/interfaces/imageForBar';
+import {t, tct} from 'sentry/locale';
+import SentryTypes from 'sentry/sentryTypes';
+import {IconSearch} from 'sentry/icons';
+import ClippedBox from 'sentry/components/clippedBox';
 
 const IMAGE_ADDR_LEN = 12;
 const MIN_FILTER_LEN = 3;

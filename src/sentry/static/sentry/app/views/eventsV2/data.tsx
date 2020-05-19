@@ -1,6 +1,6 @@
-import {t} from 'app/locale';
-import pinIcon from 'app/../images/graph/icon-location-filled.svg';
-import {NewQuery} from 'app/types';
+import {t} from 'sentry/locale';
+import pinIcon from 'sentry/../images/graph/icon-location-filled.svg';
+import {NewQuery} from 'sentry/types';
 
 export const PIN_ICON = `image://${pinIcon}`;
 

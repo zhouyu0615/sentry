@@ -4,15 +4,15 @@ import * as ReactRouter from 'react-router';
 import {Location} from 'history';
 import isEqual from 'lodash/isEqual';
 
-import {Organization} from 'app/types';
-import {getUtcToLocalDateObject} from 'app/utils/dates';
-import {Client} from 'app/api';
-import {getParams} from 'app/components/organizations/globalSelectionHeader/getParams';
-import {Panel} from 'app/components/panels';
-import getDynamicText from 'app/utils/getDynamicText';
-import {EventsChart} from 'app/views/events/eventsChart';
-import EventView from 'app/utils/discover/eventView';
-import {DisplayModes} from 'app/utils/discover/types';
+import {Organization} from 'sentry/types';
+import {getUtcToLocalDateObject} from 'sentry/utils/dates';
+import {Client} from 'sentry/api';
+import {getParams} from 'sentry/components/organizations/globalSelectionHeader/getParams';
+import {Panel} from 'sentry/components/panels';
+import getDynamicText from 'sentry/utils/getDynamicText';
+import {EventsChart} from 'sentry/views/events/eventsChart';
+import EventView from 'sentry/utils/discover/eventView';
+import {DisplayModes} from 'sentry/utils/discover/types';
 
 import ChartFooter from './chartFooter';
 

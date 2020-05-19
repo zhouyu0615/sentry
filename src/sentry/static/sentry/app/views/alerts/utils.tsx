@@ -1,6 +1,6 @@
-import {AlertRuleAggregations} from 'app/views/settings/incidentRules/types';
-import {Client} from 'app/api';
-import {t} from 'app/locale';
+import {AlertRuleAggregations} from 'sentry/views/settings/incidentRules/types';
+import {Client} from 'sentry/api';
+import {t} from 'sentry/locale';
 
 import {Incident, IncidentStats, IncidentStatus} from './types';
 

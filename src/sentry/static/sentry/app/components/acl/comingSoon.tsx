@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {t} from 'app/locale';
-import Alert from 'app/components/alert';
+import {t} from 'sentry/locale';
+import Alert from 'sentry/components/alert';
 
 const ComingSoon = () => (
   <Alert type="info" icon="icon-circle-info">

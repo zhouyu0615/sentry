@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import InlineSvg from 'app/components/inlineSvg';
+import InlineSvg from 'sentry/components/inlineSvg';
 
 const HeroIcon = styled(InlineSvg)`
   color: ${p => p.theme.gray6};

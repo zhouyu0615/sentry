@@ -2,16 +2,16 @@ import chunk from 'lodash/chunk';
 import debounce from 'lodash/debounce';
 import {Query} from 'history';
 
-import {Client} from 'app/api';
-import {Project, Team} from 'app/types';
+import {Client} from 'sentry/api';
+import {Project, Team} from 'sentry/types';
 import {
   addLoadingMessage,
   addErrorMessage,
   addSuccessMessage,
-} from 'app/actionCreators/indicator';
-import {t, tct} from 'app/locale';
-import ProjectActions from 'app/actions/projectActions';
-import ProjectsStatsStore from 'app/stores/projectsStatsStore';
+} from 'sentry/actionCreators/indicator';
+import {t, tct} from 'sentry/locale';
+import ProjectActions from 'sentry/actions/projectActions';
+import ProjectsStatsStore from 'sentry/stores/projectsStatsStore';
 
 type UpdateParams = {
   orgId: string;

@@ -2,12 +2,12 @@ import React from 'react';
 import {Location} from 'history';
 import styled from '@emotion/styled';
 
-import {Organization} from 'app/types';
-import space from 'app/styles/space';
-import EventView from 'app/utils/discover/eventView';
-import {t} from 'app/locale';
-import {getFieldRenderer} from 'app/utils/discover/fieldRenderers';
-import DiscoverQuery from 'app/utils/discover/discoverQuery';
+import {Organization} from 'sentry/types';
+import space from 'sentry/styles/space';
+import EventView from 'sentry/utils/discover/eventView';
+import {t} from 'sentry/locale';
+import {getFieldRenderer} from 'sentry/utils/discover/fieldRenderers';
+import DiscoverQuery from 'sentry/utils/discover/discoverQuery';
 
 type Props = {
   location: Location;

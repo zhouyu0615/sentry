@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import {tct} from 'app/locale';
-import {IconEllipsis} from 'app/icons';
-import space from 'app/styles/space';
+import {tct} from 'sentry/locale';
+import {IconEllipsis} from 'sentry/icons';
+import space from 'sentry/styles/space';
 
 import {GridCellLeft, IconWrapper} from './styles';
 

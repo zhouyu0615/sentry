@@ -1,7 +1,7 @@
 import React from 'react';
 
-import EventView from 'app/utils/discover/eventView';
-import {TableData, TableDataRow} from 'app/views/eventsV2/table/types';
+import EventView from 'sentry/utils/discover/eventView';
+import {TableData, TableDataRow} from 'sentry/views/eventsV2/table/types';
 
 import {SpanBoundsType, SpanGeneratedBoundsType, isGapSpan, getSpanID} from './utils';
 import {ProcessedSpanType, ParsedTraceType, TreeDepthType} from './types';

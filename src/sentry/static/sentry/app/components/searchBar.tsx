@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import classNames from 'classnames';
 
-import {callIfFunction} from 'app/utils/callIfFunction';
+import {callIfFunction} from 'sentry/utils/callIfFunction';
 
 type DefaultProps = {
   query: string;

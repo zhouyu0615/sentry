@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import space from 'app/styles/space';
-import video from 'app/../images/spot/congrats-robots.mp4';
+import space from 'sentry/styles/space';
+import video from 'sentry/../images/spot/congrats-robots.mp4';
 
 /**
  * Note, video needs `muted` for `autoplay` to work on Chrome

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Integrations} from '@sentry/apm';
 
-import getDisplayName from 'app/utils/getDisplayName';
+import getDisplayName from 'sentry/utils/getDisplayName';
 
 type InjectedProps = {
   finishProfile: () => void;

@@ -2,8 +2,8 @@ import {
   NEGATION_OPERATORS,
   NULL_OPERATORS,
   WILDCARD_OPERATORS,
-} from 'app/views/discover/data';
-import {defined} from 'app/utils';
+} from 'sentry/views/discover/data';
+import {defined} from 'sentry/utils';
 
 const checkIsNegation = operator => NEGATION_OPERATORS.includes(operator);
 const checkIsNull = operator => NULL_OPERATORS.includes(operator);
