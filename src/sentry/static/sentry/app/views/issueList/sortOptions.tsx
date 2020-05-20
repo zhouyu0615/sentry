@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
 
@@ -6,26 +5,27 @@ import DropdownControl, {DropdownItem} from 'app/components/dropdownControl';
 import {t} from 'app/locale';
 import space from 'app/styles/space';
 
-class IssueListSortOptions extends React.PureComponent {
-  static propTypes = {
-    sort: PropTypes.string,
-    onSelect: PropTypes.func,
+type SortKey = 'date' | 'freq' | 'priority' | 'new' | 'user';
+type Props = {
+  sort?: SortKey;
+  onSelect: (sort: SortKey) => void;
+};
+type State = {
+  sortKey: SortKey;
+};
+
+class IssueListSortOptions extends React.PureComponent<Props, State> {
+  state = {
+    sortKey: this.props.sort || 'date',
   };
 
-  constructor(...args) {
-    super(...args);
-    this.state = {
-      sortKey: this.props.sort || 'date',
-    };
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: Props) {
     this.setState({
       sortKey: nextProps.sort || 'date',
     });
   }
 
-  getMenuItem = key => (
+  getMenuItem = (key: SortKey): React.ReactNode => (
     <DropdownItem
       onSelect={this.onSelect}
       eventKey={key}
@@ -35,14 +35,14 @@ class IssueListSortOptions extends React.PureComponent {
     </DropdownItem>
   );
 
-  onSelect = sort => {
+  onSelect = (sort: SortKey): void => {
     this.setState({sortKey: sort});
     if (this.props.onSelect) {
       this.props.onSelect(sort);
     }
   };
 
-  getSortLabel = key => {
+  getSortLabel = (key: SortKey): string => {
     switch (key) {
       case 'new':
         return t('First Seen');
