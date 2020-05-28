@@ -262,6 +262,7 @@ type SentryEventBase = {
   message: string;
   platform?: PlatformKey;
   dateCreated?: string;
+  dateReceived?: string;
   endTimestamp?: number;
   entries: EntryType[];
 
