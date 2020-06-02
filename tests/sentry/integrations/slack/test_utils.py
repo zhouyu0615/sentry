@@ -123,7 +123,7 @@ class BuildIncidentAttachmentTest(TestCase):
                     },
                 )
             ),
-            "text": "{}} events in the last 10 minutes\nFilter: level:error".format(metric_value),
+            "text": "{} events in the last 10 minutes\nFilter: level:error".format(metric_value),
             "fields": [],
             "mrkdwn_in": ["text"],
             "footer_icon": logo_url,
