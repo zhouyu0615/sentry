@@ -62,4 +62,16 @@ export type EventId = {
   status?: EventIdStatus;
 };
 
+type PiiConfig = {
+  type: RuleType;
+  pattern: string;
+  redaction?: {
+    method?: MethodType;
+  };
+};
+
+export type PiiConfigRule = Record<string, PiiConfig>;
+
+export type Applications = Record<string, Array<string>>;
+
 export type Errors = Partial<Record<keyof Omit<Rule, 'id'>, string>>;

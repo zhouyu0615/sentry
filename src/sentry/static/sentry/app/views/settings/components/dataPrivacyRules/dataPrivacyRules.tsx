@@ -16,10 +16,9 @@ import OrganizationRules from './organizationRules';
 import {defaultSuggestions as sourceDefaultSuggestions} from './form/sourceSuggestions';
 import submitRules from './submitRules';
 import handleError from './handleError';
+import convertRelayPiiConfig from './convertRelayPiiConfig';
 import {
   Rule,
-  RuleType,
-  MethodType,
   EventIdStatus,
   EventId,
   SourceSuggestion,
@@ -30,23 +29,10 @@ import {
 const ADVANCED_DATASCRUBBING_LINK =
   'https://docs.sentry.io/data-management/advanced-datascrubbing/';
 
-type PiiConfig = {
-  type: RuleType;
-  pattern: string;
-  redaction?: {
-    method?: MethodType;
-  };
-};
-
-type PiiConfigRule = {
-  [key: string]: PiiConfig;
-};
-
-type Applications = {[key: string]: Array<string>};
-
 type Props = {
   endpoint: string;
   organization: Organization;
+  onSubmitSuccess: (data: any) => void;
   projectId?: Project['id'];
   relayPiiConfig?: string;
   additionalContext?: React.ReactNode;
@@ -89,6 +75,9 @@ class DataPrivacyRules extends React.Component<Props, State> {
     if (prevState.relayPiiConfig !== this.state.relayPiiConfig) {
       this.loadRules();
     }
+    if (prevState.eventId.value !== this.state.eventId.value) {
+      this.loadSourceSuggestions();
+    }
   }
 
   componentWillUnmount() {
@@ -103,9 +92,8 @@ class DataPrivacyRules extends React.Component<Props, State> {
 
     if (isProjectLevel) {
       try {
-        const convertedRules = this.convertRelayPiiConfig(organization.relayPiiConfig);
         this.setState({
-          orgRules: convertedRules,
+          orgRules: convertRelayPiiConfig(organization.relayPiiConfig),
         });
       } catch {
         addErrorMessage(t('Unable to load organization rules'));
@@ -115,7 +103,7 @@ class DataPrivacyRules extends React.Component<Props, State> {
 
   loadRules() {
     try {
-      const convertedRules = this.convertRelayPiiConfig(this.state.relayPiiConfig);
+      const convertedRules = convertRelayPiiConfig(this.state.relayPiiConfig);
       this.setState({
         rules: convertedRules,
         savedRules: convertedRules,
@@ -124,55 +112,6 @@ class DataPrivacyRules extends React.Component<Props, State> {
       addErrorMessage(t('Unable to load project rules'));
     }
   }
-
-  // Remap PII config format to something that is more usable in React. Ideally
-  // we would stop doing this at some point and make some updates to how we
-  // store this configuration on the server.
-  //
-  // For the time being the PII config format is documented at
-  // https://getsentry.github.io/relay/pii-config/
-  convertRelayPiiConfig = (relayPiiConfig?: string) => {
-    const piiConfig = relayPiiConfig ? JSON.parse(relayPiiConfig) : {};
-    const rules: PiiConfigRule = piiConfig.rules || {};
-    const applications: Applications = piiConfig.applications || {};
-    const convertedRules: Array<Rule> = [];
-
-    for (const application in applications) {
-      for (const rule of applications[application]) {
-        if (!rules[rule]) {
-          // Convert a "built-in" rule like "@anything:remove" to an object {
-          //   type: "anything",
-          //   method: "remove"
-          // }
-          if (rule[0] === '@') {
-            const [type, method] = rule.slice(1).split(':');
-            convertedRules.push({
-              id: convertedRules.length,
-              type: type as RuleType,
-              method: method as MethodType,
-              source: application,
-            });
-          }
-          continue;
-        }
-
-        const resolvedRule = rules[rule];
-        if (resolvedRule.type === RuleType.PATTERN && resolvedRule.pattern) {
-          const method = resolvedRule?.redaction?.method;
-
-          convertedRules.push({
-            id: convertedRules.length,
-            type: RuleType.PATTERN,
-            method: method as MethodType,
-            source: application,
-            customRegex: resolvedRule.pattern,
-          });
-        }
-      }
-    }
-
-    return convertedRules;
-  };
 
   loadSourceSuggestions = async () => {
     const {organization, projectId} = this.props;
@@ -199,13 +138,16 @@ class DataPrivacyRules extends React.Component<Props, State> {
 
     try {
       const query: {projectId?: string; eventId: string} = {eventId: eventId.value};
+
       if (projectId) {
         query.projectId = projectId;
       }
+
       const rawSuggestions = await this.api.requestPromise(
         `/organizations/${organization.slug}/data-scrubbing-selector-suggestions/`,
         {query}
       );
+
       const sourceSuggestions: Array<SourceSuggestion> = rawSuggestions.suggestions;
 
       if (sourceSuggestions && sourceSuggestions.length > 0) {
@@ -260,13 +202,16 @@ class DataPrivacyRules extends React.Component<Props, State> {
   };
 
   handleSave = async (rules: Array<Rule>, successMessage: string) => {
-    const {endpoint} = this.props;
+    const {endpoint, onSubmitSuccess} = this.props;
     try {
       const data = await submitRules(this.api, endpoint, rules);
       if (data?.relayPiiConfig) {
-        const convertedRules = this.convertRelayPiiConfig(data.relayPiiConfig);
-        this.setState({rules: convertedRules});
+        this.setState({
+          rules: convertRelayPiiConfig(data.relayPiiConfig),
+          showAddRuleModal: false,
+        });
         addSuccessMessage(successMessage);
+        onSubmitSuccess(data);
       }
     } catch (error) {
       this.convertRequestError(handleError(error));
@@ -274,29 +219,20 @@ class DataPrivacyRules extends React.Component<Props, State> {
   };
 
   handleAddRule = (rule: Rule) => {
-    const {rules} = this.state;
-    const newRule = {...rule, id: rules.length};
-    const updatedRules = [...rules, newRule];
-    this.handleSave(updatedRules, t('Successfully added rule'));
+    const newRule = {...rule, id: this.state.rules.length};
+    const rules = [...this.state.rules, newRule];
+    this.handleSave(rules, t('Successfully added rule'));
   };
 
   handleUpdateRule = (updatedRule: Rule) => {
-    console.log('rule', updatedRule);
-    // const rules = this.state.rules.map(rule => {
-    //   if (rule.id === updatedRule.id) {
-    //     return updatedRule;
-    //   }
-    //   return rule;
-    // });
-    // return await this.handleSubmit(rules).then(result => {
-    //   if (!result) {
-    //     this.setState({
-    //       rules,
-    //     });
-    //     return undefined;
-    //   }
-    //   return result;
-    // });
+    const rules = this.state.rules.map(rule => {
+      if (rule.id === updatedRule.id) {
+        return updatedRule;
+      }
+      return rule;
+    });
+
+    this.handleSave(rules, t('Successfully updated rule'));
   };
 
   handleDeleteRule = (rulesToBeDeleted: Array<Rule['id']>) => {
@@ -305,20 +241,11 @@ class DataPrivacyRules extends React.Component<Props, State> {
   };
 
   handleToggleAddRuleModal = (showAddRuleModal: boolean) => () => {
-    this.setState({
-      showAddRuleModal,
-    });
+    this.setState({showAddRuleModal});
   };
 
   handleUpdateEventId = (eventId: string) => {
-    this.setState(
-      {
-        eventId: {
-          value: eventId,
-        },
-      },
-      this.loadSourceSuggestions
-    );
+    this.setState({eventId: {value: eventId}});
   };
 
   render() {
@@ -332,8 +259,6 @@ class DataPrivacyRules extends React.Component<Props, State> {
       isProjectLevel,
       errors,
     } = this.state;
-
-    console.log('errors', errors, 'rules', rules);
 
     return (
       <React.Fragment>
@@ -355,6 +280,7 @@ class DataPrivacyRules extends React.Component<Props, State> {
           <PanelBody>
             {isProjectLevel && <OrganizationRules rules={orgRules} />}
             <Content
+              errors={errors}
               rules={rules}
               onDeleteRule={this.handleDeleteRule}
               onUpdateRule={this.handleUpdateRule}
@@ -383,6 +309,7 @@ class DataPrivacyRules extends React.Component<Props, State> {
         </Panel>
         {showAddRuleModal && (
           <Dialog
+            errors={errors}
             sourceSuggestions={sourceSuggestions}
             onSaveRule={this.handleAddRule}
             onClose={this.handleToggleAddRuleModal(false)}

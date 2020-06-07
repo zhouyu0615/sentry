@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/lib/Modal';
 import styled from '@emotion/styled';
 import omit from 'lodash/omit';
+import isEqual from 'lodash/isEqual';
 
 import Button from 'app/components/button';
 import ButtonBar from 'app/components/buttonBar';
@@ -16,6 +17,7 @@ const DEFAULT_RULE_SOURCE_VALUE = '';
 type Props = {
   onClose: () => void;
   onSaveRule: (rule: Rule) => void;
+  errors: Errors;
   onUpdateEventId?: (eventId: string) => void;
   sourceSuggestions?: Array<SourceSuggestion>;
   eventId?: EventId;
@@ -33,28 +35,52 @@ type State = {
 class Dialog extends React.Component<Props, State> {
   state: State = {
     rule: {
-      id: defined(this.props.rule?.id) ? this.props.rule?.id! : -1,
-      type: this.props.rule?.type || RuleType.CREDITCARD,
-      method: this.props.rule?.method || MethodType.MASK,
-      source: this.props.rule?.source || DEFAULT_RULE_SOURCE_VALUE,
-      customRegex: this.props.rule?.customRegex,
+      id: -1,
+      type: RuleType.CREDITCARD,
+      method: MethodType.MASK,
+      source: DEFAULT_RULE_SOURCE_VALUE,
     },
     isNewRule: defined(this.props.rule?.id),
     isFormValid: false,
     errors: {},
   };
 
+  componentDidMount() {
+    this.loadRule();
+  }
+
+  componentDidUpdate(prevProps: Props, prevState: State) {
+    if (!isEqual(prevProps.errors, this.props.errors)) {
+      this.updateErrors();
+    }
+
+    if (this.props.rule && this.props.rule.id !== prevState.rule.id) {
+      return;
+    }
+
+    if (!isEqual(prevState.rule, this.state.rule)) {
+      this.handleValidateForm();
+    }
+  }
+
+  loadRule = () => {
+    const rule = this.props.rule;
+    if (rule) {
+      this.setState({rule});
+      return;
+    }
+  };
+
+  updateErrors = () => {
+    this.setState(prevState => ({errors: {...prevState.errors, ...this.props.errors}}));
+  };
+
   clearError = (error: keyof Errors) => {
-    this.setState(prevState => ({
-      errors: omit(prevState.errors, error),
-    }));
+    this.setState(prevState => ({errors: omit(prevState.errors, error)}));
   };
 
   handleChange = <T extends keyof Omit<Rule, 'id'>>(stateProperty: T, value: Rule[T]) => {
-    const rule: Rule = {
-      ...this.state.rule,
-      [stateProperty]: value,
-    };
+    const rule: Rule = {...this.state.rule, [stateProperty]: value};
 
     if (rule.type !== RuleType.PATTERN) {
       delete rule?.customRegex;
@@ -65,12 +91,7 @@ class Dialog extends React.Component<Props, State> {
       this.clearError(stateProperty as keyof Omit<Rule, 'id'>);
     }
 
-    this.setState(
-      {
-        rule,
-      },
-      this.handleValidateForm
-    );
+    this.setState({rule});
   };
 
   handleValidation = <T extends keyof Errors>(field: T) => () => {
@@ -102,17 +123,13 @@ class Dialog extends React.Component<Props, State> {
     const ruleKeys = Object.keys(omit(rule, 'id'));
     const isFormValid = !ruleKeys.find(ruleKey => !rule[ruleKey]);
 
-    this.setState({
-      isFormValid,
-    });
+    this.setState({isFormValid});
   };
 
   handleSave = () => {
     const {rule} = this.state;
-    const {onSaveRule, onClose} = this.props;
-
+    const {onSaveRule} = this.props;
     onSaveRule(rule);
-    onClose();
   };
 
   render() {
@@ -120,7 +137,7 @@ class Dialog extends React.Component<Props, State> {
     const {rule, isFormValid, errors, isNewRule} = this.state;
 
     return (
-      <StyledModal show animation={false} onHide={() => {}}>
+      <StyledModal show animation={false} onHide={onClose}>
         <Modal.Header closeButton>
           {isNewRule ? t('Add a data privacy rule') : t('Edit a data privacy rule')}
         </Modal.Header>
