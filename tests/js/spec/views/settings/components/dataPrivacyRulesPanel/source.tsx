@@ -2,12 +2,12 @@ import React from 'react';
 
 import {mountWithTheme} from 'sentry-test/enzyme';
 
-import Source from 'app/views/settings/components/dataPrivacyRules/dataPrivacyRulesForm/source';
+import Source from 'app/views/settings/components/dataPrivacyRules/form/sourceField';
 import {
   binaryOperatorSuggestions,
   unaryOperatorSuggestions,
   defaultSuggestions,
-} from 'app/views/settings/components/dataPrivacyRules/dataPrivacyRulesForm/dataPrivacyRulesFormSourceSuggestions';
+} from 'app/views/settings/components/dataPrivacyRules/form/sourceSuggestions';
 
 function renderComponent({
   value = '$string',

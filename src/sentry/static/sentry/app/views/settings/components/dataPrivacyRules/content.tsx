@@ -6,7 +6,7 @@ import EmptyMessage from 'app/views/settings/components/emptyMessage';
 import {IconWarning} from 'app/icons';
 
 import RulesList from './rulesList';
-import DataPrivacyRulesModal from './dataPrivacyRulesModal';
+import DataPrivacyRulesModal from './dialog';
 
 type ModalProps = React.ComponentProps<typeof DataPrivacyRulesModal>;
 type Rule = NonNullable<ModalProps['rule']>;
@@ -22,7 +22,7 @@ type State = {
   editRule?: Rule['id'];
 };
 
-class DataPrivacyRulesContent extends React.Component<Props, State> {
+class Content extends React.Component<Props, State> {
   state: State = {
     editRule: undefined,
   };
@@ -45,17 +45,16 @@ class DataPrivacyRulesContent extends React.Component<Props, State> {
   };
 
   handleSave = async (updatedRule: Rule) => {
-    const {onUpdateRule} = this.props;
-
-    return await onUpdateRule(updatedRule).then(result => {
-      if (!result) {
-        this.setState({
-          editRule: undefined,
-        });
-        return undefined;
-      }
-      return result;
-    });
+    //const {onUpdateRule} = this.props;
+    // return await onUpdateRule(updatedRule).then(result => {
+    //   if (!result) {
+    //     this.setState({
+    //       editRule: undefined,
+    //     });
+    //     return undefined;
+    //   }
+    //   return result;
+    // });
   };
 
   render() {
@@ -94,4 +93,4 @@ class DataPrivacyRulesContent extends React.Component<Props, State> {
   }
 }
 
-export default DataPrivacyRulesContent;
+export default Content;
