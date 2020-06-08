@@ -4,7 +4,7 @@ import {RuleType, PiiConfig, Rule} from './types';
 
 type Applications = Record<string, Array<string>>;
 
-function getCustomRule(rule: Required<Rule>): PiiConfig {
+function getCustomRule(rule: Rule): PiiConfig {
   if (rule.type === RuleType.PATTERN) {
     return {
       type: rule.type,
@@ -22,7 +22,7 @@ function getCustomRule(rule: Required<Rule>): PiiConfig {
   };
 }
 
-function submitRules(api: Client, endpoint: string, rules: Array<Required<Rule>>) {
+function submitRules(api: Client, endpoint: string, rules: Array<Rule>) {
   const applications: Applications = {};
   const customRules: Record<string, PiiConfig> = {};
 
@@ -44,8 +44,6 @@ function submitRules(api: Client, endpoint: string, rules: Array<Required<Rule>>
     rules: customRules,
     applications,
   };
-
-  console.log('customRules', customRules);
 
   return api.requestPromise(endpoint, {
     method: 'PUT',

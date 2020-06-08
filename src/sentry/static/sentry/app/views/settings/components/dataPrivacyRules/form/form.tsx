@@ -11,12 +11,20 @@ import FormField from './formField';
 import SelectField from './selectField';
 import SourceField from './sourceField';
 import {getRuleLabel, getMethodLabel} from '../utils';
-import {MethodType, RuleType, Rule, SourceSuggestion, EventId, Errors} from '../types';
+import {
+  MethodType,
+  RuleType,
+  Rule,
+  SourceSuggestion,
+  EventId,
+  Errors,
+  KeysOfUnion,
+} from '../types';
 
-type Props = {
-  rule: Rule;
-  onChange: <T extends keyof Omit<Rule, 'id'>>(stateProperty: T, value: Rule[T]) => void;
-  onValidate: <T extends keyof Omit<Rule, 'id'>>(field: T) => () => void;
+type Props<R extends Rule, K extends KeysOfUnion<R>> = {
+  rule: R;
+  onChange: (stateProperty: K, value: R[K]) => void;
+  onValidate: (field: K) => () => void;
   onUpdateEventId?: (eventId: string) => void;
   errors: Errors;
   sourceSuggestions?: Array<SourceSuggestion>;
@@ -26,90 +34,93 @@ type Props = {
 
 const Form = ({
   disabled,
-  rule: {source, pattern, type, method},
+  rule,
   errors,
   sourceSuggestions,
   onUpdateEventId,
   eventId,
   onChange,
   onValidate,
-}: Props) => (
-  <Wrapper>
-    <WrapperSelectFields>
-      <FormField label={t('Method')} tooltipInfo={t('What to do')}>
-        <SelectField
-          placeholder={t('Select method')}
-          name="method"
-          options={sortBy(Object.values(MethodType)).map(value => ({
-            ...getMethodLabel(value),
-            value,
-          }))}
-          value={method}
-          onChange={({value}) => onChange('method', value)}
-          isDisabled={disabled}
-        />
-      </FormField>
+}: Props<Rule, KeysOfUnion<Rule>>) => {
+  const {method, type, source} = rule;
+  return (
+    <Wrapper>
+      <WrapperSelectFields>
+        <FormField label={t('Method')} tooltipInfo={t('What to do')}>
+          <SelectField
+            placeholder={t('Select method')}
+            name="method"
+            options={sortBy(Object.values(MethodType)).map(value => ({
+              ...getMethodLabel(value),
+              value,
+            }))}
+            value={method}
+            onChange={({value}) => onChange('method', value)}
+            isDisabled={disabled}
+          />
+        </FormField>
+        <FormField
+          label={t('Data Type')}
+          tooltipInfo={t(
+            'What to look for. Use an existing pattern or define your own using regular expressions.'
+          )}
+        >
+          <SelectField
+            placeholder={t('Select type')}
+            name="type"
+            options={sortBy(Object.values(RuleType)).map(value => ({
+              label: getRuleLabel(value),
+              value,
+            }))}
+            value={type}
+            onChange={({value}) => onChange('type', value)}
+            isDisabled={disabled}
+          />
+        </FormField>
+      </WrapperSelectFields>
+      {rule.type === RuleType.PATTERN && (
+        <FormField
+          label={t('Regex matches')}
+          tooltipInfo={t('Custom Perl-style regex (PCRE)')}
+          isFullWidth
+        >
+          <RegularExpression
+            name="pattern"
+            placeholder={t('[a-zA-Z0-9]+')}
+            onChange={(value: string) => {
+              onChange('pattern', value);
+            }}
+            value={rule.pattern}
+            onBlur={onValidate('pattern')}
+            error={errors?.pattern}
+            disabled={disabled}
+          />
+        </FormField>
+      )}
+      {onUpdateEventId && (
+        <EventIdField onUpdateEventId={onUpdateEventId} eventId={eventId} />
+      )}
       <FormField
-        label={t('Data Type')}
+        label={t('Source')}
         tooltipInfo={t(
-          'What to look for. Use an existing pattern or define your own using regular expressions.'
+          'Where to look. In the simplest case this can be an attribute name.'
         )}
       >
-        <SelectField
-          placeholder={t('Select type')}
-          name="type"
-          options={sortBy(Object.values(RuleType)).map(value => ({
-            label: getRuleLabel(value),
-            value,
-          }))}
-          value={type}
-          onChange={({value}) => onChange('type', value)}
-          isDisabled={disabled}
-        />
-      </FormField>
-    </WrapperSelectFields>
-    {type === RuleType.PATTERN && (
-      <FormField
-        label={t('Regex matches')}
-        tooltipInfo={t('Custom Perl-style regex (PCRE)')}
-        isFullWidth
-      >
-        <RegularExpression
-          name="pattern"
-          placeholder={t('[a-zA-Z0-9]+')}
+        <SourceField
           onChange={(value: string) => {
-            onChange('pattern', value);
+            onChange('source', value);
           }}
-          value={pattern}
-          onBlur={onValidate('pattern')}
-          error={errors?.pattern}
+          value={source}
+          onBlur={onValidate('source')}
+          isRegExMatchesSelected={type === RuleType.PATTERN}
+          suggestions={sourceSuggestions}
+          error={errors?.source}
           disabled={disabled}
         />
       </FormField>
-    )}
-    {onUpdateEventId && (
-      <EventIdField onUpdateEventId={onUpdateEventId} eventId={eventId} />
-    )}
-    <FormField
-      label={t('Source')}
-      tooltipInfo={t(
-        'Where to look. In the simplest case this can be an attribute name.'
-      )}
-    >
-      <SourceField
-        onChange={(value: string) => {
-          onChange('source', value);
-        }}
-        value={source}
-        onBlur={onValidate('source')}
-        isRegExMatchesSelected={type === RuleType.PATTERN}
-        suggestions={sourceSuggestions}
-        error={errors?.source}
-        disabled={disabled}
-      />
-    </FormField>
-  </Wrapper>
-);
+    </Wrapper>
+  );
+};
 
 export default Form;
 

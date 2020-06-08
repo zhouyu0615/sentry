@@ -10,7 +10,15 @@ import {t} from 'app/locale';
 import {defined} from 'app/utils';
 
 import Form from './form/form';
-import {RuleType, MethodType, EventId, SourceSuggestion, Rule, Errors} from './types';
+import {
+  RuleType,
+  MethodType,
+  EventId,
+  SourceSuggestion,
+  Rule,
+  Errors,
+  KeysOfUnion,
+} from './types';
 
 const DEFAULT_RULE_SOURCE_VALUE = '';
 
@@ -79,10 +87,14 @@ class Dialog extends React.Component<Props, State> {
     this.setState(prevState => ({errors: omit(prevState.errors, error)}));
   };
 
-  handleChange = <T extends keyof Omit<Rule, 'id'>>(stateProperty: T, value: Rule[T]) => {
+  handleChange = <R extends Rule, K extends KeysOfUnion<R>>(
+    stateProperty: K,
+    value: R[K]
+  ) => {
     const rule: Rule = {...this.state.rule, [stateProperty]: value};
 
     if (rule.type !== RuleType.PATTERN) {
+      // @ts-ignore
       delete rule?.pattern;
       this.clearError('pattern');
     }
@@ -95,6 +107,7 @@ class Dialog extends React.Component<Props, State> {
   };
 
   handleValidation = <T extends keyof Errors>(field: T) => () => {
+    // @ts-ignore
     const isFieldValueEmpty = !this.state.rule[field];
     const fieldErrorAlreadyExist = this.state.errors[field];
 
