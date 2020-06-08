@@ -192,7 +192,7 @@ class DataPrivacyRules extends React.Component<Props, State> {
         this.setState(prevState => ({
           errors: {
             ...prevState.errors,
-            customRegex: error.message,
+            pattern: error.message,
           },
         }));
         break;
@@ -204,7 +204,7 @@ class DataPrivacyRules extends React.Component<Props, State> {
   handleSave = async (rules: Array<Rule>, successMessage: string) => {
     const {endpoint, onSubmitSuccess} = this.props;
     try {
-      const data = await submitRules(this.api, endpoint, rules);
+      const data = await submitRules(this.api, endpoint, rules as Array<Required<Rule>>);
       if (data?.relayPiiConfig) {
         this.setState({
           rules: convertRelayPiiConfig(data.relayPiiConfig),

@@ -1,38 +1,35 @@
 import {Client} from 'app/api';
 
-import {RuleType, MethodType, Rule} from './types';
+import {RuleType, PiiConfig, Rule} from './types';
 
-type PiiConfig = {
-  type: RuleType;
-  pattern: string;
-  redaction?: {
-    method?: MethodType;
-  };
-};
-
-type PiiConfigRule = Record<string, PiiConfig>;
 type Applications = Record<string, Array<string>>;
 
-function submitRules(api: Client, endpoint: string, rules: Array<Rule>) {
+function getCustomRule(rule: Required<Rule>): PiiConfig {
+  if (rule.type === RuleType.PATTERN) {
+    return {
+      type: rule.type,
+      pattern: rule.pattern,
+      redaction: {
+        method: rule.method,
+      },
+    };
+  }
+  return {
+    type: rule.type,
+    redaction: {
+      method: rule.method,
+    },
+  };
+}
+
+function submitRules(api: Client, endpoint: string, rules: Array<Required<Rule>>) {
   const applications: Applications = {};
-  const customRules: PiiConfigRule = {};
-  let customRulesCounter = 0;
+  const customRules: Record<string, PiiConfig> = {};
 
-  for (const rule of rules) {
-    let ruleName = `@${rule.type}:${rule.method}`;
-    if (rule.type === RuleType.PATTERN && rule.customRegex) {
-      ruleName = `customRule${customRulesCounter}`;
-
-      customRulesCounter += 1;
-
-      customRules[ruleName] = {
-        type: RuleType.PATTERN,
-        pattern: rule.customRegex,
-        redaction: {
-          method: rule.method,
-        },
-      };
-    }
+  for (let i = 0; i < rules.length; i++) {
+    const rule = rules[i];
+    const ruleName = `customRule${i}`;
+    customRules[ruleName] = getCustomRule(rule);
 
     if (!applications[rule.source]) {
       applications[rule.source] = [];
@@ -47,6 +44,8 @@ function submitRules(api: Client, endpoint: string, rules: Array<Rule>) {
     rules: customRules,
     applications,
   };
+
+  console.log('customRules', customRules);
 
   return api.requestPromise(endpoint, {
     method: 'PUT',
