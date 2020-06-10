@@ -218,7 +218,7 @@ class BaseIncidentsTest(SnubaTestCase):
 
     @cached_property
     def now(self):
-        return timezone.now().replace(microsecond=0)
+        return timezone.now().replace(minute=0, second=0, microsecond=0)
 
 
 class BaseIncidentEventStatsTest(BaseIncidentsTest):
@@ -272,7 +272,7 @@ class BaseIncidentEventStatsTest(BaseIncidentsTest):
 class GetIncidentEventStatsTest(TestCase, BaseIncidentEventStatsTest):
     @fixture
     def bucket_incident(self):
-        incident_start = self.now.replace(minute=0, second=0, microsecond=0) - timedelta(minutes=23)
+        incident_start = self.now - timedelta(minutes=23)
         self.create_event(incident_start + timedelta(seconds=1))
         self.create_event(incident_start + timedelta(minutes=2))
         self.create_event(incident_start + timedelta(minutes=6))
@@ -315,6 +315,12 @@ class GetIncidentEventStatsTest(TestCase, BaseIncidentEventStatsTest):
 
     def test_start_bucket(self):
         self.run_test(self.bucket_incident, [2, 4, 2, 2])
+
+    def test_buckets_already_aligned(self):
+        self.bucket_incident.update(
+            date_started=self.now - timedelta(minutes=30), date_closed=self.now
+        )
+        self.run_test(self.bucket_incident, [2, 2, 2])
 
     def test_start_and_end_bucket(self):
         self.create_event(self.bucket_incident.date_started + timedelta(minutes=19))
