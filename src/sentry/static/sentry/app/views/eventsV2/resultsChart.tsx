@@ -130,12 +130,7 @@ class ResultsChartContainer extends React.Component<ContainerProps> {
       onAxisChange,
       onDisplayChange,
       organization,
-      confirmedQuery,
     } = this.props;
-
-    if (!confirmedQuery) {
-      return <div />;
-    }
 
     const yAxisValue = eventView.getYAxis();
     const hasQueryFeature = organization.features.includes('discover-query');
