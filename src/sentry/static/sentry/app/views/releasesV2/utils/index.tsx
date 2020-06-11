@@ -96,7 +96,7 @@ export const getCrashFreePercentColor: ProgressRingColorFn = ({percent, theme}) 
   }
 
   if (percent < CRASH_FREE_WARNING_THRESHOLD) {
-    return theme.yellow;
+    return theme.yellow500;
   }
 
   return theme.green400;
