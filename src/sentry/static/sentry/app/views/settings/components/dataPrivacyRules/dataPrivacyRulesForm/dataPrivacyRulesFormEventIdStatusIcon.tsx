@@ -28,7 +28,7 @@ const DataPrivacyRulesFormEventIdStatusIcon = ({status, onClickIconClose}: Props
     case EventIdStatus.LOADING:
       return <ControlState isSaving />;
     case EventIdStatus.LOADED:
-      return <IconCheckmark color="green" />;
+      return <IconCheckmark color="green400" />;
     default:
       return null;
   }
