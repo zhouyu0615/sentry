@@ -18,7 +18,6 @@ type Props = {
   suggestions?: Array<SourceSuggestion>;
   error?: string;
   onBlur?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
 };
 
 type State = {
@@ -377,7 +376,7 @@ class SourceField extends React.Component<Props, State> {
   };
 
   render() {
-    const {error, disabled, value, onBlur} = this.props;
+    const {error, value, onBlur} = this.props;
     const {showSuggestions, suggestions, activeSuggestion, hideCaret, help} = this.state;
 
     return (
@@ -393,7 +392,6 @@ class SourceField extends React.Component<Props, State> {
           help={help}
           onBlur={onBlur}
           onFocus={this.handleFocus}
-          disabled={disabled}
         />
         {showSuggestions && suggestions.length > 0 && (
           <React.Fragment>

@@ -12,7 +12,7 @@ type SelectControlProps = React.ComponentProps<typeof SelectControl>;
 
 type Props = Pick<
   SelectControlProps,
-  'value' | 'placeholder' | 'name' | 'onChange' | 'options' | 'isDisabled'
+  'value' | 'placeholder' | 'name' | 'onChange' | 'options'
 >;
 
 class SelectField extends React.Component<Props> {

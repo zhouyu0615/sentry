@@ -51,16 +51,10 @@ export type SourceSuggestion = {
 
 type RuleBase = {
   id: number;
-  method: MethodType;
   source: string;
 };
 
-export type RuleRegex = {
-  type: RuleType.PATTERN;
-  pattern: string;
-} & RuleBase;
-
-export type RuleWithoutRegex = {
+export type RuleDefault = RuleBase & {
   type:
     | RuleType.CREDITCARD
     | RuleType.PASSWORD
@@ -74,9 +68,20 @@ export type RuleWithoutRegex = {
     | RuleType.USER_PATH
     | RuleType.MAC
     | RuleType.ANYTHING;
-} & RuleBase;
+  method: MethodType.MASK | MethodType.REMOVE | MethodType.HASH;
+};
 
-export type Rule = RuleRegex | RuleWithoutRegex;
+export type RulePattern = RuleBase & {
+  type: RuleType.PATTERN;
+  pattern: string;
+} & Pick<RuleDefault, 'method'>;
+
+export type RuleReplace = RuleBase & {
+  method: MethodType.REPLACE;
+  placeholder?: string;
+} & Pick<RuleDefault, 'type'>;
+
+export type Rule = RuleDefault | RuleReplace | RulePattern;
 
 export type KeysOfUnion<T> = T extends any ? keyof T : never;
 
@@ -85,19 +90,30 @@ export type EventId = {
   status?: EventIdStatus;
 };
 
-type PiiConfigBase = {
+type PiiConfigDefault = {
+  type: RuleDefault['type'];
   redaction: {
-    method: MethodType;
+    method: RuleDefault['method'];
   };
 };
 
-type PiiConfigRegex = Pick<RuleRegex, 'type'> & {
+type PiiConfigReplace = {
+  type: RuleReplace['type'];
+  redaction: {
+    method: RuleReplace['method'];
+    text?: string;
+  };
+};
+
+type PiiConfigPattern = {
+  type: RulePattern['type'];
   pattern: string;
-} & PiiConfigBase;
+  redaction: {
+    method: RulePattern['method'];
+  };
+};
 
-type PiiConfigWithoutRegex = Pick<RuleWithoutRegex, 'type'> & PiiConfigBase;
-
-export type PiiConfig = PiiConfigWithoutRegex | PiiConfigRegex;
+export type PiiConfig = PiiConfigDefault | PiiConfigPattern | PiiConfigReplace;
 
 export type Applications = Record<string, Array<string>>;
 

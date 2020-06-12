@@ -29,11 +29,9 @@ type Props<R extends Rule, K extends KeysOfUnion<R>> = {
   errors: Errors;
   sourceSuggestions?: Array<SourceSuggestion>;
   eventId?: EventId;
-  disabled?: boolean;
 };
 
 const Form = ({
-  disabled,
   rule,
   errors,
   sourceSuggestions,
@@ -56,7 +54,6 @@ const Form = ({
             }))}
             value={method}
             onChange={({value}) => onChange('method', value)}
-            isDisabled={disabled}
           />
         </FormField>
         <FormField
@@ -74,10 +71,24 @@ const Form = ({
             }))}
             value={type}
             onChange={({value}) => onChange('type', value)}
-            isDisabled={disabled}
           />
         </FormField>
       </WrapperSelectFields>
+      {rule.method === MethodType.REPLACE && (
+        <FormField
+          label={t('Custom Placeholder (Optional)')}
+          tooltipInfo={t('It will replace the default placeholder [Filtered]')}
+          isFullWidth
+        >
+          <StyledTextField
+            name="placeholder"
+            onChange={(value: string) => {
+              onChange('placeholder', value);
+            }}
+            value={rule.placeholder}
+          />
+        </FormField>
+      )}
       {rule.type === RuleType.PATTERN && (
         <FormField
           label={t('Regex matches')}
@@ -93,7 +104,6 @@ const Form = ({
             value={rule.pattern}
             onBlur={onValidate('pattern')}
             error={errors?.pattern}
-            disabled={disabled}
           />
         </FormField>
       )}
@@ -115,7 +125,6 @@ const Form = ({
           isRegExMatchesSelected={type === RuleType.PATTERN}
           suggestions={sourceSuggestions}
           error={errors?.source}
-          disabled={disabled}
         />
       </FormField>
     </Wrapper>
@@ -138,7 +147,14 @@ const WrapperSelectFields = styled('div')`
   }
 `;
 
-const RegularExpression = styled(TextField)`
+const StyledTextField = styled(TextField)`
+  height: 40px;
+  input {
+    height: 40px;
+  }
+`;
+
+const RegularExpression = styled(StyledTextField)`
   font-size: ${p => p.theme.fontSizeSmall};
   height: 40px;
   input {

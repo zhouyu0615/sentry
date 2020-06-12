@@ -1,6 +1,6 @@
 import {Client} from 'app/api';
 
-import {RuleType, PiiConfig, Rule} from './types';
+import {RuleType, PiiConfig, Rule, MethodType} from './types';
 
 type Applications = Record<string, Array<string>>;
 
@@ -14,6 +14,17 @@ function getCustomRule(rule: Rule): PiiConfig {
       },
     };
   }
+
+  if (rule.method === MethodType.REPLACE) {
+    return {
+      type: rule.type,
+      redaction: {
+        method: rule.method,
+        text: rule?.placeholder,
+      },
+    };
+  }
+
   return {
     type: rule.type,
     redaction: {

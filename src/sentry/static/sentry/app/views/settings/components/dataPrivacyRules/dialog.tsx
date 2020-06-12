@@ -30,7 +30,6 @@ type Props = {
   sourceSuggestions?: Array<SourceSuggestion>;
   eventId?: EventId;
   rule?: Rule;
-  disabled?: boolean;
 };
 
 type State = {
@@ -146,7 +145,7 @@ class Dialog extends React.Component<Props, State> {
   };
 
   render() {
-    const {onClose, disabled, sourceSuggestions, onUpdateEventId, eventId} = this.props;
+    const {onClose, sourceSuggestions, onUpdateEventId, eventId} = this.props;
     const {rule, isFormValid, errors, isNewRule} = this.state;
 
     return (
@@ -162,7 +161,6 @@ class Dialog extends React.Component<Props, State> {
             onValidate={this.handleValidation}
             sourceSuggestions={sourceSuggestions}
             rule={rule}
-            disabled={disabled}
             onUpdateEventId={onUpdateEventId}
             eventId={eventId}
             errors={errors}
@@ -170,14 +168,8 @@ class Dialog extends React.Component<Props, State> {
         </Modal.Body>
         <Modal.Footer>
           <ButtonBar gap={1.5}>
-            <Button disabled={disabled} onClick={onClose}>
-              {t('Cancel')}
-            </Button>
-            <Button
-              disabled={disabled || !isFormValid}
-              onClick={this.handleSave}
-              priority="primary"
-            >
+            <Button onClick={onClose}>{t('Cancel')}</Button>
+            <Button disabled={!isFormValid} onClick={this.handleSave} priority="primary">
               {t('Save Rule')}
             </Button>
           </ButtonBar>

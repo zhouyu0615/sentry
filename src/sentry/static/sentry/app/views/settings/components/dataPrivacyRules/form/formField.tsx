@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {css} from '@emotion/core';
 
 import QuestionTooltip from 'app/components/questionTooltip';
 import space from 'app/styles/space';
@@ -27,7 +26,7 @@ export default FormField;
 const Wrapper = styled('div')<{isFullWidth?: boolean}>`
   ${p =>
     p.isFullWidth &&
-    css`
+    `
       grid-column-start: 1;
       grid-column-end: -1;
     `}

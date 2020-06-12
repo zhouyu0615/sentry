@@ -13,7 +13,6 @@ import {EventIdStatus, EventId} from '../types';
 type Props = {
   onUpdateEventId: (eventId: string) => void;
   eventId?: EventId;
-  disabled?: boolean;
 };
 
 type State = {
@@ -102,7 +101,6 @@ class EventIdField extends React.Component<Props, State> {
   };
 
   render() {
-    const {disabled} = this.props;
     const {value, status} = this.state;
 
     return (
@@ -115,7 +113,6 @@ class EventIdField extends React.Component<Props, State> {
         <FieldWrapper>
           <StyledTextField
             name="eventId"
-            disabled={disabled}
             value={value}
             placeholder={t('XXXXXXXXXXXXXX')}
             onChange={this.handleChange}

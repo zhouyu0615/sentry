@@ -55,7 +55,7 @@ function getMethodLabel(type: MethodType) {
     case MethodType.REPLACE:
       return {
         label: t('Replace'),
-        description: t('Replace with [Filtered]'),
+        description: t('Replace with [Filtered] or a Custom Placeholder'),
       };
     default:
       return {
