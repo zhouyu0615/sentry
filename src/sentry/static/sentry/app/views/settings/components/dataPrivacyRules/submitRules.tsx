@@ -40,10 +40,7 @@ function submitRules(api: Client, endpoint: string, rules: Array<Rule>) {
     }
   }
 
-  const piiConfig = {
-    rules: customRules,
-    applications,
-  };
+  const piiConfig = {rules: customRules, applications};
 
   return api.requestPromise(endpoint, {
     method: 'PUT',

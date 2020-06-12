@@ -22,35 +22,41 @@ function convertRelayPiiConfig(relayPiiConfig?: string) {
 
   for (const application in applications) {
     for (const rule of applications[application]) {
-      if (!rules[rule]) {
+      const resolvedRule = rules[rule];
+      const id = convertedRules.length;
+
+      if (!resolvedRule) {
         // Convert a "built-in" rule like "@anything:remove" to an object {
         //   type: "anything",
         //   method: "remove"
         // }
         if (rule[0] === '@') {
-          const [type, method] = rule.slice(1).split(':');
+          const [type, method] = rule.slice(1).split(':') as [RuleType, MethodType];
           convertedRules.push({
-            id: convertedRules.length,
-            type: type as RuleType,
-            method: method as MethodType,
+            id,
+            method,
+            type,
             source: application,
           } as RuleWithoutRegex);
         }
         continue;
       }
 
-      const resolvedRule = rules[rule];
-      if (resolvedRule.type === RuleType.PATTERN && resolvedRule.pattern) {
-        const method = resolvedRule?.redaction?.method;
+      const {type, redaction} = resolvedRule;
+      const method = redaction.method as MethodType;
 
+      if (resolvedRule.type === RuleType.PATTERN && resolvedRule.pattern) {
         convertedRules.push({
-          id: convertedRules.length,
+          id,
+          method,
           type: RuleType.PATTERN,
-          method: method as MethodType,
           source: application,
           pattern: resolvedRule.pattern,
         });
+        continue;
       }
+
+      convertedRules.push({id, method, type, source: application});
     }
   }
 
